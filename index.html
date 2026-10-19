@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Tech Investing | 量子電腦・量子加密・後量子密碼 (PQC) 美股/ETF 機構級研究終端</title>
+  <meta name="description" content="專門統整量子電腦、量子加密(QKD/QRNG)、後量子密碼(PQC)相關美股、ETF與準IPO獨角獸之深度投資平台，涵蓋營收、新聞、前景、Nature/Science論文與技術經濟指標。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            quantum: {
+              bg: '#060913',
+              card: '#0f172a'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="antialiased selection:bg-sky-500/30 selection:text-sky-200">
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 border-b border-slate-800/80 bg-[#060913]/90 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between py-3.5 gap-3">
+        <!-- Brand Logo & Title -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3 cursor-pointer" onclick="switchSection('overview')">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-sky-500/20 font-mono-num font-extrabold text-white text-lg">
+              |ψ⟩
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-base sm:text-lg font-extrabold tracking-tight text-white">QUANTUM TECH INVESTING</span>
+                <span class="text-[11px] font-mono-num px-2 py-0.5 rounded bg-sky-500/15 text-sky-300 border border-sky-500/30">2026 EDITION</span>
+              </div>
+              <p class="text-xs text-slate-400">量子電腦・量子加密 (QKD)・後量子密碼 (PQC) 美股 / ETF / Pre-IPO 情報終端</p>
+            </div>
+          </div>
+          <a href="https://github.com/youtingyeh/Quantum_Tech_Investing" target="_blank" rel="noopener noreferrer" class="lg:hidden text-xs px-2.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">
+            GitHub ↗
+          </a>
+        </div>
+
+        <!-- Navigation Pills -->
+        <nav class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 text-xs font-medium">
+          <button data-nav-target="overview" class="nav-tab active shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
+            📊 全景總覽與指標圖表
+          </button>
+          <button data-nav-target="stocks" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
+            🏛️ 美股標的資料庫 (15檔)
+          </button>
+          <button data-nav-target="compare" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
+            ⚔️ 並排 PK 比較台
+          </button>
+          <button data-nav-target="etfs" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
+            📈 量子與資安 ETF
+          </button>
+          <button data-nav-target="pre-ipo" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
+            🦄 準上市 Pre-IPO 獨角獸
+          </button>
+          <button data-nav-target="pqc-hub" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
+            🔐 量子加密 & PQC 專題
+          </button>
+          <button data-nav-target="papers-metrics" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
+            📚 論文庫 & 技術/經濟百科
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 1: EXECUTIVE OVERVIEW & INTERACTIVE CHARTS (全景總覽)          -->
+    <!-- ====================================================================== -->
+    <section id="section-overview" class="app-section space-y-8">
+      <!-- Hero Banner -->
+      <div class="quantum-card-static p-6 sm:p-8 bg-gradient-to-br from-slate-900/95 via-[#0b132b]/90 to-indigo-950/60 border border-sky-500/30 relative overflow-hidden">
+        <div class="max-w-4xl space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-medium">
+            <span>⚡ 2025–2026 量子容錯拐點與 NIST PQC 強制升級時代</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
+            從「實體量子位元競賽」邁向「容錯邏輯量子位元」與「後量子密碼全面商轉」
+          </h1>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            本平台完整收錄美股<strong>純量子電腦硬體商</strong>（IonQ、Rigetti、D-Wave、QCi、Infleqtion、Xanadu、Pasqal）、<strong>量子加密與後量子密碼 (PQC) 純股</strong>（SEALSQ、Arqit、WISeKey）、<strong>科技與資安巨頭</strong>（Google、IBM、Microsoft、NVIDIA、AWS、Honeywell、Cloudflare、Palo Alto、Lattice、CrowdStrike）、<strong>核心主題 ETF (QTUM)</strong> 以及 <strong>8 大準 IPO 獨角獸</strong>（Quantinuum、PsiQuantum、SandboxAQ、QuEra 等）。
+          </p>
+          <div class="pt-2 flex flex-wrap gap-3">
+            <button onclick="switchSection('stocks')" class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition shadow-lg shadow-sky-500/25">
+              探索 15 檔量子與 PQC 美股 →
+            </button>
+            <button onclick="switchSection('pre-ipo')" class="px-4 py-2 rounded-lg bg-purple-600/30 hover:bg-purple-600/50 border border-purple-400/40 text-purple-200 font-semibold text-xs transition">
+              查看 Quantinuum / PsiQuantum 準 IPO 名單
+            </button>
+            <button onclick="switchSection('pqc-hub')" class="px-4 py-2 rounded-lg bg-emerald-600/25 hover:bg-emerald-600/40 border border-emerald-400/40 text-emerald-200 font-semibold text-xs transition">
+              互動式 Mosca 定理量子風險計算機
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 Macro Technical & Economic KPI Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="quantum-card p-4">
+          <div class="text-xs text-slate-400">純量子首家破億營收里程碑</div>
+          <div class="font-mono-num text-xl font-extrabold text-emerald-400 mt-1">$130.0M (IonQ FY25)</div>
+          <div class="text-xs text-slate-300 mt-1">年增率 +202%；D-Wave H1'26 訂單亦暴增 +1,120%</div>
+        </div>
+        <div class="quantum-card p-4">
+          <div class="text-xs text-slate-400">純量子與 PQC 上市公司總現金儲備</div>
+          <div class="font-mono-num text-xl font-extrabold text-purple-300 mt-1">&gt;$6.8 Billion USD</div>
+          <div class="text-xs text-slate-300 mt-1">IONQ ($3.3B)、QUBT ($1.3B)、RGTI ($541M)、LAES ($490M)</div>
+        </div>
+        <div class="quantum-card p-4">
+          <div class="text-xs text-slate-400">最高雙量子位元閘保真度紀錄</div>
+          <div class="font-mono-num text-xl font-extrabold text-sky-400 mt-1">99.9915% (&gt;Four Nines)</div>
+          <div class="text-xs text-slate-300 mt-1">IonQ (Oxford Ionics EQC) 領先；Quantinuum Helios 達 99.921%</div>
+        </div>
+        <div class="quantum-card p-4">
+          <div class="text-xs text-slate-400">量子糾錯 (QEC) 歷史性突破</div>
+          <div class="font-mono-num text-xl font-extrabold text-amber-300 mt-1">Below-Threshold (d=7)</div>
+          <div class="text-xs text-slate-300 mt-1">Google Willow 實證擴大表面碼網格時邏輯錯誤率指數減半</div>
+        </div>
+        <div class="quantum-card p-4">
+          <div class="text-xs text-slate-400">NIST 後量子密碼強制標準</div>
+          <div class="font-mono-num text-xl font-extrabold text-emerald-300 mt-1">FIPS 203 / 204 / 205 / 206</div>
+          <div class="text-xs text-slate-300 mt-1">IBM 主導 3 項標準；Cloudflare 已保護全球 38% HTTPS 流量</div>
+        </div>
+        <div class="quantum-card p-4">
+          <div class="text-xs text-slate-400">最大量子主題 ETF (QTUM) 規模</div>
+          <div class="font-mono-num text-xl font-extrabold text-sky-300 mt-1">$5.4B+ AUM</div>
+          <div class="text-xs text-slate-300 mt-1">近 5 年年化報酬率 (CAGR) +26.4%，費用率 0.40%</div>
+        </div>
+      </div>
+
+      <!-- Interactive Charts Row -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Chart 1: Revenue vs Cash Reserves -->
+        <div class="quantum-card-static p-5">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h2 class="text-base font-bold text-white">💰 純量子與 PQC 美股：最新營收 vs. 現金儲備對比</h2>
+              <p class="text-xs text-slate-400">評估商業變現能力（左軸：$M）與抵禦研發燒錢之現金護城河（右軸：$M）</p>
+            </div>
+          </div>
+          <div class="h-80">
+            <canvas id="revenueCashChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 2: 2-Qubit Gate Fidelity Benchmark -->
+        <div class="quantum-card-static p-5">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h2 class="text-base font-bold text-white">🔬 雙量子位元閘保真度 (2-Qubit Gate Fidelity) 排行榜</h2>
+              <p class="text-xs text-slate-400">99.0% 為表面碼容錯基本門檻；達到 99.9%+ 可降低 10 倍以上糾錯硬體成本</p>
+            </div>
+          </div>
+          <div class="h-80">
+            <canvas id="fidelityBenchmarkChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 Hardware Modalities Comparison Table -->
+      <div class="quantum-card-static p-6">
+        <div class="mb-4">
+          <h2 class="text-lg font-bold text-white">🧭 七大物理技術路線 (Hardware Modalities) 全景優劣勢與代表美股對照表</h2>
+          <p class="text-xs text-slate-400 mt-0.5">不同量子硬體路線在「保真度」、「邏輯閘速度」、「連通度」與「冷卻需求」存在截然不同的工程取捨</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="border-b border-slate-800 bg-slate-900/90 text-slate-300">
+                <th class="p-3">物理技術路線</th>
+                <th class="p-3">代表上市美股</th>
+                <th class="p-3">代表未上市獨角獸</th>
+                <th class="p-3">雙量子閘保真度</th>
+                <th class="p-3">邏輯閘速度</th>
+                <th class="p-3">核心優勢 (Pros)</th>
+                <th class="p-3">主要工程瓶頸 (Cons)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/70">
+              <tr class="hover:bg-slate-900/40">
+                <td class="p-3 font-bold text-sky-400">離子阱 (Trapped-Ion)</td>
+                <td class="p-3 font-mono-num text-white">IONQ, HON</td>
+                <td class="p-3 text-purple-300">Quantinuum ($10B)</td>
+                <td class="p-3 font-mono-num text-emerald-400">99.9% – 99.99%</td>
+                <td class="p-3 font-mono-num text-amber-300">100 – 600 µs</td>
+                <td class="p-3 text-slate-200">全連通 (All-to-All)、保真度全球最高、相干時間長達數十秒</td>
+                <td class="p-3 text-slate-400">閘操作速度較慢；需靠 EQC 晶片化與光子互連擴充規模</td>
+              </tr>
+              <tr class="hover:bg-slate-900/40">
+                <td class="p-3 font-bold text-purple-400">超導邏輯閘 (Superconducting)</td>
+                <td class="p-3 font-mono-num text-white">GOOGL, IBM, RGTI</td>
+                <td class="p-3 text-purple-300">IQM, OQC</td>
+                <td class="p-3 font-mono-num text-emerald-400">99.5% – 99.9%</td>
+                <td class="p-3 font-mono-num text-emerald-400">20 – 50 ns (極快)</td>
+                <td class="p-3 text-slate-200">奈秒級超高速時脈、Willow 已實證低於表面碼門檻糾錯</td>
+                <td class="p-3 text-slate-400">僅鄰近位元連通、需 10mK 極低溫稀釋製冷機、同軸線散熱受限</td>
+              </tr>
+              <tr class="hover:bg-slate-900/40">
+                <td class="p-3 font-bold text-emerald-400">中性原子 (Neutral Atom)</td>
+                <td class="p-3 font-mono-num text-white">INFQ, PSQL</td>
+                <td class="p-3 text-purple-300">QuEra, Atom Computing</td>
+                <td class="p-3 font-mono-num text-sky-300">99.5%</td>
+                <td class="p-3 font-mono-num text-sky-300">200 – 500 ns</td>
+                <td class="p-3 text-slate-200">光學鑷子可動態移動原子實現橫向邏輯閘、易擴充至上千顆位元</td>
+                <td class="p-3 text-slate-400">原子裝填與讀出速度較慢、雷射光學控制系統複雜</td>
+              </tr>
+              <tr class="hover:bg-slate-900/40">
+                <td class="p-3 font-bold text-rose-400">光量子 (Photonic)</td>
+                <td class="p-3 font-mono-num text-white">XNDU, QUBT</td>
+                <td class="p-3 text-purple-300">PsiQuantum ($7B–$10B)</td>
+                <td class="p-3 font-mono-num text-sky-300">99.4%+ (GKP/Fusion)</td>
+                <td class="p-3 font-mono-num text-emerald-400">MHz – GHz (光速)</td>
+                <td class="p-3 text-slate-200">可由 12 吋晶圓廠量產、支援室溫光纖模組化串聯成資料中心</td>
+                <td class="p-3 text-slate-400">光波導與光纖耦合損耗 (Photon Loss)、需大量高效率單光子源</td>
+              </tr>
+              <tr class="hover:bg-slate-900/40">
+                <td class="p-3 font-bold text-amber-400">玻色貓量子位元 (Cat Qubits)</td>
+                <td class="p-3 font-mono-num text-white">AMZN (Ocelot)</td>
+                <td class="p-3 text-purple-300">Alice &amp; Bob</td>
+                <td class="p-3 font-mono-num text-sky-300">位元翻轉壽命 ~1s</td>
+                <td class="p-3 font-mono-num text-sky-300">~100 ns</td>
+                <td class="p-3 text-slate-200">硬體層自動抑制位元翻轉錯誤，減少 90% 糾錯實體位元開銷</td>
+                <td class="p-3 text-slate-400">屬於新型超導諧振腔架構，多晶片擴展尚處早期階段</td>
+              </tr>
+              <tr class="hover:bg-slate-900/40">
+                <td class="p-3 font-bold text-indigo-400">拓撲量子位元 (Topological)</td>
+                <td class="p-3 font-mono-num text-white">MSFT (Majorana 1)</td>
+                <td class="p-3 text-slate-500">微軟獨家研發</td>
+                <td class="p-3 font-mono-num text-sky-300">硬體級拓撲保護</td>
+                <td class="p-3 font-mono-num text-emerald-400">微秒級微波測量</td>
+                <td class="p-3 text-slate-200">非阿貝爾任意子天生免疫局部雜訊，單晶片理論可容納百萬位元</td>
+                <td class="p-3 text-slate-400">材料物理製備門檻極高（InAs-Al 異質結構），商用時程較長</td>
+              </tr>
+              <tr class="hover:bg-slate-900/40">
+                <td class="p-3 font-bold text-cyan-300">量子退火 (Quantum Annealing)</td>
+                <td class="p-3 font-mono-num text-white">QBTS (D-Wave)</td>
+                <td class="p-3 text-slate-500">—</td>
+                <td class="p-3 font-mono-num text-sky-300">4,800+ Qubits (Zephyr)</td>
+                <td class="p-3 font-mono-num text-emerald-400">微秒級退火求解</td>
+                <td class="p-3 text-slate-200">已大規模商轉、獲《Science》認證於磁性材料模擬超越超算百萬年</td>
+                <td class="p-3 text-slate-400">專精組合最佳化與自旋模擬，無法運行通用 Shor 演算法</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 2: US STOCKS DEEP-DIVE DIRECTORY (美股標的深度資料庫)          -->
+    <!-- ====================================================================== -->
+    <section id="section-stocks" class="app-section hidden space-y-6">
+      <div class="quantum-card-static p-6">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-5">
+          <div>
+            <div class="flex items-center gap-2.5">
+              <h2 class="text-xl font-extrabold text-white">🏛️ 量子電腦・量子加密・後量子密碼 (PQC) 美股深度資料庫</h2>
+              <span id="stockResultCount" class="text-xs font-mono-num px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-500/30">共 15 檔標的</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">點擊任一公司卡片的「深度研報・論文・新聞」即可檢視完整財報指標、Nature/Science 論文連結、技術優勢與多空催化劑</p>
+          </div>
+
+          <!-- Search & Sort Controls -->
+          <div class="flex flex-col sm:flex-row gap-2.5">
+            <input
+              id="stockSearchInput"
+              type="text"
+              placeholder="搜尋代號 (IONQ, LAES...)、技術 (離子阱, ML-KEM)..."
+              class="px-3.5 py-2 rounded-lg bg-slate-900/90 border border-slate-700 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-400 w-full sm:w-64"
+            />
+            <select
+              id="stockSortSelect"
+              class="px-3 py-2 rounded-lg bg-slate-900/90 border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-sky-400"
+            >
+              <option value="revenue-desc">排序：營收規模 (高 → 低)</option>
+              <option value="yoy-desc">排序：營收年增率 YoY (高 → 低)</option>
+              <option value="cash-desc">排序：帳上現金儲備 (高 → 低)</option>
+              <option value="fidelity-desc">排序：雙量子閘保真度 (高 → 低)</option>
+              <option value="mcap-desc">排序：總市值 (高 → 低)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap gap-2">
+          <button data-cat-filter="all" class="filter-pill active px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300">
+            全部美股標的 (15)
+          </button>
+          <button data-cat-filter="pure-compute" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300">
+            ⚡ 純量子電腦硬體/系統 (IONQ, RGTI, QBTS, QUBT, INFQ, XNDU, PSQL)
+          </button>
+          <button data-cat-filter="pure-pqc" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300">
+            🔐 量子加密 / PQC 純股 (LAES, ARQQ, WKEY)
+          </button>
+          <button data-cat-filter="big-tech" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300">
+            🌐 科技巨頭量子與混合超算 (GOOGL, IBM, MSFT, NVDA, AMZN, HON)
+          </button>
+          <button data-cat-filter="enterprise-pqc" class="filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300">
+            🛡️ 企業資安與 PQC 晶片大廠 (NET, PANW, LSCC, CRWD)
+          </button>
+        </div>
+      </div>
+
+      <!-- Stocks Grid -->
+      <div id="stocksGridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 3: SIDE-BY-SIDE STOCK COMPARISON MATRIX (並排 PK 比較台)       -->
+    <!-- ====================================================================== -->
+    <section id="section-compare" class="app-section hidden space-y-6">
+      <div class="quantum-card-static p-6 space-y-4">
+        <div>
+          <h2 class="text-xl font-extrabold text-white">⚔️ 量子與 PQC 美股並排 PK 比較矩陣 (最多同時比較 4 檔)</h2>
+          <p class="text-xs text-slate-400 mt-1">點選下方股票代號即可動態加入或替換比較標的，一鍵橫向對比營收、現金跑道、保真度、糾錯碼與 PQC 定位</p>
+        </div>
+        <div id="compareSelectorPills" class="flex flex-wrap gap-2 pt-1"></div>
+      </div>
+
+      <div id="compareMatrixContainer" class="quantum-card-static overflow-hidden"></div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 4: QUANTUM & CYBERSECURITY ETFS (量子與資安 ETF 專區)          -->
+    <!-- ====================================================================== -->
+    <section id="section-etfs" class="app-section hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 quantum-card-static p-6 flex flex-col justify-center space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs text-sky-400 font-semibold">
+            <span>📈 指數化一籃子佈局策略</span>
+          </div>
+          <h2 class="text-2xl font-extrabold text-white">如何透過美股 ETF 穩健參與量子運算與後量子密碼浪潮？</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            量子電腦仍處於多種物理路線（離子阱、超導、中性原子、光量子、拓撲）並存競逐的階段。對於不希望承擔單一小型股技術路線風險的投資人，<strong>Defiance Quantum ETF (QTUM)</strong> 透過改良式等權重機制，將約 20% 權重配置於高爆發純量子股、80% 配置於具備強勁現金流的量子科技巨頭與半導體光學供應鏈；而 <strong>CIBR</strong> 與 <strong>SPRX</strong> 則提供收割全球企業後量子密碼 (PQC) 強制升級預算的資安組合。
+          </p>
+        </div>
+        <div class="quantum-card-static p-5">
+          <h3 class="text-sm font-bold text-white mb-2 text-center">QTUM ETF 四大產業權重結構剖析</h3>
+          <div class="h-56">
+            <canvas id="qtumPerformanceChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div id="etfCardsContainer" class="space-y-6"></div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 5: PRE-IPO UNICORN PIPELINE (未來可能上市之潛力獨角獸追蹤)     -->
+    <!-- ====================================================================== -->
+    <section id="section-pre-ipo" class="app-section hidden space-y-6">
+      <!-- Newly Listed 2026 Spotlight Banner -->
+      <div class="quantum-card-static p-6 border-l-4 border-l-emerald-400 bg-gradient-to-r from-emerald-950/30 to-slate-900/90">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider">🔔 2026 已完成上市之新銳量子股 (Recently Listed in 2026)</div>
+            <h3 class="text-lg font-bold text-white mt-1">Infleqtion (NYSE: INFQ)、Xanadu (NASDAQ: XNDU)、Pasqal (NASDAQ: PSQL) 已於 2026 年完成掛牌！</h3>
+            <p class="text-xs text-slate-300 mt-1">
+              這三家原本名列 Pre-IPO 榜單的重量級獨角獸已於 2026 年初至年中透過 SPAC 合併登陸美股，我們已將其完整財報與論文納入「美股標的資料庫」中。下方為您整理<strong>接下來最具上市潛力的 8 大未上市量子與後量子密碼獨角獸</strong>：
+            </p>
+          </div>
+          <button onclick="switchSection('stocks')" class="shrink-0 px-4 py-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-400/40 text-emerald-300 text-xs font-semibold transition">
+            查看 INFQ / XNDU / PSQL 研報 →
+          </button>
+        </div>
+      </div>
+
+      <!-- Pre-IPO Cards Grid -->
+      <div id="preIpoGridContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 6: QUANTUM CRYPTO & POST-QUANTUM CRYPTOGRAPHY (PQC) HUB        -->
+    <!-- ====================================================================== -->
+    <section id="section-pqc-hub" class="app-section hidden space-y-8">
+      <!-- Header -->
+      <div class="quantum-card-static p-6 space-y-3">
+        <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider">🔐 量子資安三大支柱：PQC vs. QKD vs. QRNG</div>
+        <h2 class="text-2xl font-extrabold text-white">量子加密與後量子密碼學 (Post-Quantum Cryptography) 投資全攻略</h2>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          當容錯量子電腦達到約 2,000–4,000 顆邏輯量子位元時，<strong>Shor 演算法</strong>將在數小時內破解目前保護全球銀行轉帳、國防通訊、區塊鏈與 HTTPS 網站的 RSA-2048 與橢圓曲線密碼 (ECC)。更迫切的是，國家級駭客組織正執行<strong>「現在竊取、未來解密 (Harvest Now, Decrypt Later, HNDL)」</strong>策略——現在先攔截並儲存加密封包，待量子電腦問世後再行解開。這使得「抗量子資安升級」成為比量子電腦硬體更早進入百億美元商業變現的剛性需求！
+        </p>
+      </div>
+
+      <!-- Interactive Mosca's Theorem Calculator -->
+      <div class="quantum-card-static p-6 border border-sky-500/35 space-y-5">
+        <div>
+          <h3 class="text-lg font-bold text-sky-300">🧮 互動式莫斯卡定理 (Mosca's Theorem: X + Y &gt; Z) 量子破解風險評估器</h3>
+          <p class="text-xs text-slate-400 mt-0.5">拖動下方三個滑桿，模擬金融機構、國防系統或醫療資料庫是否已經暴露於「現在竊取、未來解密 (HNDL)」威脅：</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="flex justify-between text-xs mb-2">
+              <span class="text-slate-300 font-medium">X：資料需維持機密的年限 (Shelf Life)</span>
+              <span id="moscaXVal" class="font-mono-num font-bold text-sky-400">10 年</span>
+            </div>
+            <input id="moscaX" type="range" min="1" max="30" value="10" class="w-full accent-sky-400 cursor-pointer" />
+            <div class="text-[11px] text-slate-400 mt-1.5">例：商業合約 5 年、病歷與金融個資 10–15 年、國防機密 25 年+</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="flex justify-between text-xs mb-2">
+              <span class="text-slate-300 font-medium">Y：企業完成全系統 PQC 遷移所需時間</span>
+              <span id="moscaYVal" class="font-mono-num font-bold text-purple-400">5 年</span>
+            </div>
+            <input id="moscaY" type="range" min="1" max="15" value="5" class="w-full accent-purple-400 cursor-pointer" />
+            <div class="text-[11px] text-slate-400 mt-1.5">大型銀行與政府清查 CBOM、更換硬體 HSM/FPGA 平均需 4–8 年</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+            <div class="flex justify-between text-xs mb-2">
+              <span class="text-slate-300 font-medium">Z：密碼相關容錯量子電腦 (CRQC) 問世時間</span>
+              <span id="moscaZVal" class="font-mono-num font-bold text-amber-400">8 年 (2034 年)</span>
+            </div>
+            <input id="moscaZ" type="range" min="3" max="20" value="8" class="w-full accent-amber-400 cursor-pointer" />
+            <div class="text-[11px] text-slate-400 mt-1.5">IBM/Google 預計 2029–2033 年實現千顆至數千顆邏輯量子位元</div>
+          </div>
+        </div>
+
+        <div id="moscaResultBox"></div>
+      </div>
+
+      <!-- NIST PQC Standards & Supply Chain Table -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="quantum-card-static p-6 space-y-4">
+          <h3 class="text-base font-bold text-white">📜 NIST 四大後量子密碼正式標準 (FIPS 203–206) 與受惠股票</h3>
+          <div class="space-y-3 text-xs">
+            <div class="p-3.5 rounded-lg bg-slate-900/80 border border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="font-mono-num font-bold text-sky-400">FIPS 203 — ML-KEM (原 CRYSTALS-Kyber)</span>
+                <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300">通用加密與 TLS 金鑰封裝首選</span>
+              </div>
+              <p class="text-slate-300 mt-1.5">基於模晶格 (Module-Lattice) 數學難題。金鑰小、運算極快，已成為全球 HTTPS 網站與 VPN 取代 RSA/ECDH 金鑰交換的標準。</p>
+              <div class="text-emerald-400 mt-1">核心受惠股：IBM (共同發明人)、Cloudflare (NET)、SEALSQ (LAES)、Palo Alto (PANW)</div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-slate-900/80 border border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="font-mono-num font-bold text-purple-400">FIPS 204 — ML-DSA (原 CRYSTALS-Dilithium)</span>
+                <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">數位簽章與韌體保護首選</span>
+              </div>
+              <p class="text-slate-300 mt-1.5">美國國安局 CNSA 2.0 指定用於伺服器韌體安全開機 (Secure Boot)、軟體更新簽章與數位身分認證的核心標準。</p>
+              <div class="text-emerald-400 mt-1">核心受惠股：IBM (共同發明人)、Lattice Semiconductor (LSCC)、SEALSQ (LAES)、PQShield</div>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-slate-900/80 border border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="font-mono-num font-bold text-amber-400">FIPS 205 — SLH-DSA (SPHINCS+) &amp; FIPS 206 — FN-DSA (Falcon)</span>
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">雜湊備援簽章 &amp; 超短簽章</span>
+              </div>
+              <p class="text-slate-300 mt-1.5">SLH-DSA 基於無狀態雜湊函數，提供非晶格數學體系的雙保險；FN-DSA (Falcon) 則具備極小簽章體積，適合頻寬受限之物聯網與衛星通訊。</p>
+              <div class="text-emerald-400 mt-1">核心受惠股：IBM、WISeKey (WKEY)、CrowdStrike (CRWD)、SandboxAQ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quantum-card-static p-6 space-y-4">
+          <h3 class="text-base font-bold text-white">⚖️ 三大抗量子加密技術比較：PQC vs. QKD vs. QRNG</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="border-b border-slate-800 text-slate-400">
+                  <th class="py-2.5 pr-2">維度</th>
+                  <th class="py-2.5 px-2 text-emerald-400">後量子密碼 (PQC)</th>
+                  <th class="py-2.5 px-2 text-sky-400">量子金鑰分發 (QKD)</th>
+                  <th class="py-2.5 pl-2 text-purple-400">量子亂數產生器 (QRNG)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/70 text-slate-200">
+                <tr>
+                  <td class="py-3 pr-2 font-semibold text-slate-400">防禦原理</td>
+                  <td class="py-3 px-2">基於量子電腦也無法有效求解的晶格/雜湊數學難題</td>
+                  <td class="py-3 px-2">利用單光子量子態不可複製定理，任何竊聽必改變光子狀態</td>
+                  <td class="py-3 pl-2">利用量子力學本質隨機性產生不可預測之真亂數種子 (Entropy)</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-2 font-semibold text-slate-400">硬體需求</td>
+                  <td class="py-3 px-2">相容現有網際網路與伺服器（搭配安全晶片加速更佳）</td>
+                  <td class="py-3 px-2">需專用光纖通道、單光子偵測器或低軌量子衛星</td>
+                  <td class="py-3 pl-2">微型光學或穿隧效應 QRNG 晶片，可嵌入手機、伺服器與衛星</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-2 font-semibold text-slate-400">歐美政策態度</td>
+                  <td class="py-3 px-2 text-emerald-300 font-medium">NIST / NSA CNSA 2.0 強制全球全面部署</td>
+                  <td class="py-3 px-2">國防專線、主權骨幹網路、金融資料中心互連採用</td>
+                  <td class="py-3 pl-2">PQC 金鑰生成的必要熵源補充，高安全等級必備</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-2 font-semibold text-slate-400">代表美股/獨角獸</td>
+                  <td class="py-3 px-2 font-mono-num text-white">IBM, NET, LAES, PANW, LSCC, ARQQ, SandboxAQ</td>
+                  <td class="py-3 px-2 font-mono-num text-white">IONQ (收購 IDQ &amp; Qubitekk), QUBT (NuCrypt)</td>
+                  <td class="py-3 pl-2 font-mono-num text-white">IONQ (IDQ), HON (Quantum Origin), WKEY</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 7: ACADEMIC PAPERS & TECHNICAL/ECONOMIC GLOSSARY (論文與百科)  -->
+    <!-- ====================================================================== -->
+    <section id="section-papers-metrics" class="app-section hidden space-y-8">
+      <!-- Landmark Papers Library -->
+      <div class="space-y-4">
+        <div>
+          <h2 class="text-xl font-extrabold text-white">📚 2024–2026 必讀頂尖量子與 PQC 學術論文庫 (Nature / Science / arXiv)</h2>
+          <p class="text-xs text-slate-400 mt-1">在量子科技投資中，同行審查之頂尖期刊論文是檢驗公司宣稱性能真偽、預判股價催化劑的最可靠依據</p>
+        </div>
+        <div id="papersLibraryContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+      </div>
+
+      <!-- Technical & Economic Indicators Encyclopedia -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4">
+        <div class="space-y-4">
+          <h3 class="text-lg font-extrabold text-sky-400">🔬 量子硬體與密碼技術指標百科 (Technical Metrics)</h3>
+          <div id="techIndicatorsContainer" class="space-y-3"></div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-lg font-extrabold text-purple-400">💹 量子產業財務與經濟指標百科 (Economic Metrics)</h3>
+          <div id="econIndicatorsContainer" class="space-y-3"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Stock Deep-Dive Modal -->
+  <div id="stockDetailModal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-3 sm:p-6" onclick="if(event.target === this) closeStockModal()">
+    <div id="stockDetailModalContent" class="w-full max-w-4xl rounded-2xl bg-[#090e1d] border border-sky-500/40 shadow-2xl overflow-hidden"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-[#040710] mt-16 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div>
+        <span class="font-bold text-slate-200">Quantum Tech Investing Terminal</span> — 涵蓋量子電腦、量子加密 (QKD/QRNG)、後量子密碼 (PQC) 美股、ETF 與 Pre-IPO 獨角獸研究平台。
+      </div>
+      <div class="flex items-center gap-4">
+        <span>資料基準：2025–2026 財報與 Nature / Science / NIST 公開文獻</span>
+        <a href="https://github.com/youtingyeh/Quantum_Tech_Investing" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">GitHub Repository ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
