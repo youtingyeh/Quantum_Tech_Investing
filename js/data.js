@@ -2405,6 +2405,430 @@ window.QUANTUM_DATA = {
         }
       ]
     }
+  ],
+
+  // ============================================================================
+  // 7. QUANTUM TECH POPULAR-SCIENCE GUIDE & PAPER-BACKED EVOLUTIONARY LINEAGES
+  //    (量子電腦與密碼各技術路線科普原理、完整演進時間軸與里程碑論文佐證)
+  // ============================================================================
+  techLineages: [
+    {
+      id: "trapped-ion",
+      name: "1. 離子阱量子電腦 (Trapped-Ion Quantum Computing)",
+      shortName: "離子阱 (Trapped-Ion)",
+      representativeStocks: "IONQ (IonQ), QNT (Quantinuum), HON (Honeywell)",
+      representativePreIpo: "Universal Quantum, EleQtron",
+      analogy: "想像在超高真空中，用電磁場把一排帶正電的原子（如鐿離子 ¹⁷¹Yb⁺ 或鋇離子 ¹³⁷Ba⁺）像珍珠項鍊般懸浮在半空中，再用極度精準的雷射脈衝或晶片電極去「撥動」每一顆原子並讓它們透過庫侖靜電斥力產生共振糾纏。",
+      whyEasyToUnderstand: "大自然創造的每一顆同位素原子都是 100% 完全一模一樣的「天然完美量子位元」，沒有人工製造晶片的尺寸公差或材料缺陷，因此離子阱天生擁有全球最高的閘保真度（>99.99%）與長達數十秒的記憶時間（相干時間）。",
+      howItWorks: {
+        qubitEncoding: "利用單一帶電離子內部極其穩定的兩個超精細電子能階（Hyperfine Clock States）分別代表 |0⟩ 與 |1⟩。",
+        gateMechanism: "照射特定頻率的雷射（或透過 EQC 矽晶片電極施加微差微波電壓），使兩顆離子同時產生微小集體振動（聲子模態 Phonon Mode），藉此完成雙量子位元糾纏閘 (Mølmer–Sørensen Gate)。",
+        readoutMethod: "狀態選擇性螢光讀出法：打入一束探測雷射，若離子處於 |1⟩ 態會發出數千顆光子（亮態），處於 |0⟩ 態則完全不發光（暗態），由高靈敏度光電感測器拍照即可達到 99.99% 讀出準確率。"
+      },
+      engineeringSpecs: {
+        coherenceTime: "10 秒 – 100+ 秒 (極長)",
+        twoQubitFidelity: "99.921% (QNT Helios) – 99.9915% (IonQ Oxford Ionics)",
+        gateSpeed: "100 – 600 微秒 (µs)",
+        connectivity: "全連通 (All-to-All，任意兩顆離子可直接糾纏)",
+        operatingEnv: "超高真空腔體 (UHV)，溫和低溫 (4K–10K) 或室溫"
+      },
+      currentBottleneck: "邏輯閘操作速度（微秒級）比超導位元（奈秒級）慢約 1,000 倍；且單一線性離子阱超過 50–100 顆離子後振動模態過於擁擠，必須依賴「QCCD 二維晶片離子穿梭」與「光子互連網路 (Photonic Interconnects)」跨晶片擴展。",
+      timeline: [
+        {
+          year: "1995",
+          stage: "理論與實驗奠基 (諾貝爾獎級突破)",
+          milestone: "Cirac 與 Zoller 提出利用冷卻離子集體振動模態實作受控邏輯閘之理論；同年 NIST 的 Monroe 與 Wineland 團隊在實驗室成功演示人類史上第一個離子量子邏輯閘（Wineland 後獲 2012 諾貝爾物理獎）。",
+          paperTitle: "Quantum Computations with Cold Trapped Ions / Demonstration of a Fundamental Quantum Logic Gate",
+          journal: "Physical Review Letters 74, 4091 & PRL 75, 4714 (1995)",
+          paperUrl: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.74.4091"
+        },
+        {
+          year: "2021",
+          stage: "QCCD 量子電荷耦合穿梭架構問世",
+          milestone: "Honeywell Quantum Solutions（後合併為 Quantinuum）在《Nature》發表 QCCD 架構，證實可在晶片表面透過電極將離子自由移動、交換位置並進行中途測量而不破壞量子相干性。",
+          paperTitle: "Demonstration of the trapped-ion quantum CCD computer architecture",
+          journal: "Nature 592, 209–213 (2021)",
+          paperUrl: "https://www.nature.com/articles/s41586-021-03318-4"
+        },
+        {
+          year: "2023",
+          stage: "非阿貝爾拓撲任意子首次在離子阱合成",
+          milestone: "Quantinuum 與哈佛大學團隊在 H2 處理器上首次透過動態線路創造並編織非阿貝爾任意子 (Non-Abelian Anyons)，證明離子阱高連通度可模擬極複雜拓撲物態。",
+          paperTitle: "Creation of Non-Abelian Topological Order and Anyons on a Trapped-Ion Processor",
+          journal: "Nature 618, 264–270 (2023)",
+          paperUrl: "https://www.nature.com/articles/s41586-023-05954-4"
+        },
+        {
+          year: "2024",
+          stage: "邏輯量子位元錯誤率比實體位元降低 800 倍",
+          milestone: "Quantinuum (QNT) 與微軟 (MSFT) 利用 H2 處理器與主動症候群萃取技術，創造出邏輯錯誤率比底層實體位元低 800 倍的容錯邏輯量子位元，開啟 Level-2 彈性量子計算。",
+          paperTitle: "Demonstration of logical qubits and repeated error correction with 800x error reduction",
+          journal: "arXiv:2404.02280 / Microsoft & Quantinuum (2024)",
+          paperUrl: "https://arxiv.org/abs/2404.02280"
+        },
+        {
+          year: "2025–2026",
+          stage: "邁入「四個九 (99.99%)」保真度與 48 邏輯位元商轉",
+          milestone: "IonQ 收購之 Oxford Ionics 透過標準半導體製程 EQC 電子量子控制創下 99.9915% 雙閘保真度世界紀錄；Quantinuum 發布 98 位元 Helios 系統（支援 48 顆糾錯邏輯位元）並於 2026 年 6 月完成 Nasdaq 上市 (QNT)。",
+          paperTitle: "High-Fidelity Electronic Qubit Control in Standard CMOS Silicon Ion Traps & Helios 98Q Architecture",
+          journal: "Physical Review Letters / Quantinuum Technical Whitepaper (2025–2026)",
+          paperUrl: "https://arxiv.org/abs/2407.07694"
+        }
+      ]
+    },
+    {
+      id: "superconducting",
+      name: "2. 超導邏輯閘量子電腦 (Superconducting Circuit Qubits)",
+      shortName: "超導邏輯閘 (Superconducting)",
+      representativeStocks: "GOOGL (Google), IBM, IQMX (IQM), RGTI (Rigetti)",
+      representativePreIpo: "SEEQC, Oxford Quantum Circuits (OQC)",
+      analogy: "如果離子阱是「撥動天然原子」，超導量子電腦就是「用半導體微影技術在藍寶石或矽晶圓上蝕刻出微型人造原子」。當冷卻到接近絕對零度（10 毫開爾文，比外太空還冷 200 倍）時，鋁或鈮金屬線圈電阻瞬間歸零，電流可以同時順時針與逆時針流動，形成量子疊加態。",
+      whyEasyToUnderstand: "超導量子位元本質上是微波頻段（4–8 GHz）的非線性 LC 諧振電路。因為直接透過同軸電纜輸入微波脈衝操控，它的邏輯閘速度高達 20–50 奈秒（每秒可執行上千萬次操作），是所有固態硬體中運算時脈最快、與現代半導體製造最契合的主流路線。",
+      howItWorks: {
+        qubitEncoding: "利用「約瑟夫森結 (Josephson Junction，兩層超導體夾一層奈米氧化鋁絕緣層)」構成 Transmon 非線性諧振器，將最低兩個量子化微波能量態定義為 |0⟩ 與 |1⟩。",
+        gateMechanism: "透過微波控制線送入數十奈秒的精準微波脈衝（單量子閘），並透過可調諧耦合器 (Tunable Coupler，如 Google Willow / Rigetti Ankaa) 或交叉共振 (Cross-Resonance，如 IBM Heron) 讓相鄰位元產生糾纏。",
+        readoutMethod: "色散微波讀出法 (Dispersive Readout)：每個量子位元連接一個讀出諧振腔，發射微波探測反射相位的微小偏移即可高速判讀 |0⟩ 或 |1⟩。"
+      },
+      engineeringSpecs: {
+        coherenceTime: "100 微秒 – 500 微秒 (µs)",
+        twoQubitFidelity: "99.5% (RGTI) – 99.8% (IBM Heron) – 99.9% (Google Willow)",
+        gateSpeed: "20 – 50 奈秒 (ns，極快)",
+        connectivity: "平面鄰近網格連通 (Nearest-Neighbor Grid / Heavy-Hex)",
+        operatingEnv: "10–15 mK 極低溫稀釋製冷機 (Dilution Refrigerator)"
+      },
+      currentBottleneck: "因為是人造微小電路，每顆位元的微小製造差異會導致頻率飄移與兩能階系統缺陷 (TLS Defects)；此外每顆位元都需要獨立微波同軸線通往極低溫腔體，單一製冷機受限於冷卻功率與配線密度（約數千顆位元上限），需靠「多晶片模組拼接 (Chiplets)」與「極低溫 CMOS 控制晶片 (如 SEEQC)」突破。",
+      timeline: [
+        {
+          year: "1999–2007",
+          stage: "從首顆超導位元到 Transmon 抗雜訊架構誕生",
+          milestone: "1999 年日本 NEC 中村泰信演示首顆超導庫侖島位元；2007 年耶魯大學 Schoelkopf 與 Girvin 團隊發明 Transmon 架構，透過並聯大電容將電荷雜訊敏感度指數級壓低，成為今日 Google、IBM、Rigetti 的共同底座。",
+          paperTitle: "Charge-insensitive qubit design derived from the Cooper pair box (Transmon)",
+          journal: "Physical Review A 76, 042319 (2007)",
+          paperUrl: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.76.042319"
+        },
+        {
+          year: "2012",
+          stage: "表面碼 (Surface Code) 容錯糾錯理論確立",
+          milestone: "Fowler、Martinis 等人完整建立二維鄰近連通網格上的「表面碼」量子糾錯藍圖，證明只要實體閘保真度超過 ~99% 門檻，即可透過二維棋盤陣列合成任意長壽命的邏輯位元。",
+          paperTitle: "Surface codes: Towards practical large-scale quantum computation",
+          journal: "Physical Review A 86, 032324 (2012)",
+          paperUrl: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.86.032324"
+        },
+        {
+          year: "2019",
+          stage: "Google Sycamore 53 位元首次演示「量子霸權」",
+          milestone: "Google Quantum AI 在《Nature》發表 53 位元 Sycamore 處理器，於 200 秒內完成隨機線路取樣任務，開啟 NISQ（含雜訊中尺度量子）世代。",
+          paperTitle: "Quantum supremacy using a programmable superconducting processor",
+          journal: "Nature 574, 505–510 (2019)",
+          paperUrl: "https://www.nature.com/articles/s41586-019-1666-5"
+        },
+        {
+          year: "2024.03",
+          stage: "IBM 發表高效率 qLDPC (Gross Code) 量子糾錯碼",
+          milestone: "IBM 在《Nature》提出雙變數腳踏車低密度奇偶校驗碼 (Bivariate Bicycle qLDPC Codes)，僅需 288 顆實體超導位元即可保護 12 顆邏輯位元，比傳統表面碼節省近 90% 硬體開銷。",
+          paperTitle: "High-threshold and low-overhead fault-tolerant quantum memory",
+          journal: "Nature 627, 778–782 (2024)",
+          paperUrl: "https://www.nature.com/articles/s41586-024-07107-7"
+        },
+        {
+          year: "2024.12–2026",
+          stage: "Google Willow 跨越表面碼糾錯門檻 (Below-Threshold QEC)",
+          milestone: "Google 105 位元 Willow 晶片在《Nature》實證：當表面碼網格從 3x3 擴展至 5x5 與 7x7 時，邏輯錯誤率每次減半（Λ = 2.14），並使邏輯位元壽命超越單一實體位元 2.4 倍，正式打通邁向百萬位元容錯主機的物理道路。",
+          paperTitle: "Quantum error correction below the surface code threshold",
+          journal: "Nature 636, 308–315 (2024/2025)",
+          paperUrl: "https://www.nature.com/articles/s41586-024-08449-y"
+        }
+      ]
+    },
+    {
+      id: "neutral-atom",
+      name: "3. 中性原子陣列量子電腦 (Neutral-Atom Tweezers & Rydberg Arrays)",
+      shortName: "中性原子 (Neutral-Atom)",
+      representativeStocks: "INFQ (Infleqtion), PSQL (Pasqal)",
+      representativePreIpo: "QuEra Computing, Atom Computing, Planqc",
+      analogy: "想像用上千道高度聚焦的雷射光束當作「微米級光學夾子（Optical Tweezers，2018 諾貝爾物理獎技術）」，在玻璃真空腔裡抓起上千顆不帶電的銣 (⁸⁷Rb)、鍶 (⁸⁸Sr) 或鐿 (¹⁷¹Yb) 原子排成整齊棋盤。更神奇的是，在計算過程中，光學夾子可以直接載著原子在空中穿梭移動去跟遠處的原子配對糾纏！",
+      whyEasyToUnderstand: "因為中性原子平常不帶電，彼此可以靠得很近卻互不干擾，單一玻璃腔體就能輕鬆塞進 1,000 到 10,000 顆原子；而當需要兩顆原子產生邏輯閘時，只需用雷射把電子激發到極大的「里德堡態 (Rydberg State)」，原子半徑瞬間膨脹數百倍產生強烈偶極交互作用（里德堡阻塞效應），完成超高速橫向糾纏。",
+      howItWorks: {
+        qubitEncoding: "利用鹼土金屬原子（如 ¹⁷¹Yb）極穩定的原子核自旋態 (Nuclear Spin) 或鹼金屬原子的超精細基態編碼 |0⟩ 與 |1⟩，相干時間長達數十秒。",
+        gateMechanism: "里德堡阻塞閘 (Rydberg Blockade Gate)：用紫外/藍光雷射將相鄰兩顆原子激發至高主量子數里德堡態，利用強偶極作用在 200–400 奈秒內完成雙量子閘；並透過聲光偏轉器 (AOD) 移動光學鑷子實現全區動態連通。",
+        readoutMethod: "CMOS/EMCCD 高速科學相機對整個二維原子陣列進行無損螢光成像拍照，一次同時讀出上千顆原子的狀態。"
+      },
+      engineeringSpecs: {
+        coherenceTime: "5 秒 – 40+ 秒",
+        twoQubitFidelity: "99.5% – 99.55% (QuEra / Atom / Infleqtion)",
+        gateSpeed: "200 – 500 奈秒 (ns)",
+        connectivity: "動態可重構連通 (藉由光學鑷子空中穿梭實現全區橫向邏輯閘)",
+        operatingEnv: "光學磁光阱雷射冷卻 (真空腔體外圍為室溫光學桌，無需大型極低溫製冷機)"
+      },
+      currentBottleneck: "原子裝填 (Atom Loading) 與相機螢光讀出時間較慢（毫秒級），導致每秒鐘能執行的線路重複率 (Shot Rate) 低於超導；目前正透過「連續原子補充池 (Continuous Reloading)」與「分區無損讀出」克服。",
+      timeline: [
+        {
+          year: "2000",
+          stage: "里德堡阻塞 (Rydberg Blockade) 量子邏輯閘理論提出",
+          milestone: "Jaksch、Cirac、Zoller 與 Lukin 等人提出利用冷中性原子的里德堡偶極阻塞效應執行快速雙量子位元糾纏閘，奠定中性原子量子計算的物理基礎。",
+          paperTitle: "Fast Quantum Gates for Neutral Atoms",
+          journal: "Physical Review Letters 85, 2208 (2000)",
+          paperUrl: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.85.2208"
+        },
+        {
+          year: "2017",
+          stage: "51 顆中性原子無缺陷光學鑷子陣列問世",
+          milestone: "哈佛大學 Mikhail Lukin 與サSubir Sachdev 團隊（QuEra 創辦團隊）與法國 Institut d'Optique 團隊（Pasqal 創辦團隊）利用聲光偏轉器實現無缺陷二維/一維中性原子陣列。",
+          paperTitle: "Probing many-body dynamics on a 51-atom quantum simulator",
+          journal: "Nature 551, 579–584 (2017)",
+          paperUrl: "https://www.nature.com/articles/nature24622"
+        },
+        {
+          year: "2022",
+          stage: "動態移動光學鑷子實現可重構量子處理器",
+          milestone: "Bluvstein 等人在《Nature》展示在保持量子相干性的前提下，用光學鑷子載著糾纏原子在二維空間高速穿梭移動，徹底打破固態晶片固定布線的限制。",
+          paperTitle: "A quantum processor based on coherent transport of entangled atom arrays",
+          journal: "Nature 604, 451–456 (2022)",
+          paperUrl: "https://www.nature.com/articles/s41586-022-04592-6"
+        },
+        {
+          year: "2023.12",
+          stage: "48 顆邏輯量子位元與橫向容錯邏輯閘震驚學界",
+          milestone: "哈佛大學、QuEra、MIT 與 NIST 團隊利用 280 顆實體中性原子同時編碼出 48 顆邏輯量子位元，並透過整排移動原子在單一步驟完成橫向 CNOT 邏輯閘，登上《Nature》。",
+          paperTitle: "Logical quantum processor based on reconfigurable atom arrays",
+          journal: "Nature 626, 58–65 (2024)",
+          paperUrl: "https://www.nature.com/articles/s41586-023-06927-3"
+        },
+        {
+          year: "2024.11–2026",
+          stage: "突破千顆實體原子與 24 顆全糾纏邏輯位元商轉",
+          milestone: "Atom Computing 與微軟演示 24 顆邏輯位元糾纏與邏輯魔術態傳送；Infleqtion (NYSE: INFQ) 與 Pasqal (NASDAQ: PSQL) 於 2026 年相繼在美股掛牌並推進 1,600+ 原子陣列。",
+          paperTitle: "Demonstration of 24 logical qubits with logical entanglement on neutral-atom arrays",
+          journal: "arXiv:2411.10423 (Atom Computing & Microsoft, 2024/2025)",
+          paperUrl: "https://arxiv.org/abs/2411.10423"
+        }
+      ]
+    },
+    {
+      id: "photonic",
+      name: "4. 光量子電腦與矽光子互連 (Photonic & Linear Optical / GKP Quantum Computing)",
+      shortName: "光量子 (Photonic)",
+      representativeStocks: "XNDU (Xanadu), QUBT (Quantum Computing Inc.)",
+      representativePreIpo: "PsiQuantum ($7B–$10B), Quandela, ORCA Computing",
+      analogy: "其他技術路線都是把量子位元「關在原地」等待操控，光量子電腦則是讓光子（光的最小粒子）在奈米矽光子晶片波導與標準電信光纖中以光速飛行，透過分光鏡 (Beam Splitters)、相位調變器與單光子偵測器在飛行途中直接完成量子干涉與糾錯。",
+      whyEasyToUnderstand: "光子在室溫光纖中完全不會受到環境熱雜訊干擾（無需把整個運算光路放進 mK 級製冷機），而且光子晶片可以直接交由 GlobalFoundries 等成熟 12 吋半導體晶圓廠大批量製造，再像現代 AI 伺服器一樣用光纖把上千個機櫃串聯成百萬位元量子資料中心！",
+      howItWorks: {
+        qubitEncoding: "分為兩大主流：① 雙軌離散光子編碼（Dual-Rail Encoding，如 PsiQuantum，以光子走哪一條波導代表 |0⟩ 或 |1⟩）；② 連續變數 GKP 壓縮光態編碼（Gottesman–Kitaev–Preskill Squeezed States，如 Xanadu，在單一光模態的相空間網格中內建抗損耗糾錯）。",
+        gateMechanism: "基於測量的量子計算 (MBQC / Fusion-Based QC)：先在矽光子或氮化矽晶片上產生大型三維糾纏簇態 (Cluster State)，接著對光子進行干涉與融合測量 (Fusion Measurements) 來推進邏輯閘運算。",
+        readoutMethod: "利用超導奈米線單光子偵測器 (SNSPD，僅此偵測器需 1K–4K 冷卻) 或光子數解析偵測器 (PNRD) 進行近乎 99%+ 效率的光子計數測量。"
+      },
+      engineeringSpecs: {
+        coherenceTime: "光子在低損耗光纖中無熱退相干（受限於光波導傳播損耗）",
+        twoQubitFidelity: "99.4%+ (晶片融合與壓縮態干涉保真度)",
+        gateSpeed: "MHz – GHz 級光速時脈 (奈秒至皮秒級)",
+        connectivity: "全光纖網路化連通 (可跨晶片、跨機櫃長距離光纖互連)",
+        operatingEnv: "光子晶片與光纖網路為室溫運作；僅光子偵測器需 1.5K–4K 液氦冷卻"
+      },
+      currentBottleneck: "光子在矽波導、晶片耦合器與光開關中傳播時會發生「光子損耗 (Photon Loss / Attenuation)」，一旦光子消失即代表位元遺失；因此必須將晶圓級波導損耗壓低至 <0.05 dB/cm 並提升 GKP 壓縮度 (>12 dB)。",
+      timeline: [
+        {
+          year: "2001",
+          stage: "KLM 線性光學量子計算與 GKP 玻色糾錯碼雙雙奠基",
+          milestone: "Knill、Laflamme 與 Milburn 在《Nature》證明僅靠線性光學元件（分光鏡、相移器）與單光子偵測即可實現通用量子計算；同年 Gottesman、Kitaev 與 Preskill 提出 GKP 網格玻色碼。",
+          paperTitle: "A scheme for efficient quantum computation with linear optics / Encoding a qubit in an oscillator",
+          journal: "Nature 409, 46–52 (2001) & Physical Review A 64, 012310 (2001)",
+          paperUrl: "https://www.nature.com/articles/35051009"
+        },
+        {
+          year: "2022",
+          stage: "Xanadu Borealis 室溫可編程光量子處理器實現量子優勢",
+          milestone: "Xanadu 在《Nature》發表 Borealis 光量子處理器，利用時間多工壓縮光態在 36 微秒內完成高斯玻色取樣，而經典超算需耗時 9,000 年。",
+          paperTitle: "Quantum computational advantage with a programmable photonic processor",
+          journal: "Nature 606, 75–81 (2022)",
+          paperUrl: "https://www.nature.com/articles/s41586-022-04725-x"
+        },
+        {
+          year: "2023",
+          stage: "PsiQuantum 提出融合基量子計算 (FBQC) 容錯架構",
+          milestone: "PsiQuantum 團隊發表 Fusion-Based Quantum Computation 架構，大幅降低光量子電腦對大型光學延遲線與動態切換開關的需求，為百萬位元矽光子晶圓廠量產鋪路。",
+          paperTitle: "Fusion-based quantum computation",
+          journal: "Nature Communications 14, 1070 (2023)",
+          paperUrl: "https://www.nature.com/articles/s41467-023-36493-1"
+        },
+        {
+          year: "2025.01–2026",
+          stage: "Xanadu Aurora 全球首台模組化光纖網路光量子電腦問世",
+          milestone: "Xanadu (NASDAQ: XNDU) 在《Nature》發表 Aurora 系統，將 35 顆光子晶片透過 13 公里標準電信光纖在室溫下串聯成 4 機櫃模組化系統；PsiQuantum 亦於 2025 在《Nature》公布 Omega 12 吋晶圓量產光子晶片組。",
+          paperTitle: "Scaling and networking a modular photonic quantum computer (Xanadu Aurora) / A manufacturable platform for photonic quantum computing (PsiQuantum)",
+          journal: "Nature 638, 912–919 & Nature 639 (2025)",
+          paperUrl: "https://www.nature.com/articles/s41586-024-08406-9"
+        }
+      ]
+    },
+    {
+      id: "topological-cat",
+      name: "5. 拓撲馬約拉納與玻色貓量子位元 (Topological Majorana & Bosonic Cat Qubits)",
+      shortName: "拓撲 & 玻色貓位元",
+      representativeStocks: "MSFT (Microsoft Majorana 1), AMZN (AWS Ocelot)",
+      representativePreIpo: "Alice & Bob (法國玻色貓位元獨角獸)",
+      analogy: "傳統超導或離子阱位元就像在狂風中走鋼索，需要動用 1,000 顆實體位元去保護 1 顆邏輯位元；而「拓撲量子位元」就像在繩子上打一個死結（只要繩子不斷，怎麼晃動結都不會消失），「玻色貓量子位元」則像一個自動回正的不倒翁，從硬體物理底層直接消弭 90% 的錯誤！",
+      whyEasyToUnderstand: "量子計算有兩種錯誤：位元翻轉（0 變 1）與相位翻轉（+ 變 -）。玻色貓量子位元（AWS Ocelot / Alice & Bob）透過雙光子驅動超導諧振腔，讓位元翻轉錯誤率隨光子數增加呈「指數級歸零」，使糾錯碼只需處理單一方向的相位錯誤，將硬體成本暴降 90%！微軟的拓撲導體（Majorana 1）則利用馬約拉納零模的空間非局域性，讓局部環境雜訊根本無法同時干擾成對的準粒子。",
+      howItWorks: {
+        qubitEncoding: "【拓撲位元 (MSFT)】：在砷化銦-鋁 (InAs-Al) 拓撲超導奈米線兩端生成馬約拉納零模 (MZMs)，以費米子奇偶性 (Fermion Parity) 編碼 |0⟩ 與 |1⟩。\n【玻色貓位元 (AMZN / Alice & Bob)】：在鉭金屬超導微波諧振腔中創造振幅相反的兩個相干態疊加（|α⟩ ± |-α⟩，即薛丁格的貓態）。",
+        gateMechanism: "【拓撲位元】：無需旋轉脆弱的連續角度，僅需透過量子點對不同對的馬約拉納零模進行微秒級數位測量（Measurement-Based Braiding）即可完成受拓撲保護的邏輯閘。\n【玻色貓位元】：結合偏置保護 (Bias-Preserving) CNOT 閘與極簡的一維重複碼 (Repetition Code)。",
+        readoutMethod: "微秒級單次微波量子電容干涉測量法 (Single-Shot Interferometric Parity Readout)。"
+      },
+      engineeringSpecs: {
+        coherenceTime: "玻色貓位元翻轉壽命達 1 秒 – 10+ 秒（比傳統超導長一萬倍）",
+        twoQubitFidelity: "硬體內建偏置雜訊抑制（節省 90% 量子糾錯實體位元開銷）",
+        gateSpeed: "100 奈秒 – 1 微秒",
+        connectivity: "平面二維晶格（僅需一維重複碼或極小碼距表面碼）",
+        operatingEnv: "10 mK 極低溫稀釋製冷機"
+      },
+      currentBottleneck: "拓撲位元對半導體-超導體異質介面原子級純度要求極為嚴苛，目前微軟甫完成 8 位元 Tetron 拓撲核心驗證，尚待擴展至百位元陣列；玻色貓位元則需進一步提升相位翻轉閘保真度。",
+      timeline: [
+        {
+          year: "2001–2003",
+          stage: "Kitaev 提出一維拓撲馬約拉納鏈與非阿貝爾任意子容錯理論",
+          milestone: "物理學家 Alexei Kitaev 提出在拓撲超導奈米線兩端可出現不成對的馬約拉納零模 (Majorana Zero Modes)，其非局域拓撲性質可天然抵抗局部環境退相干。",
+          paperTitle: "Unpaired Majorana fermions in quantum wires / Fault-tolerant quantum computation by anyons",
+          journal: "Physics-Uspekhi 44, 131 (2001) & Annals of Physics 303, 2–30 (2003)",
+          paperUrl: "https://arxiv.org/abs/cond-mat/0010440"
+        },
+        {
+          year: "2014–2020",
+          stage: "玻色貓量子位元 (Bosonic Cat Qubits) 理論與雙光子耗散穩定化",
+          milestone: "法國 ENS / Inria 的 Mazyar Mirrahimi（Alice & Bob 共同創辦人）與耶魯大學團隊提出利用雙光子驅動與耗散工程，在超導諧振腔中穩定保護薛丁格貓態並指數級抑制位元翻轉。",
+          paperTitle: "Dynamically protected cat-qubits: a new paradigm for universal quantum computation",
+          journal: "New Journal of Physics 16, 045014 (2014)",
+          paperUrl: "https://iopscience.iop.org/article/10.1088/1367-2630/16/4/045014"
+        },
+        {
+          year: "2024.05",
+          stage: "Alice & Bob 實證玻色貓位元翻轉壽命突破 10 秒大關",
+          milestone: "法國獨角獸 Alice & Bob 在《Nature》發表宏觀位元翻轉時間超過 10 秒的玻色貓量子位元，比傳統超導位元提升四個數量級。",
+          paperTitle: "Quantum control of a cat qubit with bit-flip times exceeding ten seconds",
+          journal: "Nature 629, 778–783 (2024)",
+          paperUrl: "https://www.nature.com/articles/s41586-024-07294-3"
+        },
+        {
+          year: "2025.02",
+          stage: "微軟 Majorana 1 拓撲晶片與亞馬遜 AWS Ocelot 貓位元晶片雙雙登上《Nature》",
+          milestone: "2025 年 2 月，微軟 (MSFT) 在《Nature》發表 InAs-Al 拓撲導體單次費米子奇偶測量與 Majorana 1 路線圖；同月亞馬遜 (AMZN) 在《Nature》發表首款整合玻色貓位元糾錯之 Ocelot 晶片，證實可降低 90% 糾錯位元開銷。",
+          paperTitle: "Interferometric single-shot parity measurement in InAs–Al hybrid devices (MSFT) / Hardware-efficient quantum error correction using concatenated bosonic qubits (AWS Ocelot)",
+          journal: "Nature (Feb 2025)",
+          paperUrl: "https://www.nature.com/articles/s41586-024-08445-2"
+        }
+      ]
+    },
+    {
+      id: "annealing",
+      name: "6. 量子退火與絕熱最佳化專用機 (Quantum Annealing & Adiabatic Computing)",
+      shortName: "量子退火 (Annealing)",
+      representativeStocks: "QBTS (D-Wave Quantum)",
+      representativePreIpo: "Qilimanjaro (歐洲退火新創)",
+      analogy: "如果通用邏輯閘量子電腦是一步一步執行加減乘除指令的 CPU，那麼「量子退火機」就像把一顆彈珠放進有上億個山谷的複雜高低地形模型中。傳統電腦必須一座山一座山慢慢爬才能找到最低谷（最佳解），而量子退火機直接利用「量子穿隧效應 (Quantum Tunneling)」讓系統直接穿牆過壁，在幾微秒內滑入全局能量最低谷！",
+      whyEasyToUnderstand: "量子退火不需要控制單一邏輯閘的精確相位，而是將商業問題（如全球港口貨櫃排程、5G 基地台頻譜分配、新材料自旋結構）直接映射成伊辛模型 (Ising Hamiltonian) 的能量地形。因此它能輕鬆做到 4,800 到 7,000+ 顆超導量子位元規模，是今日唯一已經在商業現場大規模收費運轉並擁有近 80% 毛利率的量子硬體。",
+      howItWorks: {
+        qubitEncoding: "利用超導磁通量子位元 (Superconducting Flux Qubits / rf-SQUID)，以微小超導環路中順時針與逆時針產生的磁通量方向代表自旋向上 (+1) 與向下 (-1)。",
+        gateMechanism: "絕熱演化與量子穿隧：先施加橫向磁場使所有位元處於均勻量子疊加態，隨後逐漸減弱橫向場並開啟代表問題約束的縱向耦合場，系統透過量子穿隧自動演化至基態。",
+        readoutMethod: "退火結束瞬間透過直流超導量子干涉儀 (DC-SQUID) 磁強計一次讀出數千顆位元的最終自旋方向。"
+      },
+      engineeringSpecs: {
+        coherenceTime: "非相干與相干退火雙模式（退火時間可快至數奈秒）",
+        twoQubitFidelity: "4,800+ Qubits | 20-Way Zephyr 高連通拓撲 (Advantage2)",
+        gateSpeed: "微秒至毫秒級完整最佳化問題求解",
+        connectivity: "Zephyr 拓撲（每顆位元可與 20 顆鄰近位元直接耦合）",
+        operatingEnv: "12–15 mK 極低溫稀釋製冷機（功耗僅 ~12–25 kW，遠低於傳統超算）"
+      },
+      currentBottleneck: "量子退火屬於專用型架構，專精於組合最佳化 (QUBO)、取樣與自旋磁性材料模擬，無法直接執行需要深層相干邏輯閘的 Shor 質因數分解演算法；因此 D-Wave (QBTS) 於 2026 年收購 Quantum Circuits Inc. 展開「退火 + 雙軌超導邏輯閘」雙引擎佈局。",
+      timeline: [
+        {
+          year: "1998–2000",
+          stage: "量子退火 (Quantum Annealing) 與絕熱量子計算理論誕生",
+          milestone: "日本東京工業大學 Kadowaki 與 Nishimori 提出利用橫場伊辛模型中的量子穿隧效應求解組合最佳化問題；2000 年 MIT Farhi 等人提出絕熱量子計算框架。",
+          paperTitle: "Quantum annealing in the transverse Ising model",
+          journal: "Physical Review E 58, 5355 (1998)",
+          paperUrl: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.58.5355"
+        },
+        {
+          year: "2011",
+          stage: "D-Wave 驗證人造超導自旋系統中的宏觀量子退火",
+          milestone: "D-Wave 團隊在《Nature》發表首篇實驗證明超導磁通量子位元陣列中存在量子穿隧退火機制，並推出全球首台商用量子退火機 D-Wave One。",
+          paperTitle: "Quantum annealing with manufactured spins",
+          journal: "Nature 473, 194–198 (2011)",
+          paperUrl: "https://www.nature.com/articles/nature10012"
+        },
+        {
+          year: "2023",
+          stage: "5,000 位元相干量子退火模擬三維自旋玻璃相變",
+          milestone: "D-Wave 在《Nature》展示在 5,000 顆位元的 Advantage 系統上進行奈秒級超快相干量子退火，觀測到純粹由量子糾纏驅動的三維自旋玻璃臨界動力學。",
+          paperTitle: "Coherent quantum annealing in a programmable 2,000-qubit Ising chain / 3D spin glasses",
+          journal: "Nature 617, 61–66 (2023)",
+          paperUrl: "https://www.nature.com/articles/s41586-023-05867-2"
+        },
+        {
+          year: "2025.03–2026",
+          stage: "Advantage2 獲《Science》認證實現磁性材料模擬「超越經典超算百萬年」",
+          milestone: "D-Wave (NYSE: QBTS) 在《Science》發表里程碑論文，證實 Advantage2 處理器在短短數分鐘內完成的磁性材料非平衡量子淬火模擬，若使用全球最強經典超算 Frontier 需耗時近百萬年與全地球年發電量。",
+          paperTitle: "Beyond-Classical Computation in Quantum Simulation",
+          journal: "Science Vol. 387, Issue 6739 (2025)",
+          paperUrl: "https://www.science.org/doi/10.1126/science.ado6285"
+        }
+      ]
+    },
+    {
+      id: "pqc-crypto",
+      name: "7. 量子加密 (QKD/QRNG) 與後量子密碼學 (Post-Quantum Cryptography, PQC)",
+      shortName: "量子加密 & 後量子密碼 (PQC)",
+      representativeStocks: "IBM, NET, PANW, CRWD, LSCC, LAES (SEALSQ), ARQQ, WKEY, IONQ (IDQ)",
+      representativePreIpo: "SandboxAQ ($5.75B), PQShield, Quantropi",
+      analogy: "當未來的容錯量子電腦（配備 Shor 演算法）像一把萬能鑰匙能瞬間撬開今日所有的 RSA 與橢圓曲線 (ECC) 門鎖時，人類有兩條防禦路線：①「後量子密碼學 (PQC)」是設計一把連量子電腦都算不出來的超高維度數學迷宮鎖（如 500 維度的晶格問題），直接安裝在現有電腦、手機與伺服器上；②「量子金鑰分發 (QKD)」則是把鑰匙寫在單一光子上透過光纖傳送，只要駭客偷看一眼，光子狀態就會立刻改變並發出警報！",
+      whyEasyToUnderstand: "為什麼不用等 2030 年量子電腦造出來才買抗量子資安股？因為駭客現在正在執行「現在竊取、未來解密 (Harvest Now, Decrypt Later, HNDL)」——今天先在網路上攔截並複製銀行、政府與醫療機構的加密檔案，鎖進硬碟等幾年後量子電腦問世再一次解開。因此美國 NIST 已於 2024–2025 正式頒布 FIPS 203/204/205 法規，強制全球雲端、防火牆、晶片與物聯網立刻全面升級！",
+      howItWorks: {
+        qubitEncoding: "【PQC 數學防護】：基於「模晶格帶誤差學習問題 (Module-LWE，對應 FIPS 203 ML-KEM 與 FIPS 204 ML-DSA)」或「無狀態雜湊樹 (FIPS 205 SLH-DSA)」。\n【QKD / QRNG 物理防護】：基於海森堡測不準原理與單光子不可複製定理 (No-Cloning Theorem)。",
+        gateMechanism: "【PQC 運算】：在伺服器 CPU、安全 FPGA (如 Lattice LSCC) 或抗量子安全晶片 (如 SEALSQ LAES QS7001) 中執行高速多項式數論轉換 (NTT) 矩陣運算。\n【QKD 傳輸】：透過光纖或低軌衛星發射偏振/相位編碼單光子或糾纏光子對。",
+        readoutMethod: "PQC 透過 TLS 1.3 網路握手協定完成毫秒級零信任驗證；QKD 則透過比對公開基底之量子位元錯誤率 (QBER) 偵測是否存在竊聽。"
+      },
+      engineeringSpecs: {
+        coherenceTime: "PQC 金鑰可抵抗容錯量子電腦長達數十年以上之攻擊",
+        twoQubitFidelity: "NIST FIPS 203 (ML-KEM) / FIPS 204 (ML-DSA) / CNSA 2.0 最高國安等級認證",
+        gateSpeed: "ML-KEM-768 網路金鑰交換僅需 ~0.1 毫秒（比傳統 RSA 快且無損網速）",
+        connectivity: "PQC 100% 相容全球現有網際網路與雲端；QKD 適用於主權光纖專線與衛星骨幹",
+        operatingEnv: "全室溫標準資料中心、端點電腦、智慧卡與物聯網晶片"
+      },
+      currentBottleneck: "PQC 數位簽章（如 ML-DSA 與 SLH-DSA）的公鑰與簽章體積比傳統 ECC 大約 20–40 倍，對老舊物聯網設備、汽車 ECU 與低頻寬衛星構成記憶體與延遲壓力，因此亟需專用硬體加速晶片（如 LAES、LSCC）與自動化密碼盤點工具（CBOM，如 PANW、SandboxAQ）。",
+      timeline: [
+        {
+          year: "1984 & 1994",
+          stage: "BB84 量子密碼協議誕生 & Shor 演算法宣告傳統公鑰密碼死刑",
+          milestone: "1984 年 Bennett 與 Brassard 提出人類首個量子金鑰分發協議 (BB84)；1994 年 Peter Shor 提出可在多項式時間內分解大整數與求解離散對數的量子演算法，證明容錯量子電腦將徹底瓦解 RSA 與 ECC。",
+          paperTitle: "Quantum cryptography: Public key distribution and coin tossing (BB84) / Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer (Shor)",
+          journal: "IEEE ICCSSP (1984) & SIAM Journal on Computing 26, 1484 (1997)",
+          paperUrl: "https://epubs.siam.org/doi/10.1137/S0097539795293172"
+        },
+        {
+          year: "2005",
+          stage: "Oded Regev 提出 LWE（帶誤差學習）晶格密碼學理論（哥德爾獎突破）",
+          milestone: "密碼學家 Oded Regev 提出 Learning With Errors (LWE) 問題，並嚴格證明破解 LWE 的平均難度等同於最壞情況下求解高維度晶格最短向量問題，成為今日 NIST FIPS 203/204 的數學基石。",
+          paperTitle: "On lattices, learning with errors, random linear codes, and cryptography",
+          journal: "Journal of the ACM 56(6), Article 34 (STOC 2005 / JACM 2009)",
+          paperUrl: "https://dl.acm.org/doi/10.1145/1568318.1568324"
+        },
+        {
+          year: "2018–2022",
+          stage: "IBM Research 與學界聯盟設計 CRYSTALS-Kyber 與 CRYSTALS-Dilithium",
+          milestone: "IBM 蘇黎世實驗室與歐美密碼學家提出基於模晶格 (Module-LWE) 的高效金鑰封裝 Kyber 與數位簽章 Dilithium，在 NIST 全球歷時 6 年的後量子密碼競賽中脫穎而出。",
+          paperTitle: "CRYSTALS – Kyber: a CCA-secure module-lattice-based KEM",
+          journal: "IEEE European Symposium on Security and Privacy (EuroS&P 2018)",
+          paperUrl: "https://ieeexplore.ieee.org/document/8406610"
+        },
+        {
+          year: "2024.08–2026",
+          stage: "NIST 正式頒布 FIPS 203 / 204 / 205 標準，全球進入強制遷移商轉期",
+          milestone: "美國 NIST 正式發布首批聯邦後量子密碼標準（ML-KEM、ML-DSA、SLH-DSA）；截至 2026 年，Cloudflare (NET) 已將全球 38% HTTPS 流量升級為後量子加密，SEALSQ (LAES) 與 Lattice (LSCC) 抗量子晶片全面量產出貨。",
+          paperTitle: "NIST FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), and FIPS 205 (SLH-DSA) Official Standards",
+          journal: "National Institute of Standards and Technology (NIST, 2024–2026)",
+          paperUrl: "https://csrc.nist.gov/pubs/fips/203/final"
+        }
+      ]
+    }
   ]
 };
+
 

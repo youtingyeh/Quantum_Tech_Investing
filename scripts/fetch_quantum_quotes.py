@@ -531,37 +531,65 @@ def fetch_yfinance_metrics(existing_stocks_map: Dict[str, Dict[str, Any]]) -> Di
     return results
 
 
-def fetch_latest_arxiv_papers(max_results: int = 16) -> List[Dict[str, Any]]:
+def fetch_latest_arxiv_papers(max_results: int = 21) -> List[Dict[str, Any]]:
     """
-    Query arXiv API (`http://export.arxiv.org/api/query`) across 4 strategic streams:
-    1. Quantum Computing Hardware & Error Correction (量子電腦硬體與表面碼/LDPC糾錯)
-    2. Quantum Cryptography & QKD / QRNG Networks (量子加密、量子金鑰分發與量子網路)
-    3. Post-Quantum Cryptography / NIST PQC (後量子密碼學、晶格密碼 ML-KEM / ML-DSA)
-    4. Quantum AI & Hybrid GPU-QPU Computing (量子 AI、量子機器學習與混合超算)
+    Query arXiv API (`http://export.arxiv.org/api/query`) across all 7 quantum technology lines:
+    1. trapped-ion: Trapped-Ion Quantum Computing (離子阱)
+    2. superconducting: Superconducting Qubits & Surface/qLDPC Code (超導邏輯閘)
+    3. neutral-atom: Neutral-Atom Tweezers & Rydberg Arrays (中性原子)
+    4. photonic: Photonic / Linear Optical / GKP Quantum Computing (光量子)
+    5. topological-cat: Topological Majorana & Bosonic Cat Qubits (拓撲與玻色貓位元)
+    6. annealing: Quantum Annealing & Ising Optimization (量子退火)
+    7. pqc-crypto: Quantum Cryptography (QKD/QRNG) & Post-Quantum Cryptography (PQC)
     """
     queries = [
         (
-            "Quantum Computing Hardware & QEC (量子電腦硬體與糾錯)",
-            "cat:quant-ph AND (all:\"surface code\" OR all:\"logical qubit\" OR all:\"trapped-ion\" OR all:\"superconducting qubit\" OR all:\"neutral atom\" OR all:\"cat qubit\")",
+            "trapped-ion",
+            "離子阱量子電腦 (Trapped-Ion)",
+            "cat:quant-ph AND (all:\"trapped-ion\" OR all:\"trapped ion\" OR all:\"QCCD\" OR all:\"ion trap qubit\")",
             "Quantum Hardware / QEC",
-            5
+            3
         ),
         (
-            "Quantum Cryptography — QKD & QRNG (量子加密與量子通訊)",
-            "cat:quant-ph AND (all:\"quantum key distribution\" OR all:\"QKD\" OR all:\"quantum random number\" OR all:\"quantum network\" OR all:\"entanglement distribution\")",
-            "Quantum Encryption (QKD/QRNG)",
-            4
+            "superconducting",
+            "超導邏輯閘量子電腦 (Superconducting)",
+            "cat:quant-ph AND (all:\"superconducting qubit\" OR all:\"transmon\" OR all:\"surface code\" OR all:\"qLDPC\")",
+            "Quantum Hardware / QEC",
+            3
         ),
         (
-            "Post-Quantum Cryptography — PQC (後量子密碼學與抗量子晶片)",
-            "(cat:cs.CR OR cat:quant-ph) AND (all:\"post-quantum\" OR all:\"ML-KEM\" OR all:\"ML-DSA\" OR all:\"Kyber\" OR all:\"Dilithium\" OR all:\"lattice-based cryptography\")",
-            "Post-Quantum Crypto (PQC)",
-            4
+            "neutral-atom",
+            "中性原子陣列量子電腦 (Neutral-Atom)",
+            "cat:quant-ph AND (all:\"neutral atom\" OR all:\"Rydberg atom\" OR all:\"optical tweezer\" OR all:\"reconfigurable atom\")",
+            "Quantum Hardware / QEC",
+            3
         ),
         (
-            "Quantum AI & Machine Learning (量子 AI 與混合超算)",
-            "cat:quant-ph AND (cat:cs.AI OR cat:cs.LG OR all:\"quantum machine learning\" OR all:\"quantum neural\" OR all:\"generative quantum\")",
+            "photonic",
+            "光量子電腦與矽光子 (Photonic)",
+            "cat:quant-ph AND (all:\"photonic quantum\" OR all:\"GKP qubit\" OR all:\"fusion-based quantum\" OR all:\"boson sampling\")",
+            "Quantum Hardware / QEC",
+            3
+        ),
+        (
+            "topological-cat",
+            "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
+            "cat:quant-ph AND (all:\"Majorana\" OR all:\"cat qubit\" OR all:\"bosonic code\" OR all:\"topological qubit\")",
+            "Quantum Hardware / QEC",
+            3
+        ),
+        (
+            "annealing",
+            "量子退火與伊辛最佳化 (Quantum Annealing)",
+            "cat:quant-ph AND (all:\"quantum annealing\" OR all:\"Ising machine\" OR all:\"adiabatic quantum\" OR all:\"QUBO\")",
             "Quantum AI / Hybrid",
+            3
+        ),
+        (
+            "pqc-crypto",
+            "量子加密 (QKD) 與後量子密碼學 (PQC)",
+            "(cat:cs.CR OR cat:quant-ph) AND (all:\"post-quantum\" OR all:\"ML-KEM\" OR all:\"ML-DSA\" OR all:\"quantum key distribution\" OR all:\"QKD\")",
+            "Post-Quantum Crypto (PQC)",
             3
         ),
     ]
@@ -570,7 +598,7 @@ def fetch_latest_arxiv_papers(max_results: int = 16) -> List[Dict[str, Any]]:
     seen_ids = set()
     ns = {"atom": "http://www.w3.org/2005/Atom"}
 
-    for topic_label, raw_query, badge_tag, limit in queries:
+    for modality_id, topic_label, raw_query, badge_tag, limit in queries:
         encoded_query = urllib.parse.quote(raw_query)
         url = (
             f"http://export.arxiv.org/api/query?"
@@ -579,7 +607,7 @@ def fetch_latest_arxiv_papers(max_results: int = 16) -> List[Dict[str, Any]]:
         try:
             req = urllib.request.Request(
                 url,
-                headers={"User-Agent": "QuantumTechInvestingTerminal/2.5 (https://github.com/youtingyeh/Quantum_Tech_Investing)"}
+                headers={"User-Agent": "QuantumTechInvestingTerminal/3.0 (https://github.com/youtingyeh/Quantum_Tech_Investing)"}
             )
             with urllib.request.urlopen(req, timeout=20) as resp:
                 xml_data = resp.read()
@@ -609,6 +637,7 @@ def fetch_latest_arxiv_papers(max_results: int = 16) -> List[Dict[str, Any]]:
 
                 papers.append({
                     "arxiv_id": arxiv_id,
+                    "modality_id": modality_id,
                     "topic_stream": topic_label,
                     "domain_tag": badge_tag,
                     "title": title,
