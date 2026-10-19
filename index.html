@@ -65,6 +65,12 @@
           <button data-nav-target="overview" class="nav-tab active shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
             📊 全景總覽與指標圖表
           </button>
+          <button data-nav-target="modality-arena" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-sky-300 hover:text-white">
+            🧭 技術流派分類與同類評比
+          </button>
+          <button data-nav-target="live-analytics" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-emerald-300 hover:text-white">
+            🤖 自動化財報(毛利率/Debt) &amp; 優勢決策
+          </button>
           <button data-nav-target="stocks" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
             🏛️ 美股標的資料庫 (23檔)
           </button>
@@ -78,10 +84,10 @@
             🦄 未上市 Pre-IPO 獨角獸 (10家)
           </button>
           <button data-nav-target="pqc-hub" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
-            🔐 量子加密 & PQC 專題
+            🔐 量子加密 &amp; PQC 專題
           </button>
           <button data-nav-target="papers-metrics" class="nav-tab shrink-0 px-3 py-2 rounded-lg border border-transparent text-slate-300 hover:text-white">
-            📚 論文庫 & 技術/經濟百科
+            📚 論文庫 &amp; 技術/經濟百科
           </button>
         </nav>
       </div>
@@ -99,7 +105,7 @@
       <div class="quantum-card-static p-6 sm:p-8 bg-gradient-to-br from-slate-900/95 via-[#0b132b]/90 to-indigo-950/60 border border-sky-500/30 relative overflow-hidden">
         <div class="max-w-4xl space-y-3">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-medium">
-            <span>⚡ 2026 年 10 月最新校驗：涵蓋 Quantinuum (QNT)、IQM (IQMX) 等 2026 最新掛牌量子股</span>
+            <span>⚡ 2026 年 10 月最新校驗：涵蓋 Quantinuum (QNT)、IQM (IQMX) 等 2026 最新掛牌量子股 + Python 自動化財報/arXiv 更新引擎</span>
           </div>
           <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
             從「實體量子位元競賽」邁向「容錯邏輯量子位元」與「後量子密碼全面商轉」
@@ -108,14 +114,17 @@
             本平台完整收錄美股已上市<strong>純量子電腦與軟體股</strong>（IonQ `IONQ`、Quantinuum `QNT`、D-Wave `QBTS`、IQM `IQMX`、Rigetti `RGTI`、Infleqtion `INFQ`、QCi `QUBT`、Pasqal `PSQL`、Xanadu `XNDU`、Horizon Quantum `HQ`）、<strong>量子加密與後量子密碼 (PQC) 純股</strong>（SEALSQ `LAES`、Arqit `ARQQ`、WISeKey `WKEY`）、<strong>科技與資安巨頭</strong>（Google、IBM、Microsoft、NVIDIA、AWS、Honeywell、Cloudflare、Palo Alto、Lattice、CrowdStrike）、<strong>核心主題 ETF (`QTUM`)</strong> 以及<strong>真正尚未上市之 10 大 Pre-IPO 獨角獸</strong>（PsiQuantum、SandboxAQ、Classiq、QuEra、Atom Computing 等）。
           </p>
           <div class="pt-2 flex flex-wrap gap-3">
-            <button onclick="switchSection('stocks')" class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition shadow-lg shadow-sky-500/25">
-              探索 23 檔已上市量子與 PQC 美股 →
+            <button onclick="switchSection('modality-arena')" class="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition shadow-lg shadow-sky-500/25">
+              🧭 8 大技術流派分類與同類評比擂台 →
+            </button>
+            <button onclick="switchSection('live-analytics')" class="px-4 py-2 rounded-lg bg-emerald-500/25 hover:bg-emerald-500/40 border border-emerald-400/40 text-emerald-200 font-bold text-xs transition">
+              🤖 查看 yfinance 毛利率 / Debt-to-EBITDA 與優勢決策引擎 →
+            </button>
+            <button onclick="switchSection('stocks')" class="px-4 py-2 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 border border-indigo-400/40 text-indigo-200 font-semibold text-xs transition">
+              探索 23 檔已上市量子與 PQC 美股
             </button>
             <button onclick="switchSection('pre-ipo')" class="px-4 py-2 rounded-lg bg-purple-600/30 hover:bg-purple-600/50 border border-purple-400/40 text-purple-200 font-semibold text-xs transition">
-              查看 PsiQuantum / SandboxAQ / QuEra 未上市名單
-            </button>
-            <button onclick="switchSection('pqc-hub')" class="px-4 py-2 rounded-lg bg-emerald-600/25 hover:bg-emerald-600/40 border border-emerald-400/40 text-emerald-200 font-semibold text-xs transition">
-              互動式 Mosca 定理量子風險計算機
+              查看 PsiQuantum / SandboxAQ 未上市名單
             </button>
           </div>
         </div>
@@ -552,6 +561,106 @@
       </div>
     </section>
 
+    <!-- ====================================================================== -->
+    <!-- SECTION 8: 8 HARDWARE/SOFTWARE MODALITIES PEER ARENA (技術流派與同類評比) -->
+    <!-- ====================================================================== -->
+    <section id="section-modality-arena" class="app-section hidden space-y-6">
+      <div class="quantum-card-static p-6 space-y-4 border border-sky-500/35">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="text-xs font-bold text-sky-400 uppercase tracking-wider">🧭 8 大量子運算與密碼技術流派・同類橫向評比擂台 (Intra-Modality Peer Comparison)</div>
+            <h2 class="text-2xl font-extrabold text-white mt-1">不同技術路線的量子電腦與抗量子密碼公司：物理分類與同類捉對廝殺</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+              蘋果不能直接與橘子比較：超導量子電腦追求「奈秒級高速時脈」，離子阱追求「99.99% 極致保真度與全連通」，光量子追求「室溫光纖模組化百萬位元」。下方將所有已上市美股與未上市獨角獸嚴格依 <strong>8 大技術路線分類</strong>，並針對<strong>同一技術路線內部的競爭對手進行四維度量化評分（保真度、擴展性、商業化、資金跑道）與深度優劣勢對決</strong>。
+            </p>
+          </div>
+        </div>
+        <!-- Filter Pills for Modalities -->
+        <div id="arenaFilterPills" class="flex flex-wrap gap-2 pt-2"></div>
+      </div>
+
+      <!-- Modality Arena Cards Container -->
+      <div id="modalityArenaContainer" class="space-y-8"></div>
+    </section>
+
+    <!-- ====================================================================== -->
+    <!-- SECTION 9: AUTOMATED YFINANCE (GROSS MARGIN / DEBT-TO-EBITDA) & ARXIV  -->
+    <!--            COMPETITIVE ADVANTAGE ENGINE (Python 自動化財報與優勢決策站)  -->
+    <!-- ====================================================================== -->
+    <section id="section-live-analytics" class="app-section hidden space-y-8">
+      <!-- Header Banner -->
+      <div class="quantum-card-static p-6 border border-emerald-500/40 bg-gradient-to-br from-slate-900/95 via-emerald-950/20 to-slate-950 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
+              <span>🤖 由 `scripts/fetch_quantum_quotes.py` + GitHub Actions 定期自動抓取更新 `data/quantum_live_data.json`</span>
+            </div>
+            <h2 class="text-2xl font-extrabold text-white mt-2">
+              yfinance 財報指標（毛利率、Debt-to-EBITDA）、arXiv 最新論文與「誰將獲取最大優勢」量化決策引擎
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+              本專區直接讀取由 Python 腳本自動更新之 <code class="text-sky-300 font-mono-num">data/quantum_live_data.json</code>，結合 <strong>Yahoo Finance (`yfinance`) 即時財報指標（毛利率 Gross Margin、負債/EBITDA 比 Debt-to-EBITDA、淨現金跑道）</strong> 與 <strong>arXiv API 最新量子電腦 / 量子加密 (QKD) / 後量子密碼學 (PQC) 論文動能</strong>，量化評估各技術類別與個別公司的競爭優勢。
+            </p>
+          </div>
+          <div class="shrink-0 p-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-xs space-y-1 min-w-[230px]">
+            <div class="text-slate-400">JSON 最後自動更新時間 (UTC)：</div>
+            <div id="liveJsonUpdatedAt" class="font-mono-num font-bold text-emerald-400 text-sm">載入中...</div>
+            <div class="text-[11px] text-slate-400">腳本路徑：<code class="text-sky-300">scripts/fetch_quantum_quotes.py</code></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 1: Category Advantage Verdict Matrix (哪一類量子電腦/加密/PQC將獲取更大優勢或成效) -->
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xl font-extrabold text-white">🏆 各類別量子電腦 / 量子加密 / 後量子密碼學：誰將獲取更大優勢與商轉成效？</h3>
+          <p class="text-xs text-slate-400 mt-1">綜合比較商轉時程、毛利率結構、Debt-to-EBITDA 財務槓桿與容錯技術突破之八大領域勝出潛力排行</p>
+        </div>
+        <div id="liveModalityVerdictsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+      </div>
+
+      <!-- Part 2: 23 Stocks yfinance Gross Margin, Debt-to-EBITDA & Advantage Score Table -->
+      <div class="quantum-card-static p-6 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-extrabold text-white">📊 23 檔美股 yfinance 財報指標（毛利率、Debt-to-EBITDA）與綜合優勢評分排行表</h3>
+            <p class="text-xs text-slate-400 mt-0.5">
+              針對尚處研發投入期（EBITDA 為負）之純量子硬體股，系統自動計算其「有息負債 vs. 帳上總現金」之淨現金覆蓋年數，避免負值 Debt-to-EBITDA 造成誤判
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <select id="liveTableCategoryFilter" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-slate-200">
+              <option value="all">篩選類別：全部 23 檔標的</option>
+              <option value="pure-compute">⚡ 純量子電腦與軟體 (10檔)</option>
+              <option value="pure-pqc">🔐 量子加密 / PQC 純股 (3檔)</option>
+              <option value="big-tech">🌐 科技巨頭量子與超算 (6檔)</option>
+              <option value="enterprise-pqc">🛡️ 企業資安與 PQC 晶片 (4檔)</option>
+            </select>
+            <select id="liveTableSortSelect" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-slate-200">
+              <option value="advantage-desc">排序：綜合競爭優勢總分 (高 → 低)</option>
+              <option value="gm-desc">排序：yfinance 毛利率 Gross Margin (高 → 低)</option>
+              <option value="cash-desc">排序：帳上總現金 Total Cash (高 → 低)</option>
+              <option value="yoy-desc">排序：營收年增率 YoY (高 → 低)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="liveFinancialsTableContainer" class="overflow-x-auto"></div>
+      </div>
+
+      <!-- Part 3: Live arXiv API Feed (Quantum Computing / Quantum Encryption QKD / Post-Quantum Crypto PQC / Quantum AI) -->
+      <div class="quantum-card-static p-6 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+          <div>
+            <h3 class="text-lg font-extrabold text-white">📄 arXiv API 自動抓取：最新量子電腦 / 量子加密 (QKD) / 後量子密碼學 (PQC) 論文串流</h3>
+            <p class="text-xs text-slate-400 mt-0.5">由 Python 腳本定期查詢 <code class="text-sky-300">export.arxiv.org/api/query</code> 並寫入 JSON 之最新預印本論文</p>
+          </div>
+          <div id="liveArxivFilterPills" class="flex flex-wrap gap-1.5"></div>
+        </div>
+        <div id="liveArxivPapersContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Stock Deep-Dive Modal -->
@@ -566,7 +675,7 @@
         <span class="font-bold text-slate-200">Quantum Tech Investing Terminal</span> — 涵蓋量子電腦、量子加密 (QKD/QRNG)、後量子密碼 (PQC) 美股、ETF 與 Pre-IPO 獨角獸研究平台。
       </div>
       <div class="flex items-center gap-4">
-        <span>資料基準：2025–2026 財報與 Nature / Science / NIST 公開文獻</span>
+        <span>資料基準：2025–2026 財報與 Nature / Science / NIST / arXiv 公開文獻</span>
         <a href="https://github.com/youtingyeh/Quantum_Tech_Investing" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">GitHub Repository ↗</a>
       </div>
     </div>
@@ -574,6 +683,7 @@
 
   <!-- Scripts -->
   <script src="js/data.js"></script>
+  <script src="js/live_data_fallback.js"></script>
   <script src="js/charts.js"></script>
   <script src="js/app.js"></script>
 </body>

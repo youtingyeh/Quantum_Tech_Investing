@@ -1,0 +1,47 @@
+name: Auto-Update Quantum Financials (yfinance) & arXiv Papers
+
+on:
+  schedule:
+    # Runs every US market trading day (Mon-Fri) at 22:00 UTC (after US market close)
+    - cron: '0 22 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-live-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python dependencies (yfinance)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch yfinance Gross Margin / Debt-to-EBITDA & arXiv AI/Hardware Papers
+        run: |
+          python scripts/fetch_quantum_quotes.py
+
+      - name: Commit and push updated JSON files to main & gh-pages
+        run: |
+          git config user.name "QuantumDataBot"
+          git config user.email "actions@github.com"
+          git add data/quantum_live_data.json data/latest_arxiv_feed.json js/live_data_fallback.js
+          if git diff --staged --quiet; then
+            echo "No changes in financial or arXiv JSON data."
+          else
+            git commit -m "chore(data): auto-update yfinance financials (Gross Margin, Debt/EBITDA) & arXiv papers"
+            git push origin HEAD:main
+            git push origin HEAD:gh-pages --force
+          fi

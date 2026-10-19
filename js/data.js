@@ -2006,5 +2006,405 @@ window.QUANTUM_DATA = {
         leaders: "Microsoft, PsiQuantum, Quantinuum (QNT), IonQ (IONQ), Rigetti (RGTI), IQM (IQMX), Pasqal (PSQL)"
       }
     ]
-  }
+  },
+
+  // ============================================================================
+  // 6. MODALITY CLASSIFICATION & INTRA-CATEGORY PEER ARENA (技術流派分類與同類橫向評比)
+  // ============================================================================
+  modalityArena: [
+    {
+      id: "trapped-ion",
+      name: "1. 離子阱量子電腦 (Trapped-Ion)",
+      tagline: "保真度與全連通之王 — 唯一誕生兩家百億級上市龍頭的黃金賽道",
+      physicsPrinciple: "利用超高真空腔體內的電磁場懸浮帶電原子離子（如 ¹³³Ba⁺、¹³⁷Ba⁺、¹⁷¹Yb⁺），透過精準雷射或晶片內建微波天線 (EQC) 操控超精細結構能階，並藉由庫侖靜電斥力實現任意兩顆離子間的集體振動模式糾纏。",
+      operatingTemp: "室溫真空腔體至 ~4K–10K 低溫晶片阱（無需 10mK 巨型稀釋製冷機）",
+      corePros: "天然全連通 (All-to-All Connectivity)、雙量子位元閘保真度全球最高 (99.92%–99.99%)、相干時間長達數十秒至數分鐘、支援高編碼率 qLDPC 糾錯碼。",
+      coreCons: "單次邏輯閘速度較慢 (100–600 µs，比超導慢約千倍)；單一線性阱超過百顆離子後需靠「QCCD 離子穿梭」或「光子互連」跨模組擴充。",
+      verdictSummary: "離子阱是目前商業營收最高、邏輯量子位元品質最穩定的技術流派。IONQ 在「標準矽晶圓代工微波控制 (EQC) + QKD 網路併購」領先；QNT (Quantinuum) 則在「98Q Helios 整機平均保真度 + 容錯邏輯閘實證 + 量子化學軟體」拔得頭籌。",
+      peers: [
+        {
+          ticker: "IONQ",
+          name: "IonQ, Inc.",
+          status: "NYSE 上市 ($12.73B)",
+          architecture: "鋇離子 ¹³³Ba⁺ (Tempo) + Oxford Ionics 電控晶片 (EQC) + Lightsynq 光子互連",
+          fidelityAndQubits: "99.99% (EQC 峰值) / 99.9% (Tempo) | #AQ 64 | Walking Cat 110 邏輯位元藍圖",
+          commercialTraction: "FY25 營收 $130.0M (+202%) | 現金 ~$3.3B | 併購 IDQ 切入 QKD",
+          scores: { fidelity: 99, scalability: 93, commercial: 97, cash: 99, total: 96 },
+          peerRank: "🏆 同類併購生態與營收規模冠軍",
+          comparisonNote: "收購 Oxford Ionics 後徹底解決過去雷射光學對準難以擴充至萬顆離子的痛點，可用英飛凌標準半導體產線製造離子阱，且帳上 $3.3B 現金傲視全場。"
+        },
+        {
+          ticker: "QNT",
+          name: "Quantinuum Inc.",
+          status: "NASDAQ 上市 ($9.60B, 2026/06 IPO)",
+          architecture: "鋇離子 ¹³⁷Ba⁺ 運算 + 鐿離子 ¹⁷¹Yb⁺ 同情冷卻 (QCCD 動態環形穿梭 Helios)",
+          fidelityAndQubits: "99.921% (98Q 全系統平均) | QV 2²¹ | 已實證 12–50 邏輯位元 (錯誤率降 800 倍)",
+          commercialTraction: "FY26E $28M–$32M (Q2 +279%) | 現金 ~$1.95B+ | Oracle 直接採購 Helios 主機",
+          scores: { fidelity: 98, scalability: 91, commercial: 93, cash: 95, total: 95 },
+          peerRank: "🏆 同類整機容錯成熟度與性價比冠軍",
+          comparisonNote: "在大型整機 (98Q Helios) 的全系統實測保真度與主動量子糾錯演示上領先全球；市值 ($9.6B) 低於 IonQ ($12.7B)，具備相對估值優勢。"
+        },
+        {
+          ticker: "HON",
+          name: "Honeywell International",
+          status: "NASDAQ 上市 ($148B 工業母公司)",
+          architecture: "控股 Quantinuum (QNT) 過半股權 + 提供超高真空離子阱 MEMS 晶圓代工",
+          fidelityAndQubits: "共享 Quantinuum Helios 98Q 技術成果 + 自研航太量子慣性導航感測器",
+          commercialTraction: "集團營收 $39.5B | 享有 QNT 持股市值與航太國防量子感測雙重收益",
+          scores: { fidelity: 95, scalability: 90, commercial: 94, cash: 98, total: 92 },
+          peerRank: "🛡️ 低波動藍籌母公司首選",
+          comparisonNote: "適合不敢承受純量子股單日劇烈波動、希望領取穩定股息同時參與 Quantinuum 成長的保守型資金。"
+        }
+      ]
+    },
+    {
+      id: "superconducting",
+      name: "2. 超導邏輯閘量子電腦 (Superconducting Gate-Model)",
+      tagline: "奈秒級極速與表面碼容錯先鋒 — 科技巨頭重金押注的主流賽道",
+      physicsPrinciple: "在接近絕對零度 (~10–15 mK) 下，電流通過鋁/鈮/鉭超導約瑟夫森接面形成無電阻非線性諧振器 (Transmon)，利用微波脈衝以 20–50 奈秒超高速操控人造原子能階。",
+      operatingTemp: "10–15 mK (必須配置昂貴的液態氦稀釋製冷機 Dilution Refrigerator)",
+      corePros: "邏輯閘速度極快 (20–50 ns，比離子阱快上千倍)、半導體微影製程相容度高、Google Willow 已於 2024 年底在《Nature》實證跨越表面碼容錯門檻。",
+      coreCons: "僅支援平面鄰近位元耦合（需大量 SWAP 閘或發展雙變數 qLDPC / 星狀共振腔）、極低溫冷卻同軸電纜散熱限制單一製冷機位元上限。",
+      verdictSummary: "巨頭組由 Google (Willow 表面碼霸主) 與 IBM (qLDPC Gross Code 與 Qiskit 生態霸主) 雙雄爭霸；純量子上市股則由歐洲整機出貨王 IQM (IQMX) 與美國模組化拼接代表 Rigetti (RGTI) 正面交鋒。",
+      peers: [
+        {
+          ticker: "GOOGL",
+          name: "Alphabet (Google Quantum AI)",
+          status: "NASDAQ 巨頭 ($2,620B)",
+          architecture: "Willow 105Q 平面方形格點 + 可調耦合器",
+          fidelityAndQubits: "99.9%+ (2Q 錯誤率 <0.1%) | 全球首證 d=3→5→7 邏輯錯誤率指數減半 (Λ=2.14)",
+          commercialTraction: "集團無限現金流支持 | 戰略投資中性原子 QuEra",
+          scores: { fidelity: 98, scalability: 94, commercial: 90, cash: 100, total: 96 },
+          peerRank: "👑 超導物理與表面碼糾錯絕對標竿",
+          comparisonNote: "Willow 晶片是目前人類在超導量子糾錯上最嚴謹、最領先的實驗成果，T1 相干時間提升至 ~100 µs。"
+        },
+        {
+          ticker: "IBM",
+          name: "IBM Corporation",
+          status: "NYSE 巨頭 ($218B)",
+          architecture: "Heron R3 (156Q) & Nighthawk R2 方形格點 + Quantum System Two 模組化機櫃",
+          fidelityAndQubits: "99.8% 保真度 | Nighthawk R2 每秒 >10 萬線路 | qLDPC Gross Code 省 90% 實體位元",
+          commercialTraction: "累積量子簽約突破 $1B+ | Qiskit 全球市佔第一 | 主導 3 項 NIST PQC 標準",
+          scores: { fidelity: 95, scalability: 96, commercial: 99, cash: 98, total: 96 },
+          peerRank: "👑 超導商業化簽約額與軟體生態總冠軍",
+          comparisonNote: "以雙變數自行車碼 (Gross Code) 解決超導表面碼太耗實體位元的弱點，2029 Starling 系統直指 200 邏輯位元。"
+        },
+        {
+          ticker: "IQMX",
+          name: "IQM Quantum Computers",
+          status: "NASDAQ 上市 ($4.42B, 2026/07 上市)",
+          architecture: "IQM Radiance (54Q / 150Q) + IQM Star 中心諧振腔非局域耦合架構",
+          fidelityAndQubits: "99.5%–99.7% 保真度 | 150 實體位元 | 星狀拓撲支援高效率 qLDPC 糾錯",
+          commercialTraction: "營收 $35M+ (+115%) | 德國 LRZ、芬蘭 VTT、西班牙與亞洲國家超算中心整機出貨王",
+          scores: { fidelity: 91, scalability: 90, commercial: 92, cash: 88, total: 90 },
+          peerRank: "🏆 純超導股本地端整機銷售冠軍",
+          comparisonNote: "相比 Rigetti，IQM 在歐洲與亞洲國家級超算中心的整機交付營收規模更大，且擁有 IQM Star 長程耦合專利。"
+        },
+        {
+          ticker: "RGTI",
+          name: "Rigetti Computing",
+          status: "NASDAQ 上市 ($4.08B)",
+          architecture: "Cepheus-1-108Q (4x 晶片模組化拼接) + Novera 9Q + ABAA 製程",
+          fidelityAndQubits: "99.5% (36Q) / 99.0% (108Q) / 99.9% (24ns 原型) | 絕熱 CZ 原生閘",
+          commercialTraction: "年化營收 ~$19.2M (Q2 +185%) | 現金 $541.3M (零負債) | 廣達入股 + CHIPS 法案支持",
+          scores: { fidelity: 90, scalability: 91, commercial: 86, cash: 92, total: 89 },
+          peerRank: "⚡ 美國本土純超導模組化拼接首選",
+          comparisonNote: "現金部位 ($541M) 比 IQM 更雄厚且為美國本土國防/CHIPS 法案核心受惠者，多晶片拼接技術具長期擴展優勢。"
+        },
+        {
+          ticker: "SEEQC (未上市)",
+          name: "SEEQC",
+          status: "Pre-IPO 私有 (~$1.0B 估值，2026/08 終止原 SPAC)",
+          architecture: "超導單磁通量子 (SFQ) 10mK 數位控制晶片 (與 QPU 3D 異質整合)",
+          fidelityAndQubits: "非獨立 QPU 競爭者，而是替超導 QPU 解決『千條同軸電纜散熱瓶頸』之低溫控制晶片",
+          commercialTraction: "與 NVIDIA、IBM、Booz Allen 深度合作",
+          scores: { fidelity: 89, scalability: 95, commercial: 82, cash: 80, total: 86 },
+          peerRank: "🔧 超導極低溫數位控制晶片獨特軍火商",
+          comparisonNote: "任何超導電腦要從 1,000 位元擴至 100,000 位元都必須將控制電路搬進冷卻機內，SEEQC 掌握此關鍵 SFQ 專利。"
+        }
+      ]
+    },
+    {
+      id: "neutral-atom",
+      name: "3. 中性原子量子電腦 (Neutral-Atom)",
+      tagline: "千位元高擴展性與動態光學鑷子黑馬 — 2024–2026 學術突破最密集的流派",
+      physicsPrinciple: "利用雷射光學晶格與可移動光學鑷子 (Optical Tweezers) 在真空玻璃腔內排列不帶電的銣 (⁸⁷Rb)、鍶 (⁸⁸Sr) 或鐿 (¹⁷¹Yb) 原子。平時原子互不干擾（相干時間極長），需執行邏輯閘時才用雷射激發至高能階「里德堡態 (Rydberg State)」產生偶極交互作用。",
+      operatingTemp: "室溫真空腔體（透過雷射多普勒與蒸發冷卻原子本身，機房無需大型液態氦製冷機）",
+      corePros: "單一腔體極易擴充至 1,000–10,000 顆原子、光學鑷子可在運算中途「整排移動原子」直接執行橫向糾纏邏輯閘 (Transversal Gates)。",
+      coreCons: "雙量子閘保真度 (~99.5%) 目前略低於離子阱與頂尖超導；原子裝填與螢光成像讀取速度較慢（毫秒級）。",
+      verdictSummary: "目前呈現「兩家已上市 (INFQ, PSQL) + 兩家未上市頂級獨角獸 (QuEra, Atom Computing)」的四強格局。INFQ 靠量子原子鐘商業變現最強；PSQL 估值最便宜且稱霸歐洲；QuEra 與 Atom Computing 則在邏輯量子位元數 (48Q & 24Q) 領先。",
+      peers: [
+        {
+          ticker: "INFQ",
+          name: "Infleqtion (ColdQuanta)",
+          status: "NYSE 上市 ($1.98B, 2026/02 上市)",
+          architecture: "Sqale 1,600Q 中性原子陣列 + Tiqker 光學原子鐘 + SuperstaQ 編譯器",
+          fidelityAndQubits: "99.5% 保真度 | 1,600 實體原子位元 | 脈衝級編譯優化",
+          commercialTraction: "營收 $38.0M (+85%) | 現金 ~$520M | 美英澳國防無 GPS 導航原子鐘大單",
+          scores: { fidelity: 90, scalability: 94, commercial: 94, cash: 92, total: 93 },
+          peerRank: "🏆 已上市中性原子營收與國防感測雙棲王",
+          comparisonNote: "同時擁有中性原子電腦與即刻變現的商用光學原子鐘，帳上 $520M 現金讓其在公開市場最具底氣。"
+        },
+        {
+          ticker: "PSQL",
+          name: "Pasqal Holding SA",
+          status: "NASDAQ 上市 ($1.20B, 2026/08 上市)",
+          architecture: "Orion / Fresnel 1,110+ 中性銣/鍶原子陣列 (類比 + 數位邏輯閘雙模)",
+          fidelityAndQubits: "99.5% 保真度 | 1,110 實體原子 | 2026–2027 推進百顆邏輯位元",
+          commercialTraction: "營收 $26.5M (+110%) | 現金 $360M+ | 法德國家超算中心與沙烏地 Aramco 主機交付",
+          scores: { fidelity: 90, scalability: 93, commercial: 91, cash: 89, total: 91 },
+          peerRank: "🏆 諾貝爾獎背書與最高性價比中性原子股",
+          comparisonNote: "共同創辦人為諾貝爾獎得主 Alain Aspect，市值僅 $1.20B（含 $360M 現金），是佈局中性原子最便宜的上市門票。"
+        },
+        {
+          ticker: "QuEra (未上市)",
+          name: "QuEra Computing",
+          status: "Pre-IPO 獨角獸 ($1.5B–$2.0B+ 估值)",
+          architecture: "哈佛/MIT 動態分區重構架構 (Zoned Architecture: 儲存區 / 糾纏區 / 讀出區)",
+          fidelityAndQubits: "99.55% 保真度 | 全球最高 48 顆邏輯量子位元實證 (《Nature》)",
+          commercialTraction: "獲 Google Quantum AI 與 SoftBank 領投 $2.3 億 | AWS Braket 主力中性原子機",
+          scores: { fidelity: 94, scalability: 96, commercial: 89, cash: 90, total: 94 },
+          peerRank: "👑 中性原子邏輯位元與容錯架構學術之王",
+          comparisonNote: "48 邏輯量子位元論文奠定其在容錯中性原子的龍頭地位，未來一旦 IPO 必成機構瘋搶標的。"
+        },
+        {
+          ticker: "Atom (未上市)",
+          name: "Atom Computing",
+          status: "Pre-IPO 獨角獸 ($1.2B+ 估值)",
+          architecture: "中性鐿原子 (¹⁷¹Yb) 核自旋量子位元 (相干時間 >40 秒)",
+          fidelityAndQubits: "99.5%+ | 1,180 實體位元 | 與微軟合作創下 24 顆全糾纏邏輯量子位元",
+          commercialTraction: "與微軟聯合銷售商用整機 Magne (獲丹麥 QuNorth 主權採購) | 2026 完成 Series C",
+          scores: { fidelity: 93, scalability: 95, commercial: 90, cash: 88, total: 92 },
+          peerRank: "👑 微軟 Azure Quantum 欽點商用硬體夥伴",
+          comparisonNote: "核自旋相干時間超長且支援線路中途失落原子即時補充，與微軟深度綁定帶來強大商用出海口。"
+        }
+      ]
+    },
+    {
+      id: "photonic",
+      name: "4. 光量子電腦 (Photonic Quantum Computing)",
+      tagline: "標準晶圓代工廠量產與室溫光纖網路化 — 直通百萬量子位元資料中心",
+      physicsPrinciple: "以光子 (Photon) 作為量子位元，利用氮化矽 (SiN)、矽光子或薄膜鈮酸鋰 (TFLN) 波導晶片進行分束干涉與電光調變，透過單光子偵測或連續變數壓縮態 (GKP States) 執行運算。",
+      operatingTemp: "核心運算晶片與光纖網路為「完全室溫」；僅超導奈米線單光子偵測器 (SNSPD) 需 ~1.5K–4K 輕度冷卻（QUBT 則完全室溫）",
+      corePros: "光子在室溫光纖中完全沒有熱退相干問題、可直接利用台積電/格羅方德 12 吋晶圓廠量產、天生具備透過電信光纖串聯多台機櫃的能力。",
+      coreCons: "光子在波導與光纖接頭中的「光學損耗 (Photon Loss)」是最大敵人；通用閘模型需仰賴極高效率單光子源與超高速電光開關。",
+      verdictSummary: "光量子陣營分為三大子路線：PsiQuantum（未上市，12吋晶圓廠離散單光子融合理論）、Xanadu (XNDU，已上市，連續變數 GKP 態 + PennyLane 軟體)、以及 QCi (QUBT，已上市，室溫非線性光學熵最佳化 + TFLN 代工)。",
+      peers: [
+        {
+          ticker: "PsiQuantum (未上市)",
+          name: "PsiQuantum",
+          status: "Pre-IPO 頭號獨角獸 ($7B–$10B 估值)",
+          architecture: "GlobalFoundries 300mm 晶圓廠量產 Omega 矽光子晶片 + 鈦酸鋇 (BTO) 超高速光開關",
+          fidelityAndQubits: "Fusion-Based QC 容錯架構 | 跳過小型機，直接建造芝加哥與布里斯本百萬位元資料中心",
+          commercialTraction: "募資逾 $2.3B (BlackRock, NVIDIA) + 美澳政府逾 $11 億建廠補助",
+          scores: { fidelity: 92, scalability: 98, commercial: 88, cash: 97, total: 95 },
+          peerRank: "👑 全球估值最高未上市量子獨角獸",
+          comparisonNote: "唯一真正把量子晶片放進標準 12 吋半導體代工廠大規模流片的公司，一步到位鎖定百萬位元容錯系統。"
+        },
+        {
+          ticker: "XNDU",
+          name: "Xanadu Quantum Technologies",
+          status: "NASDAQ / TSX 上市 ($925M, 2026/03 上市)",
+          architecture: "Aurora 4 機櫃光纖模組化系統 + 連續變數 GKP 玻色壓縮態 + PennyLane 軟體",
+          fidelityAndQubits: "99.4%+ | 84Q 模組化 (35 顆光子晶片 + 13km 光纖互連登上《Nature》)",
+          commercialTraction: "營收 $21.0M (+92%) | 現金 $460M (佔市值近 50%) | PennyLane 統治全球 QML 生態",
+          scores: { fidelity: 90, scalability: 95, commercial: 90, cash: 91, total: 92 },
+          peerRank: "🏆 已上市通用光量子與 QML 軟體首選",
+          comparisonNote: "市值僅 $9.25 億卻坐擁 $4.6 億現金與《Nature》認證的 Aurora 機櫃架構，同時掌握 PennyLane 軟體護城河。"
+        },
+        {
+          ticker: "QUBT",
+          name: "Quantum Computing Inc. (QCi)",
+          status: "NASDAQ 上市 ($1.50B)",
+          architecture: "Dirac-3 室溫非線性光學熵運算機 + 亞利桑那 Tempe 6 吋薄膜鈮酸鋰 (TFLN) 晶圓廠",
+          fidelityAndQubits: "專用型高維度光脈衝耗散最佳化 (非通用邏輯閘) | 100% 室溫免冷卻",
+          commercialTraction: "FY26E $20M–$25M | 現金 ~$1.3B (佔市值逾 85%) | 獲 NASA Goddard 與 Langley 合約",
+          scores: { fidelity: 84, scalability: 88, commercial: 89, cash: 96, total: 89 },
+          peerRank: "🏆 美國本土 TFLN 光子晶圓代工與高現金比代表",
+          comparisonNote: "投資核心在於其高達 $1.3B 的現金部位與全美首座商用 TFLN 光子晶圓廠（同時受惠 AI 光收發模組與量子光學）。"
+        }
+      ]
+    },
+    {
+      id: "cat-topological",
+      name: "5. 玻色貓態與拓撲量子位元 (Cat Qubits & Topological)",
+      tagline: "硬體級物理糾錯革命 — 將容錯量子電腦硬體成本砍掉 90% 的降維打擊",
+      physicsPrinciple: "傳統量子位元需同時修正「位元翻轉 (Bit-flip, X錯誤)」與「相位翻轉 (Phase-flip, Z錯誤)」，導致 1 顆邏輯位元需消耗上千顆實體位元。玻色貓態 (Cat Qubits) 利用微波共振腔中相位相反的相干態疊加，在物理層自主消滅位元翻轉；拓撲量子位元則利用馬約拉納零能模 (MZM) 編織非阿貝爾任意子，從拓撲幾何層面免疫局部干擾。",
+      operatingTemp: "10–20 mK 極低溫",
+      corePros: "將量子糾錯所需的實體位元與冷卻控制線開銷暴降 90% 以上，是通往緊湊型百萬位元容錯電腦的捷徑。",
+      coreCons: "技術難度極高：拓撲導體材料製備嚴苛，玻色貓態則剛完成首代多晶片概念驗證。",
+      verdictSummary: "由兩大雲端霸主微軟 (MSFT — Majorana 1 拓撲晶片) 與亞馬遜 (AMZN — Ocelot 玻色貓態晶片) 領軍，加上法國新創 Alice & Bob。",
+      peers: [
+        {
+          ticker: "MSFT",
+          name: "Microsoft (Majorana 1)",
+          status: "NASDAQ 巨頭 ($3,480B)",
+          architecture: "砷化銦-鋁 (InAs-Al) 拓撲導體異質結構 (馬約拉納零能模 MZMs)",
+          fidelityAndQubits: "8Q 拓撲核心晶片登上《Nature》(2025/02) | 單晶片百萬位元藍圖 | 入選 DARPA 最終階段",
+          commercialTraction: "Azure Quantum 同時整合 Quantinuum 與 Atom Computing 邏輯位元服務全球企業",
+          scores: { fidelity: 94, scalability: 99, commercial: 95, cash: 100, total: 96 },
+          peerRank: "👑 拓撲量子位元全球唯一霸主",
+          comparisonNote: "歷時 17 年研發的 Majorana 1 一旦完成千位元陣列擴展，將改寫整個量子硬體競爭規則。"
+        },
+        {
+          ticker: "AMZN",
+          name: "Amazon AWS (Ocelot)",
+          status: "NASDAQ 巨頭 ($2,360B)",
+          architecture: "鉭超導微腔玻色貓態量子位元 (Bosonic Cat Qubits) + 一維外部相位糾錯碼",
+          fidelityAndQubits: "位元翻轉壽命趨近 1 秒 (提升千倍) | 減少 90% 糾錯實體位元開銷 (《Nature》2025/02)",
+          commercialTraction: "AWS Braket 為全球最大量子雲平台入口",
+          scores: { fidelity: 93, scalability: 95, commercial: 94, cash: 100, total: 95 },
+          peerRank: "👑 玻色貓態糾錯晶片雲端巨頭",
+          comparisonNote: "Ocelot 證明 AWS 能以 1/10 的硬體成本在資料中心部署容錯量子伺服器。"
+        },
+        {
+          ticker: "Alice & Bob (未上市)",
+          name: "Alice & Bob",
+          status: "Pre-IPO 獨角獸 (~$350M+ 估值)",
+          architecture: "Helium / Graphene 超導玻色貓態處理器 + LDPC 糾錯碼",
+          fidelityAndQubits: "單顆貓量子位元位元翻轉壽命達數分鐘級別 | 目標 2,000 實體位元造出 100 邏輯位元",
+          commercialTraction: "完成 €100M Series B 融資，獲 NVIDIA NVentures 與法國國開行支持",
+          scores: { fidelity: 92, scalability: 93, commercial: 82, cash: 85, total: 88 },
+          peerRank: "🏆 純玻色貓態新創技術先驅",
+          comparisonNote: "專注於貓量子位元時間最久的純新創團隊，技術指標與 AWS Ocelot 並駕齊驅。"
+        }
+      ]
+    },
+    {
+      id: "annealing",
+      name: "6. 量子退火與專用組合最佳化 (Quantum Annealing)",
+      tagline: "不需等待 2030 年 — 今日已大規模商轉並獲《Science》認證量子優勢",
+      physicsPrinciple: "不執行通用邏輯閘，而是將複雜商業最佳化問題（物流路徑、排班、飛彈防禦分派、自旋玻璃材料）映射為伊辛模型 (Ising Model / QUBO) 的能量地景，利用量子穿隧效應直接穿越高窄能量障壁找到全域最優解。",
+      operatingTemp: "15 mK (D-Wave 超導退火) 或 室溫 (QCi 光學耗散最佳化)",
+      corePros: "量子位元數已達 4,800–7,000+ 顆、對雜訊容忍度高、已能處理百萬變數級別真實企業與國防問題。",
+      coreCons: "屬於專用型系統，無法執行 Shor 大數分解演算法或通用化學分子模擬。",
+      verdictSummary: "D-Wave (QBTS) 在此賽道擁有絕對壟斷地位，2025 年《Science》論文更讓其從商業最佳化跨足基礎材料物理模擬。",
+      peers: [
+        {
+          ticker: "QBTS",
+          name: "D-Wave Quantum Inc.",
+          status: "NYSE 上市 ($4.65B)",
+          architecture: "Advantage2 (Zephyr 20向連通拓撲, 4,800+ Qubits) + Dual-Rail 邏輯閘雙軌研發",
+          fidelityAndQubits: "能量尺度 +40%、雜訊降 4 倍 | 《Science》實證幾分鐘完成 Frontier 超算需百萬年之磁性模擬",
+          commercialTraction: "FY25 營收 $24.6M | H1'26 訂單 Bookings $35.5M (+1,120%) | RPO 積壓訂單 $40.7M",
+          scores: { fidelity: 92, scalability: 96, commercial: 96, cash: 89, total: 94 },
+          peerRank: "👑 全球量子退火唯一霸主與訂單成長王",
+          comparisonNote: "2026 上半年訂單暴增逾 11 倍（含 FAU $2,000 萬美元購機案），是短期商業訂單爆發力最強的純量子股。"
+        }
+      ]
+    },
+    {
+      id: "hybrid-software-qec",
+      name: "7. 混合量子超算、QEC 解碼與自動化編譯軟體層",
+      tagline: "不論哪種物理路線勝出都必買的「量子鏟子與作業系統」",
+      physicsPrinciple: "容錯量子電腦運作時，每秒產生數十 GB 的奇偶校驗症候群數據 (Syndrome Data)，必須在量子位元退相干前（數微秒內）由超低延遲 GPU 或專用 FPGA/ASIC 解碼器完成錯誤修正；同時上層演算法需透過自動化編譯器將高階數學模型壓縮為底層脈衝。",
+      operatingTemp: "室溫資料中心機櫃 (透過超低延遲光纖/同軸線與 QPU 連接)",
+      corePros: "完全免疫「單一硬體物理路線押錯寶」風險，毛利率高，且隨所有量子硬體位元數成長而倍數受惠。",
+      coreCons: "純量子軟體小型股短期營收規模仍受限於全球已安裝 QPU 總台數。",
+      verdictSummary: "硬體解碼與混合超算由 NVIDIA (NVDA) 與未上市 Riverlane 統治；純量子編譯軟體則由 2026/03 新上市的 Horizon Quantum (HQ) 與準上市獨角獸 Classiq 領軍。",
+      peers: [
+        {
+          ticker: "NVDA",
+          name: "NVIDIA (CUDA-Q & NVAQC)",
+          status: "NASDAQ 巨頭 ($3,880B)",
+          architecture: "CUDA-Q 混合編程平台 + cuQuantum 模擬器 + NVQLink 亞微秒級 QPU-GPU 互連",
+          fidelityAndQubits: "支援所有主流 QPU (Quantinuum, IonQ, QuEra, IQM, Rigetti) 之 AI 神經網路即時糾錯解碼",
+          commercialTraction: "全球國家級量子超算中心標配 | NVentures 入股 Quantinuum、PsiQuantum、QuEra",
+          scores: { fidelity: 99, scalability: 100, commercial: 100, cash: 100, total: 99 },
+          peerRank: "👑 全球量子混合超算與解碼算力絕對壟斷者",
+          comparisonNote: "每一台容錯量子電腦背後都必須配屬一整排 NVIDIA Grace Blackwell 超算負責即時解碼與混合運算。"
+        },
+        {
+          ticker: "HQ",
+          name: "Horizon Quantum Holdings",
+          status: "NASDAQ 上市 ($677M, 2026/03 上市)",
+          architecture: "Triple Alpha 自動化量子軟體開發環境 (將 C++/Python 自動合成為量子演算法)",
+          fidelityAndQubits: "支援跨超導、離子阱、中性原子之自動邏輯閘合成與最高 70% 線路深度壓縮",
+          commercialTraction: "營收 $8.5M (+140%) | 現金 $145M | 上市後股價穩健站上 ~$13.20",
+          scores: { fidelity: 89, scalability: 93, commercial: 86, cash: 86, total: 88 },
+          peerRank: "🏆 美股唯一已上市純量子編譯器軟體股",
+          comparisonNote: "市值僅 $6.77 億美元，為公開市場稀缺的「純量子軟體 (Hardware-Agnostic)」投資標的。"
+        },
+        {
+          ticker: "Classiq (未上市)",
+          name: "Classiq Technologies",
+          status: "Pre-IPO 洽談上市中 ($2B–$5B 目標估值)",
+          architecture: "高階功能模型量子電路自動合成平台（量子界的 Cadence / Synopsys EDA）",
+          fidelityAndQubits: "可為數千位元複雜量子演算法自動生成最省邏輯閘之壓縮線路",
+          commercialTraction: "獲 HPE、三星、HSBC、SoftBank 投資，全球數百家企業與大學採用",
+          scores: { fidelity: 92, scalability: 96, commercial: 91, cash: 88, total: 92 },
+          peerRank: "👑 未上市量子 EDA 軟體頭號獨角獸",
+          comparisonNote: "正與華爾街投行洽談以 20 億至 50 億美元估值上市，將與 HQ 形成軟體雙雄。"
+        },
+        {
+          ticker: "Riverlane (未上市)",
+          name: "Riverlane",
+          status: "Pre-IPO 獨角獸 ($450M+ 估值)",
+          architecture: "Deltaflow.OS 即時量子糾錯作業系統 + Local Clustering Decoder (LCD 專用 FPGA/ASIC)",
+          fidelityAndQubits: "於 Google Willow 數據集實證 16 µs 超低延遲即時表面碼解碼 (《Nature Comms》)",
+          commercialTraction: "完成 $75M Series C | Rigetti、Infleqtion、QuEra、OQC 與英國國家實驗室採用",
+          scores: { fidelity: 95, scalability: 95, commercial: 89, cash: 87, total: 92 },
+          peerRank: "👑 專用量子糾錯解碼晶片 (QEC ASIC) 霸主",
+          comparisonNote: "專攻 QEC 解碼延遲痛點，是多家硬體商邁向容錯時代的共同底層供應商。"
+        }
+      ]
+    },
+    {
+      id: "pqc-qkd",
+      name: "8. 後量子密碼 (PQC) 與量子加密 (QKD / QRNG) 陣營評比",
+      tagline: "2026–2030 法規強制換機潮 — 比量子電腦硬體更早收割百億美元資安預算",
+      physicsPrinciple: "分為兩大技術流派：(1) 後量子密碼學 (PQC)：基於晶格數學難題 (NIST FIPS 203 ML-KEM / FIPS 204 ML-DSA) 或雜湊函數 (FIPS 205)，可運行於現有網際網路與安全晶片；(2) 量子物理加密 (QKD / QRNG)：利用單光子不可複製定理分發金鑰或利用量子穿隧產生真亂數。",
+      operatingTemp: "室溫晶片、伺服器、邊緣網路與低軌衛星",
+      corePros: "受美國 CNSA 2.0、NIST 標準與歐盟 CRA 法規強制要求於 2030 年前全面升級，商業訂單已經進入高速認列期。",
+      coreCons: "純軟體對稱金鑰小廠若無硬體信任根或大型雲端通路護城河，易受免費開源 NIST 演算法擠壓。",
+      verdictSummary: "純 PQC 半導體首選 SEALSQ (LAES，現金高於市值且成長 131%)；伺服器 PQC FPGA 首選 Lattice (LSCC)；雲端與網路 PQC 首選 Cloudflare (NET)、IBM 與 Palo Alto (PANW)。",
+      peers: [
+        {
+          ticker: "LAES",
+          name: "SEALSQ Corp",
+          status: "NASDAQ 上市 ($440M 純 PQC 晶片股)",
+          architecture: "QS7001 RISC-V 硬體內嵌 NIST FIPS 203 (ML-KEM) & FIPS 204 (ML-DSA) 加速引擎 + QVault TPM",
+          fidelityAndQubits: "Common Criteria EAL5+ & FIPS 140-3 Level 3 認證 | 硬體加速較純軟體快 10–50 倍",
+          commercialTraction: "H1'26 營收 $11.15M (+131%) | 現金 ~$490M (高於總市值 $440M！) | 訂單管道 >$225M",
+          scores: { fidelity: 94, scalability: 94, commercial: 92, cash: 99, total: 95 },
+          peerRank: "🏆 純後量子密碼 (PQC) 半導體首選標的",
+          comparisonNote: "唯一純度 100% 且帳上現金 ($490M) 大於總市值 ($440M) 的高速成長後量子晶片股，具備極高安全邊際。"
+        },
+        {
+          ticker: "NET / PANW / CRWD",
+          name: "Cloudflare / Palo Alto / CrowdStrike",
+          status: "NYSE & NASDAQ 資安三巨頭",
+          architecture: "NET: 全球 38% 網頁流量預設 X25519MLKEM768 | PANW: PQC 密碼轉換代理防火牆 | CRWD: 端點 CBOM 盤點",
+          fidelityAndQubits: "符合 NIST FIPS 203/204 與 IETF RFC 9370 / 8784 企業級零信任標準",
+          commercialTraction: "年營收數十億美元、自由現金流利潤率 >30%，直接收割全球財星 500 大企業 PQC 升級預算",
+          scores: { fidelity: 96, scalability: 99, commercial: 99, cash: 98, total: 98 },
+          peerRank: "👑 企業級網路與端點 PQC 商業落地霸主",
+          comparisonNote: "大型機構配置後量子資安最穩健、流動性最佳的獲利成長股組合。"
+        },
+        {
+          ticker: "LSCC",
+          name: "Lattice Semiconductor",
+          status: "NASDAQ 上市 ($8.6B 半導體大廠)",
+          architecture: "MachXO5-NX TDQ 低功耗安全控制 FPGA + Sentry 5.0 韌體堆疊",
+          fidelityAndQubits: "完整支援美國國安局 CNSA 2.0 (ML-DSA-87 / ML-KEM / LMS) 伺服器主板安全開機 (PFR)",
+          commercialTraction: "年營收 $580M | 北美四大雲端 CSP 與 AI 伺服器主板硬體信任根標配",
+          scores: { fidelity: 95, scalability: 95, commercial: 94, cash: 90, total: 94 },
+          peerRank: "🏆 AI 伺服器主板抗量子 FPGA 硬體霸主",
+          comparisonNote: "FPGA 的可重新編程特性完美契合企業『密碼敏捷性 (Crypto-Agility)』硬體換機潮。"
+        },
+        {
+          ticker: "WKEY / ARQQ",
+          name: "WISeKey ($62M) & Arqit ($270M)",
+          status: "NASDAQ 小型加密純股",
+          architecture: "WKEY: 控股 SEALSQ + WISeSat 低軌抗量子衛星 | ARQQ: QuantumCloud 動態對稱金鑰 SaaS",
+          fidelityAndQubits: "太空硬體信任根 (WKEY) vs. RFC 8784 對稱金鑰協商 (ARQQ)",
+          commercialTraction: "WKEY H1'26 合併營收 $11.4M (+116%) 具深度母子折價；ARQQ FY26 營收 ~$1.0M 轉型純軟體",
+          scores: { fidelity: 86, scalability: 88, commercial: 83, cash: 85, total: 85 },
+          peerRank: "⚡ 小市值高彈性太空 PQC 與對稱加密代表",
+          comparisonNote: "WKEY 市值僅 $6,200 萬美元卻控股市值 $4.4 億的 SEALSQ，具備顯著控股折價；ARQQ 則看電信與國防 SaaS 轉機。"
+        }
+      ]
+    }
+  ]
 };
+

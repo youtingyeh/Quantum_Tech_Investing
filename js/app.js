@@ -9,7 +9,12 @@ const AppState = {
   selectedCompareIds: ['ionq', 'qnt', 'qbts', 'rgti'],
   activeModalStockId: null,
   activeModalTab: 'overview',
-  paperCategory: 'all'
+  paperCategory: 'all',
+  activeArenaModality: 'all',
+  liveData: window.QUANTUM_LIVE_DATA || null,
+  liveTableCategory: 'all',
+  liveTableSort: 'advantage-desc',
+  liveArxivDomain: 'all'
 };
 
 const CategoryMeta = {
@@ -22,13 +27,16 @@ const CategoryMeta = {
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initStockControls();
+  initLiveAnalyticsControls();
   renderStocksGrid();
+  renderModalityArena();
   renderCompareTable();
   renderEtfsSection();
   renderPreIpoSection();
   renderPapersSection();
   renderIndicatorsSection();
   initMoscaCalculator();
+  loadLiveQuantumDataJson();
 
   if (window.QuantumCharts) {
     window.QuantumCharts.initAll();
@@ -217,12 +225,20 @@ function renderStocksGrid() {
               <div class="text-[11px] text-slate-400 truncate" title="${s.runway}">${s.runway}</div>
             </div>
             <div class="p-2 rounded bg-slate-900/55 border border-slate-800/60">
-              <div class="text-slate-400">雙量子閘保真度 / 安全認證</div>
-              <div class="font-mono-num font-semibold text-sky-300 mt-0.5 truncate" title="${s.twoQubitFidelity}">${s.twoQubitFidelity.split('(')[0]}</div>
+              <div class="text-slate-400">yfinance 毛利率 / 負債比</div>
+              <div class="font-mono-num font-semibold text-amber-300 mt-0.5">
+                毛利: ${(AppState.liveData?.stocks_financials?.[s.ticker]?.gross_margin_display) || 'N/A'}
+              </div>
+              <div class="text-[11px] text-slate-300 truncate" title="${(AppState.liveData?.stocks_financials?.[s.ticker]?.leverage_status) || ''}">
+                Debt/EBITDA: ${(AppState.liveData?.stocks_financials?.[s.ticker]?.debt_to_ebitda_display) || 'N/A'}
+              </div>
             </div>
             <div class="p-2 rounded bg-slate-900/55 border border-slate-800/60">
-              <div class="text-slate-400">量子糾錯 / PQC 架構</div>
-              <div class="font-medium text-amber-300 mt-0.5 truncate" title="${s.errorCorrection}">${s.errorCorrection.split('(')[0]}</div>
+              <div class="text-slate-400">雙閘保真度 / 優勢評分</div>
+              <div class="font-mono-num font-semibold text-sky-300 mt-0.5 truncate" title="${s.twoQubitFidelity}">${s.twoQubitFidelity.split('(')[0]}</div>
+              <div class="text-[11px] text-emerald-300 font-mono-num">
+                優勢分: ${(AppState.liveData?.stocks_financials?.[s.ticker]?.overall_advantage_score) || '—'} / 100
+              </div>
             </div>
           </div>
 
@@ -477,6 +493,8 @@ function renderCompareTable() {
     { label: '總市值 / 參考股價', render: s => `<span class="font-mono-num text-sky-400 font-bold">${s.marketCap}</span> <span class="text-xs text-slate-400">($${s.price})</span>` },
     { label: '最新營收 (Revenue)', render: s => `<span class="font-mono-num text-emerald-400 font-semibold">${s.revenue}</span>` },
     { label: '營收年增率 (YoY)', render: s => `<span class="font-mono-num text-emerald-300">${s.revenueYoY}</span>` },
+    { label: 'yfinance 毛利率 (Gross Margin)', render: s => `<span class="font-mono-num text-amber-300 font-bold">${(AppState.liveData?.stocks_financials?.[s.ticker]?.gross_margin_display) || 'N/A'}</span>` },
+    { label: 'Debt-to-EBITDA 與財務槓桿', render: s => `<div class="font-mono-num text-sky-300 font-semibold">${(AppState.liveData?.stocks_financials?.[s.ticker]?.debt_to_ebitda_display) || 'N/A'}</div><div class="text-[11px] text-slate-400">${(AppState.liveData?.stocks_financials?.[s.ticker]?.leverage_status) || ''}</div>` },
     { label: '現金儲備與跑道', render: s => `<div class="font-mono-num text-purple-300 font-semibold">${s.cashReserves}</div><div class="text-[11px] text-slate-400">${s.runway}</div>` },
     { label: '在手訂單 / RPO', render: s => `<span class="text-xs text-amber-200">${s.bookingsOrBacklog}</span>` },
     { label: '物理技術路線 (Modality)', render: s => `<span class="text-xs text-sky-300 font-medium">${s.modality}</span>` },
@@ -484,7 +502,7 @@ function renderCompareTable() {
     { label: '雙量子閘保真度 / 安全等級', render: s => `<span class="font-mono-num text-xs text-sky-300 font-semibold">${s.twoQubitFidelity}</span>` },
     { label: '邏輯位元與量子糾錯 (QEC)', render: s => `<div class="text-xs text-slate-200">${s.logicalQubits}</div><div class="text-[11px] text-slate-400 mt-0.5">${s.errorCorrection}</div>` },
     { label: '量子加密 / 後量子密碼定位', render: s => `<span class="text-xs text-emerald-300">${s.pqcOrCryptoRole}</span>` },
-    { label: '機構評級與深度報告', render: s => `<button onclick="openStockModal('${s.id}')" class="px-3 py-1 rounded bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs hover:bg-sky-500/35">開啟完整研報 →</button>` }
+    { label: '綜合優勢評分 / 研報', render: s => `<div class="font-mono-num text-xs text-emerald-400 font-bold mb-1">優勢總分：${(AppState.liveData?.stocks_financials?.[s.ticker]?.overall_advantage_score) || '—'} / 100</div><button onclick="openStockModal('${s.id}')" class="px-3 py-1 rounded bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs hover:bg-sky-500/35">開啟完整研報 →</button>` }
   ];
 
   container.innerHTML = `
@@ -790,3 +808,385 @@ function renderIndicatorsSection() {
     `).join('');
   }
 }
+
+// ============================================================================
+// MODALITY PEER-GROUP ARENA RENDERER (技術流派分類與同類橫向評比擂台)
+// ============================================================================
+window.setArenaModality = function(modId) {
+  AppState.activeArenaModality = modId;
+  renderModalityArena();
+};
+
+function renderModalityArena() {
+  const pillBar = document.getElementById('arenaFilterPills');
+  const container = document.getElementById('modalityArenaContainer');
+  if (!container || !window.QUANTUM_DATA.modalityArena) return;
+
+  const arenas = window.QUANTUM_DATA.modalityArena;
+
+  if (pillBar) {
+    const allBtn = `
+      <button
+        onclick="setArenaModality('all')"
+        class="filter-pill ${AppState.activeArenaModality === 'all' ? 'active' : ''} px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300"
+      >
+        全部 8 大技術流派總覽
+      </button>
+    `;
+    const modBtns = arenas.map(a => `
+      <button
+        onclick="setArenaModality('${a.id}')"
+        class="filter-pill ${AppState.activeArenaModality === a.id ? 'active' : ''} px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300"
+      >
+        ${a.name.replace(/^\d+\.\s*/, '')}
+      </button>
+    `).join('');
+    pillBar.innerHTML = allBtn + modBtns;
+  }
+
+  const visibleArenas = AppState.activeArenaModality === 'all'
+    ? arenas
+    : arenas.filter(a => a.id === AppState.activeArenaModality);
+
+  container.innerHTML = visibleArenas.map(arena => `
+    <div class="quantum-card-static p-6 space-y-5 border border-sky-500/25">
+      <!-- Arena Header -->
+      <div class="border-b border-slate-800 pb-4 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+        <div>
+          <h3 class="text-xl font-extrabold text-white">${arena.name}</h3>
+          <p class="text-xs font-semibold text-sky-400 mt-1">${arena.tagline}</p>
+        </div>
+        <div class="text-xs px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-300">
+          🌡️ 運作環境：<span class="text-amber-300 font-medium">${arena.operatingTemp}</span>
+        </div>
+      </div>
+
+      <!-- Physics & Pros/Cons Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="font-bold text-sky-300 mb-1.5">⚛️ 底層物理與操控原理</div>
+          <p class="text-slate-300 leading-relaxed">${arena.physicsPrinciple}</p>
+        </div>
+        <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30">
+          <div class="font-bold text-emerald-400 mb-1.5">✓ 該流派核心技術優勢 (Pros)</div>
+          <p class="text-slate-200 leading-relaxed">${arena.corePros}</p>
+        </div>
+        <div class="p-4 rounded-xl bg-rose-950/20 border border-rose-500/30">
+          <div class="font-bold text-rose-400 mb-1.5">⚠ 該流派主要工程瓶頸 (Cons)</div>
+          <p class="text-slate-200 leading-relaxed">${arena.coreCons}</p>
+        </div>
+      </div>
+
+      <!-- Verdict Banner -->
+      <div class="p-3.5 rounded-xl bg-gradient-to-r from-indigo-950/50 via-slate-900/90 to-sky-950/50 border border-indigo-500/30 text-xs text-slate-200">
+        <strong class="text-amber-300">🏅 同類競爭格局總評：</strong>${arena.verdictSummary}
+      </div>
+
+      <!-- Intra-Category Peer Comparison Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-900/95 text-slate-300">
+              <th class="p-3 min-w-[140px]">同類競爭標的</th>
+              <th class="p-3 min-w-[140px]">同類地位評級</th>
+              <th class="p-3 min-w-[200px]">具體技術架構與差異化</th>
+              <th class="p-3 min-w-[200px]">保真度 / 量子位元 / 認證指標</th>
+              <th class="p-3 min-w-[190px]">營收 / 訂單 / 現金實力</th>
+              <th class="p-3 min-w-[165px]">四維度同類評分 (滿分100)</th>
+              <th class="p-3 min-w-[220px]">同類橫向 PK 深度點評</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/70">
+            ${arena.peers.map(peer => `
+              <tr class="hover:bg-slate-900/50 transition align-top">
+                <td class="p-3">
+                  <div class="font-mono-num text-sm font-extrabold text-sky-400">${peer.ticker}</div>
+                  <div class="font-semibold text-white mt-0.5">${peer.name}</div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">${peer.status}</div>
+                </td>
+                <td class="p-3">
+                  <span class="inline-block px-2.5 py-1 rounded-md bg-amber-500/15 border border-amber-500/35 text-amber-300 font-semibold leading-snug">
+                    ${peer.peerRank}
+                  </span>
+                </td>
+                <td class="p-3 text-slate-200 leading-relaxed">${peer.architecture}</td>
+                <td class="p-3 font-mono-num text-sky-300 leading-relaxed">${peer.fidelityAndQubits}</td>
+                <td class="p-3 text-emerald-300 leading-relaxed">${peer.commercialTraction}</td>
+                <td class="p-3">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="text-slate-400">綜合總分</span>
+                    <span class="font-mono-num font-extrabold text-sm text-white">${peer.scores.total}</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden mb-2">
+                    <div class="h-full bg-gradient-to-r from-sky-400 to-emerald-400" style="width: ${peer.scores.total}%"></div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-x-2 gap-y-0.5 text-[11px] text-slate-400 font-mono-num">
+                    <span>保真: <b class="text-slate-200">${peer.scores.fidelity}</b></span>
+                    <span>擴展: <b class="text-slate-200">${peer.scores.scalability}</b></span>
+                    <span>商業: <b class="text-slate-200">${peer.scores.commercial}</b></span>
+                    <span>資金: <b class="text-slate-200">${peer.scores.cash}</b></span>
+                  </div>
+                </td>
+                <td class="p-3 text-slate-300 leading-relaxed">${peer.comparisonNote}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================================================
+// AUTOMATED YFINANCE (GROSS MARGIN / DEBT-TO-EBITDA) & ARXIV ADVANTAGE ENGINE
+// ============================================================================
+function initLiveAnalyticsControls() {
+  const catFilter = document.getElementById('liveTableCategoryFilter');
+  if (catFilter) {
+    catFilter.addEventListener('change', (e) => {
+      AppState.liveTableCategory = e.target.value;
+      renderLiveFinancialsTable();
+    });
+  }
+
+  const sortSelect = document.getElementById('liveTableSortSelect');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      AppState.liveTableSort = e.target.value;
+      renderLiveFinancialsTable();
+    });
+  }
+}
+
+async function loadLiveQuantumDataJson() {
+  try {
+    const resp = await fetch('data/quantum_live_data.json', { cache: 'no-store' });
+    if (resp.ok) {
+      const json = await resp.json();
+      AppState.liveData = json;
+    }
+  } catch (err) {
+    // Fallback to window.QUANTUM_LIVE_DATA when opened via local file:// protocol
+    if (window.QUANTUM_LIVE_DATA) {
+      AppState.liveData = window.QUANTUM_LIVE_DATA;
+    }
+  }
+
+  renderLiveAnalyticsAll();
+  renderStocksGrid();
+  renderCompareTable();
+}
+
+function renderLiveAnalyticsAll() {
+  if (!AppState.liveData) return;
+
+  const updatedBadge = document.getElementById('liveJsonUpdatedAt');
+  if (updatedBadge) {
+    updatedBadge.textContent = AppState.liveData.updated_at || '2026-10-19 UTC';
+  }
+
+  renderLiveModalityVerdicts();
+  renderLiveFinancialsTable();
+  renderLiveArxivFeed();
+}
+
+function renderLiveModalityVerdicts() {
+  const container = document.getElementById('liveModalityVerdictsContainer');
+  if (!container || !AppState.liveData?.modality_advantage_rankings) return;
+
+  const list = AppState.liveData.modality_advantage_rankings;
+  container.innerHTML = list.map((item, idx) => `
+    <div class="quantum-card p-5 space-y-3 border border-emerald-500/25">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-[11px] font-mono-num px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            <span>勝出優勢排名 #${idx + 1}</span>
+            <span>|</span>
+            <span>${item.commercial_horizon}</span>
+          </div>
+          <h4 class="text-base font-extrabold text-white mt-1.5">${item.category_name}</h4>
+        </div>
+        <div class="text-right shrink-0">
+          <div class="text-[11px] text-slate-400">商轉優勢指數</div>
+          <div class="font-mono-num text-xl font-extrabold text-emerald-400">${item.readiness_score} / 100</div>
+        </div>
+      </div>
+
+      <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-emerald-400 via-sky-400 to-purple-400" style="width: ${item.readiness_score}%"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+        <div class="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800">
+          <div class="text-sky-400 font-bold mb-0.5">⚡ 純量子 / 純 PQC 首選標的</div>
+          <div class="text-slate-200 leading-snug">${item.pure_play_leader}</div>
+        </div>
+        <div class="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800">
+          <div class="text-purple-400 font-bold mb-0.5">🌐 科技與資安巨頭首選標的</div>
+          <div class="text-slate-200 leading-snug">${item.enterprise_leader}</div>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-300 leading-relaxed">
+        <strong class="text-amber-300">為何此類別將獲取更大優勢與成效：</strong>${item.why_it_wins}
+      </p>
+    </div>
+  `).join('');
+}
+
+function renderLiveFinancialsTable() {
+  const container = document.getElementById('liveFinancialsTableContainer');
+  if (!container || !AppState.liveData?.stocks_financials) return;
+
+  let rows = Object.values(AppState.liveData.stocks_financials);
+
+  if (AppState.liveTableCategory !== 'all') {
+    rows = rows.filter(r => r.category === AppState.liveTableCategory);
+  }
+
+  rows.sort((a, b) => {
+    switch (AppState.liveTableSort) {
+      case 'gm-desc':
+        return (b.gross_margin_pct ?? -999) - (a.gross_margin_pct ?? -999);
+      case 'cash-desc':
+        return (b.total_cash_raw ?? 0) - (a.total_cash_raw ?? 0);
+      case 'yoy-desc':
+        return (b.revenue_growth_yoy_pct ?? -999) - (a.revenue_growth_yoy_pct ?? -999);
+      case 'advantage-desc':
+      default:
+        return (b.overall_advantage_score ?? 0) - (a.overall_advantage_score ?? 0);
+    }
+  });
+
+  container.innerHTML = `
+    <table class="w-full text-left border-collapse text-xs">
+      <thead>
+        <tr class="border-b border-slate-800 bg-slate-900/95 text-slate-300">
+          <th class="p-3">排名 / 代號</th>
+          <th class="p-3">技術路線分類</th>
+          <th class="p-3 text-right">總市值 / 股價</th>
+          <th class="p-3 text-right">毛利率 (Gross Margin)</th>
+          <th class="p-3">Debt-to-EBITDA (負債/EBITDA)</th>
+          <th class="p-3 text-right">總負債 / EBITDA</th>
+          <th class="p-3 text-right">帳上總現金</th>
+          <th class="p-3">綜合競爭優勢評分 &amp; 核心勝出原因</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-800/70">
+        ${rows.map((r, idx) => `
+          <tr class="hover:bg-slate-900/50 transition align-top">
+            <td class="p-3">
+              <div class="flex items-center gap-2">
+                <span class="font-mono-num text-xs px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">#${idx + 1}</span>
+                <span class="font-mono-num text-sm font-extrabold text-sky-400">${r.ticker}</span>
+              </div>
+              <div class="font-semibold text-white mt-0.5">${r.name}</div>
+            </td>
+            <td class="p-3 text-sky-300 font-medium">${r.modality}</td>
+            <td class="p-3 text-right font-mono-num">
+              <div class="font-bold text-white">${r.market_cap_fmt}</div>
+              <div class="text-[11px] text-slate-400">$${r.price}</div>
+            </td>
+            <td class="p-3 text-right font-mono-num">
+              <span class="px-2 py-1 rounded font-bold ${
+                (r.gross_margin_pct || 0) >= 65
+                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                  : (r.gross_margin_pct || 0) >= 50
+                  ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30'
+                  : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+              }">
+                ${r.gross_margin_display}
+              </span>
+            </td>
+            <td class="p-3">
+              <div class="font-mono-num font-bold text-amber-300">${r.debt_to_ebitda_display}</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">${r.leverage_status}</div>
+            </td>
+            <td class="p-3 text-right font-mono-num">
+              <div class="text-rose-300">負債: ${r.total_debt_fmt}</div>
+              <div class="text-slate-400">EBITDA: ${r.ebitda_fmt}</div>
+            </td>
+            <td class="p-3 text-right font-mono-num font-bold text-purple-300">${r.total_cash_fmt}</td>
+            <td class="p-3 min-w-[250px]">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-semibold text-emerald-400">${r.advantage_tier}</span>
+                <span class="font-mono-num font-extrabold text-sm text-white">${r.overall_advantage_score} 分</span>
+              </div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden mb-1.5">
+                <div class="h-full bg-gradient-to-r from-sky-400 to-emerald-400" style="width: ${r.overall_advantage_score}%"></div>
+              </div>
+              <p class="text-[11px] text-slate-300 leading-relaxed">${r.key_edge_summary}</p>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+window.setLiveArxivDomain = function(domain) {
+  AppState.liveArxivDomain = domain;
+  renderLiveArxivFeed();
+};
+
+function renderLiveArxivFeed() {
+  const pillContainer = document.getElementById('liveArxivFilterPills');
+  const container = document.getElementById('liveArxivPapersContainer');
+  if (!container || !AppState.liveData?.latest_arxiv_papers) return;
+
+  const papers = AppState.liveData.latest_arxiv_papers;
+  const domains = ['all', 'Quantum Hardware / QEC', 'Quantum Encryption (QKD/QRNG)', 'Post-Quantum Crypto (PQC)', 'Quantum AI / Hybrid'];
+  const domainLabels = {
+    'all': '全部最新論文',
+    'Quantum Hardware / QEC': '⚛️ 量子電腦硬體與糾錯',
+    'Quantum Encryption (QKD/QRNG)': '📡 量子加密 (QKD/QRNG)',
+    'Post-Quantum Crypto (PQC)': '🔐 後量子密碼學 (PQC)',
+    'Quantum AI / Hybrid': '🤖 量子 AI 與混合超算'
+  };
+
+  if (pillContainer) {
+    pillContainer.innerHTML = domains.map(d => `
+      <button
+        onclick="setLiveArxivDomain('${d}')"
+        class="filter-pill ${AppState.liveArxivDomain === d ? 'active' : ''} px-3 py-1 rounded-full text-xs font-medium text-slate-300"
+      >
+        ${domainLabels[d] || d}
+      </button>
+    `).join('');
+  }
+
+  const visible = AppState.liveArxivDomain === 'all'
+    ? papers
+    : papers.filter(p => p.domain_tag === AppState.liveArxivDomain);
+
+  container.innerHTML = visible.map(p => `
+    <div class="quantum-card p-5 flex flex-col justify-between gap-3">
+      <div>
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">
+            ${p.domain_tag || p.topic_stream}
+          </span>
+          <span class="font-mono-num text-xs text-slate-400">arXiv:${p.arxiv_id} | ${p.published}</span>
+        </div>
+        <h4 class="text-sm font-bold text-white leading-snug mb-1">${p.title}</h4>
+        <div class="text-xs text-sky-400 mb-2">${p.authors}</div>
+        <p class="text-xs text-slate-300 leading-relaxed">${p.summary}</p>
+      </div>
+      <div class="pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-xs">
+        <div class="flex flex-wrap gap-1">
+          ${(p.categories || []).map(c => `<span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 font-mono-num">${c}</span>`).join('')}
+        </div>
+        <div class="flex gap-2">
+          <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-sky-500/20 hover:bg-sky-500/35 text-sky-300 border border-sky-400/40 font-medium">
+            arXiv 摘要 ↗
+          </a>
+          <a href="${p.pdf_url || p.url}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-purple-500/20 hover:bg-purple-500/35 text-purple-300 border border-purple-400/40 font-medium">
+            PDF 全文 ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+
