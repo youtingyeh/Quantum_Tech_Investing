@@ -6,7 +6,7 @@ const AppState = {
   stockModality: 'all',
   stockSort: 'revenue-desc',
   searchQuery: '',
-  selectedCompareIds: ['ionq', 'rgti', 'qbts', 'laes'],
+  selectedCompareIds: ['ionq', 'qnt', 'qbts', 'rgti'],
   activeModalStockId: null,
   activeModalTab: 'overview',
   paperCategory: 'all'

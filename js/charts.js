@@ -1,4 +1,4 @@
-// Quantum Tech Investing - Interactive Chart.js Visualizations
+// Quantum Tech Investing - Interactive Chart.js Visualizations (Verified October 2026)
 
 window.QuantumCharts = {
   revenueCashChart: null,
@@ -36,7 +36,7 @@ window.QuantumCharts = {
           {
             label: '最新年化/年度營收 ($M USD)',
             data: revenues,
-            backgroundColor: 'rgba(56, 189, 248, 0.82)',
+            backgroundColor: 'rgba(56, 189, 248, 0.85)',
             borderColor: '#38bdf8',
             borderWidth: 1,
             borderRadius: 6,
@@ -78,6 +78,7 @@ window.QuantumCharts = {
                 const st = purePlays[idx];
                 return [
                   `公司: ${st.name}`,
+                  `總市值: ${st.marketCap} (股價 ~$${st.price})`,
                   `營收成長: ${st.revenueYoY}`,
                   `跑道評估: ${st.runway}`
                 ];
@@ -114,15 +115,16 @@ window.QuantumCharts = {
     if (!ctx) return;
 
     const hardwareSystems = [
-      { label: 'IonQ / Oxford Ionics (EQC)', fidelity: 99.99, errorRate: 0.01, modality: '離子阱', color: '#38bdf8' },
-      { label: 'Quantinuum Helios (98Q Ba+)', fidelity: 99.921, errorRate: 0.079, modality: '離子阱 (Pre-IPO)', color: '#22d3ee' },
-      { label: 'Google Willow (105Q d=7)', fidelity: 99.90, errorRate: 0.10, modality: '超導', color: '#a855f7' },
-      { label: 'IBM Heron R3 (156Q)', fidelity: 99.80, errorRate: 0.20, modality: '超導', color: '#818cf8' },
-      { label: 'QuEra / Harvard (48 Logical)', fidelity: 99.55, errorRate: 0.45, modality: '中性原子 (Pre-IPO)', color: '#10b981' },
-      { label: 'Rigetti Cepheus / 24ns Proto', fidelity: 99.50, errorRate: 0.50, modality: '超導', color: '#f59e0b' },
-      { label: 'Infleqtion Sqale (INFQ)', fidelity: 99.50, errorRate: 0.50, modality: '中性原子', color: '#34d399' },
-      { label: 'Pasqal Orion (PSQL)', fidelity: 99.50, errorRate: 0.50, modality: '中性原子', color: '#6ee7b7' },
-      { label: 'Xanadu Aurora (XNDU)', fidelity: 99.40, errorRate: 0.60, modality: '光量子', color: '#f43f5e' }
+      { label: 'IonQ / Oxford Ionics EQC (NYSE: IONQ)', fidelity: 99.99, errorRate: 0.01, modality: '離子阱 (已上市)', color: '#38bdf8' },
+      { label: 'Quantinuum Helios 98Q (NASDAQ: QNT)', fidelity: 99.921, errorRate: 0.079, modality: '離子阱 (2026/06 IPO)', color: '#22d3ee' },
+      { label: 'Google Willow 105Q (NASDAQ: GOOGL)', fidelity: 99.90, errorRate: 0.10, modality: '超導 (已上市)', color: '#a855f7' },
+      { label: 'IBM Heron R3 156Q (NYSE: IBM)', fidelity: 99.80, errorRate: 0.20, modality: '超導 (已上市)', color: '#818cf8' },
+      { label: 'IQM Radiance 150Q (NASDAQ: IQMX)', fidelity: 99.60, errorRate: 0.40, modality: '超導 (2026/07 上市)', color: '#c084fc' },
+      { label: 'QuEra 48 Logical Qubits (Pre-IPO)', fidelity: 99.55, errorRate: 0.45, modality: '中性原子 (未上市)', color: '#10b981' },
+      { label: 'Rigetti Cepheus 108Q (NASDAQ: RGTI)', fidelity: 99.50, errorRate: 0.50, modality: '超導 (已上市)', color: '#f59e0b' },
+      { label: 'Infleqtion Sqale (NYSE: INFQ)', fidelity: 99.50, errorRate: 0.50, modality: '中性原子 (2026/02 上市)', color: '#34d399' },
+      { label: 'Pasqal Orion (NASDAQ: PSQL)', fidelity: 99.50, errorRate: 0.50, modality: '中性原子 (2026/08 上市)', color: '#6ee7b7' },
+      { label: 'Xanadu Aurora (NASDAQ: XNDU)', fidelity: 99.40, errorRate: 0.60, modality: '光量子 (2026/03 上市)', color: '#f43f5e' }
     ];
 
     if (this.fidelityBubbleChart) this.fidelityBubbleChart.destroy();
@@ -188,14 +190,14 @@ window.QuantumCharts = {
       type: 'doughnut',
       data: {
         labels: [
-          '純量子硬體與軟體 (IONQ, RGTI, QBTS, XNDU 等)',
+          '純量子硬體與軟體 (IONQ, QNT, QBTS, RGTI, IQMX 等)',
           '科技巨頭量子與混合超算 (NVDA, GOOGL, IBM, MSFT)',
           '後量子密碼與網路資安 (NET, PANW, LSCC, LAES)',
           '先進半導體、極低溫與光學供應鏈 (COHR, ASML, TSM 等)'
         ],
         datasets: [
           {
-            data: [22, 26, 18, 34],
+            data: [24, 25, 18, 33],
             backgroundColor: [
               'rgba(56, 189, 248, 0.85)',
               'rgba(168, 85, 247, 0.85)',
