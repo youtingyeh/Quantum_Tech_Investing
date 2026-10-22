@@ -1832,44 +1832,36 @@ window.QUANTUM_DATA = {
     ],
     firstradeGuide: [
       {
-        category: "🔄 舊代號已失效・須改用新代號下單",
-        statusBadge: "改輸入新代號即可買賣",
-        statusColor: "text-amber-300 bg-amber-500/15 border-amber-400/25",
-        tickers: "舊代號 WKEY ❌ → 請改輸入 WQEY ✅\n舊 SPAC 代號 CCCX / CHAC / DMYY / RAAQ / BBCQ ❌ → 請改輸入 INFQ / XNDU / HQ / IQMX / PSQL ✅",
-        reason: "1. WISeKey 已於 2026/10/01 完成自瑞士遷冊至英屬維京群島 (BVI) 並更名為 WISeQey Corp.，原 ADS 代號 WKEY 於 2026/10/05 正式自 Nasdaq 終止下市（每 1 股舊 WKEY 換發 0.5 股新普通股），在 Firstrade 輸入 WKEY 會顯示無法下單，必須改輸入新代號 WQEY。\n2. 2026 年完成合併之 5 檔量子 SPAC 原代號皆已註銷，須直接輸入合併後正股代號。",
-        workaround: "在 Firstrade 搜尋欄直接輸入 WQEY、INFQ、XNDU、HQ、IQMX、PSQL 即可正常免佣金買賣。"
-      },
-      {
-        category: "⏳ 準上市招股書階段・新代號尚未掛牌",
-        statusBadge: "新代號無法下單",
+        category: "🚫 外國發行人 (FPI) + 跨境 Form F-4 de-SPAC / 反分割封鎖名單（7 檔高危擋單股）",
+        statusBadge: "Firstrade 禁止開倉 / 不給下單",
         statusColor: "text-rose-300 bg-rose-500/15 border-rose-400/25",
-        tickers: "SEQC (SEEQC, Form S-1/A) ❌\nEIGQ (EigenQ, Form S-4) ❌ → 可先買 SVAQ ✅\nKQC (KQC Quantum, Form S-4) ❌ → 可先買 CHAR ✅",
-        reason: "1. SEEQC (SEQC) 處於傳統 S-1 IPO 承銷詢價階段，尚未正式敲鐘掛牌，且 Firstrade 不支援美股 S-1 IPO 新股抽籤申購。\n2. EigenQ (EIGQ) 與 KQC Quantum (KQC) 尚處於 SEC Form S-4 審查與股東投票前階段，新代號尚未啟用。",
-        workaround: "• SEQC：須等待 Nasdaq 正式定價掛牌首日開盤後再於次級市場下單。\n• EIGQ / KQC：若欲於合併交割前卡位，可在 Firstrade 直接買入其 SPAC 母體普通股 SVAQ（對應 EigenQ）或 CHAR（對應 KQC）。"
+        tickers: "• 已實測封鎖：IQMX (芬蘭 F-4)、HQ (新加坡 ISIN: SGXZ31642911)、ARQQ (開曼 ISIN: KYG0567U1278) ❌\n• 同結構高危封鎖：PSQL (法國 ISIN: FR0014019QW4)、XNDU (加拿大 ISIN: CA98390R1029)、WQEY/舊WKEY (BVI ISIN: VGG9724F1053)、LAES (BVI ISIN: VGG794831062) ❌/⚠️",
+        reason: "【核心真相：Apex Clearing 外國私人發行人 (FPI) 風控鎖倉】\nFirstrade 的底層交割清算商為 Apex Clearing。不同於美國本土德拉瓦州公司（ISIN 為 US 開頭、申報 Form 10-K），上述 7 檔全部屬於「非美國註冊之外國私人發行人 (Foreign Private Issuers，申報 Form 20-F / Form F-4)」：\n1. HQ (新加坡 SG 開頭)、PSQL (法國 FR 開頭)、XNDU (加拿大 CA 開頭)、ARQQ (開曼 KYG 開頭)、WQEY/LAES (英屬維京群島 VG 開頭) 皆為非美國本土 ISIN 之海外普通股。\n2. IQMX、HQ、PSQL、XNDU 皆為 2026 年剛透過「跨境 Form F-4 SPAC 合併」掛牌的新股；ARQQ 則經歷過 1:25 反分割 (Reverse Split) 且流通盤極小；WQEY 剛於 2026/10/05 完成 WKEY→WQEY 1換0.5 跨境遷冊。Apex Clearing 對此類「跨境 de-SPAC / 反分割 + 外國發行人」一律啟動風控鎖定：僅允許既有持倉平倉 (Closing Only)，完全拒絕散戶新建買單！",
+        workaround: "1. 【Firstrade 內一鍵替代】直接買入美國本土註冊之純正量子股（IONQ、QBTS、RGTI、QUBT）或買入 QTUM ETF（由機構直接持倉，不受散戶清算商封鎖）。\n2. 【跨券商解法】若堅持買入 IQMX、HQ、ARQQ、PSQL、XNDU 個股，必須使用具備全球多國清算通道的 Interactive Brokers (IBKR 盈透證券) 或 Charles Schwab (嘉信理財)。"
       },
       {
-        category: "🚫 Firstrade 平台明文禁止買入之衍生性標的（權證 Warrants / 權利 Rights）",
-        statusBadge: "Firstrade 禁止買入",
+        category: "⏳ 準上市招股書階段・新代號尚未掛牌（3 檔準新股 + 9 家私有獨角獸）",
+        statusBadge: "尚未掛牌・無法下單",
+        statusColor: "text-rose-300 bg-rose-500/15 border-rose-400/25",
+        tickers: "• 招股書審查中：SEQC (Form S-1/A) ❌、EIGQ (Form S-4，現 SPAC 為 SVAQ) ❌、KQC (Form S-4，現 SPAC 為 CHAR) ❌\n• 9 家未上市獨角獸：PsiQuantum、SandboxAQ、Classiq、QuEra、Atom Computing、Alice & Bob、Riverlane、PQShield、Diraq ❌",
+        reason: "1. SEEQC (SEQC) 尚在傳統 S-1 IPO 詢價階段未掛牌；EigenQ (EIGQ) 與 KQC Quantum (KQC) 尚在 Form S-4 合併投票前階段，新代碼尚未啟用。\n2. 注意：即使透過 SPAC 殼公司（SVAQ 或 CHAR）提前買入，一旦未來合併交割時轉為非美國註冊或低流通盤結構，在 Firstrade 仍可能遭遇交割凍結或轉為僅限平倉。",
+        workaround: "• 想間接參與未上市獨角獸：可在 Firstrade 買入 100% 暢通的戰略股東巨頭——GOOGL（領投 QuEra、分拆 SandboxAQ）、MSFT（合作 Atom Computing）、NVDA（投資 PsiQuantum、QuEra、SandboxAQ）。"
+      },
+      {
+        category: "🚫 所有量子股與 SPAC 之附屬權證 (Warrants) 與權利 (Rights)",
+        statusBadge: "Firstrade 全面禁買",
         statusColor: "text-rose-300 bg-rose-500/15 border-rose-400/25",
         tickers: "HQWWW、PSQLW、INFQ.WS、IONQ.WS、QBTS.WT、ARQQW、SVAQW / EIGQW、CHARR ❌",
-        reason: "根據 Firstrade 官方交易規範，平台已全面停止接受任何上市權證 (Warrants，字尾 W / WS / WT) 與權利 (Rights，字尾 R) 的新建買入委託（若原持有僅能以限價單賣出平倉，申請履約須人工收費 $25）。",
-        workaround: "在 Firstrade 請一律下單 4 字母普通股（如 HQ、PSQL、INFQ、IONQ、QBTS、ARQQ、SVAQ、CHAR）；若一定要交易高槓桿量子權證，須改用 Interactive Brokers (IBKR) 或 Charles Schwab。"
+        reason: "Firstrade 官方規則明定：全面禁止買入任何上市權證 (字尾 W / WS / WT) 與權利 (字尾 R)，僅支援既有部位以限價單賣出平倉。",
+        workaround: "在 Firstrade 請完全避開任何字尾帶 W 或 R 的衍生代號。"
       },
       {
-        category: "🔒 純私有未上市獨角獸（9 家）與海外原股（5 字母 F 尾碼 OTC）",
-        statusBadge: "未上市 / 禁止買入",
-        statusColor: "text-rose-300 bg-rose-500/15 border-rose-400/25",
-        tickers: "PsiQuantum、SandboxAQ、Classiq、QuEra、Atom Computing、Alice & Bob、Riverlane、PQShield、Diraq ❌\n以及所有 5 字母 F 結尾之海外 OTC 原股 ❌",
-        reason: "1. 上述 9 家獨角獸尚未向 SEC 遞交公開上市申請，僅於 Forge Global / Nasdaq Private Market 供合格機構交易。\n2. Firstrade 禁止線上買賣 5 字母 F 結尾之外國發行 OTC 股票（平倉須收 $75 清算費）。",
-        workaround: "可於 Firstrade 買入其上市母公司或核心戰略股東間接佈局：如透過 GOOGL 參與 QuEra 與 SandboxAQ；透過 MSFT 參與 Atom Computing；透過 NVDA 參與 PsiQuantum 與 QuEra。"
-      },
-      {
-        category: "⚠️ 可正常下單但受「低價股 (<$3 / <$1) 保證金與限價單規則」限制之標的",
-        statusBadge: "可下單・限現股/限價",
+        category: "✅ 100% 美國本土註冊 (US ISIN)・Firstrade 實測保證可正常下單之標的",
+        statusBadge: "Firstrade 暢通可買",
         statusColor: "text-emerald-300 bg-emerald-500/15 border-emerald-400/25",
-        tickers: "LAES (SEALSQ, 現價 ~$1.64) ✅\nXNDU (Xanadu, 現價 ~$2.84) ✅\n其餘 21 檔美股 (IONQ, QNT, QBTS, RGTI, IQMX, INFQ, PSQL, HQ, QUBT, ARQQ, WQEY, 巨頭群) & 3 檔 ETF (QTUM, SPRX, CIBR) 皆可正常下單 ✅",
-        reason: "Firstrade 針對股價低於 $3.00 之標的（如 LAES、XNDU）要求 100% 現股保證金（不可融資買進、不可放空）；且一旦股價跌破 $1.00，系統將強制要求「單筆最低買入 100 股、僅限使用限價單 (Limit Order)、且禁止盤前盤後交易」。",
-        workaround: "於 Firstrade 下單 LAES、XNDU、ARQQ、WQEY 等小型量子股時，建議直接使用「正規交易時段 (Regular Hours) + 限價單 (Limit Order)」現股買入。"
+        tickers: "• 美國本土純量子硬體股：IONQ (US46222L1089)、QBTS (US26740W1099)、RGTI (US76655K1034)、QUBT (US7476741097)、INFQ (US45676K1034)、QNT (US74768A1043，或買母公司 HON) ✅\n• 10 大科技與 PQC 資安巨頭：NVDA、GOOGL、IBM、MSFT、AMZN、HON、NET、PANW、LSCC、CRWD ✅\n• 3 大美國主題 ETF：QTUM、SPRX、CIBR ✅",
+        reason: "上述標的皆為 100% 美國本土德拉瓦州等州份註冊（ISIN 皆為 US 開頭、遵循美國國內 SEC Form 10-K / S-1 / S-4 規範），完全符合 DTC 與 Apex Clearing 標準交割資格，無外國發行人 (FPI) 風控鎖倉問題。",
+        workaround: "若以 Firstrade 作為主力帳戶，建議將資金聚焦於「IONQ + QBTS + RGTI + INFQ + QTUM ETF + PQC 巨頭 (NET/PANW/IBM/NVDA)」組合，完全避開歐洲與亞洲跨境 F-4 小型股的交割限制。"
       }
     ]
   },

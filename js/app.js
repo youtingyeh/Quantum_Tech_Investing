@@ -184,10 +184,22 @@ function renderStocksGrid() {
     return;
   }
 
+  const firstradeMap = {
+    IQMX: { label: '🚫 Firstrade 禁買 (芬蘭 F-4)', cls: 'text-rose-300 bg-rose-500/15 border-rose-400/25' },
+    HQ:   { label: '🚫 Firstrade 禁買 (新加坡 SG)', cls: 'text-rose-300 bg-rose-500/15 border-rose-400/25' },
+    ARQQ: { label: '🚫 Firstrade 禁買 (開曼 KYG)', cls: 'text-rose-300 bg-rose-500/15 border-rose-400/25' },
+    PSQL: { label: '🚫 Firstrade 禁買 (法國 FR)', cls: 'text-rose-300 bg-rose-500/15 border-rose-400/25' },
+    XNDU: { label: '🚫 Firstrade 受限 (加拿大 CA)', cls: 'text-amber-300 bg-amber-500/15 border-amber-400/25' },
+    WQEY: { label: '🚫 Firstrade 禁買 (BVI 換號)', cls: 'text-rose-300 bg-rose-500/15 border-rose-400/25' },
+    WKEY: { label: '🚫 Firstrade 禁買 (已換號 WQEY)', cls: 'text-rose-300 bg-rose-500/15 border-rose-400/25' },
+    LAES: { label: '⚠️ Firstrade 受限 (BVI <$2)', cls: 'text-amber-300 bg-amber-500/15 border-amber-400/25' }
+  };
+
   container.innerHTML = stocks.map(s => {
     const meta = CategoryMeta[s.category] || { label: s.category, badgeClass: 'badge-pure-compute' };
     const isCompared = AppState.selectedCompareIds.includes(s.id);
     const fin = AppState.liveData?.stocks_financials?.[s.ticker];
+    const ftBadge = firstradeMap[s.ticker] || { label: '✅ Firstrade 可買 (US 本土)', cls: 'text-emerald-300 bg-emerald-500/10 border-emerald-400/20' };
 
     return `
       <div class="quantum-card p-5 flex flex-col justify-between">
@@ -195,10 +207,11 @@ function renderStocksGrid() {
           <!-- Top Header -->
           <div class="flex items-start justify-between gap-2 mb-3">
             <div>
-              <div class="flex items-center gap-2">
+              <div class="flex flex-wrap items-center gap-1.5">
                 <span class="font-mono-num text-xl font-bold text-white tracking-tight">${s.ticker}</span>
-                <span class="text-[11px] font-mono-num px-2 py-0.5 rounded bg-white/[0.05] text-slate-400 border border-white/[0.07]">${s.exchange}</span>
-                <span class="text-[11px] px-2.5 py-0.5 rounded-full font-medium ${meta.badgeClass}">${meta.label}</span>
+                <span class="text-[11px] font-mono-num px-2 py-0.5 rounded bg-white/[0.05] text-slate-400 border border-white/[0.07]">${s.exchange.split(' ')[0]}</span>
+                <span class="text-[11px] px-2 py-0.5 rounded-full font-medium ${meta.badgeClass}">${meta.label}</span>
+                <span class="text-[10px] px-2 py-0.5 rounded border ${ftBadge.cls}">${ftBadge.label}</span>
               </div>
               <h3 class="text-xs font-medium text-slate-400 mt-1">${s.name}</h3>
             </div>
