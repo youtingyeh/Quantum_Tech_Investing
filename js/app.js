@@ -760,6 +760,41 @@ function renderPreIpoSection() {
     `;
   }
 
+  // 3B. Render Firstrade Broker Orderability & Restrictions Guide
+  const ftEl = document.getElementById('firstradeGuideContainer');
+  if (ftEl && pa?.firstradeGuide) {
+    ftEl.innerHTML = `
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/[0.07] pb-3.5">
+          <div>
+            <div class="text-xs font-semibold text-indigo-300 uppercase tracking-wider">Broker Execution &amp; Orderability Check</div>
+            <h3 class="text-base sm:text-lg font-bold text-white mt-0.5">Firstrade (第一證券) 下單實測：哪些追蹤標的無法下單、需改代號或受交易限制？</h3>
+          </div>
+          <span class="text-[11px] font-mono-num px-2.5 py-1 rounded bg-[#161922] border border-white/[0.08] text-slate-300">2026/10 交易規則實測</span>
+        </div>
+        <div class="space-y-3 text-xs">
+          ${pa.firstradeGuide.map(g => `
+            <div class="p-4 rounded-xl bg-[#161922] border border-white/[0.06] grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+              <div class="lg:col-span-4 space-y-1.5">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="font-bold text-white">${g.category}</span>
+                  <span class="text-[11px] px-2 py-0.5 rounded border ${g.statusColor}">${g.statusBadge}</span>
+                </div>
+                <div class="font-mono-num text-slate-200 whitespace-pre-line leading-relaxed pt-1">${g.tickers}</div>
+              </div>
+              <div class="lg:col-span-5 text-slate-300 whitespace-pre-line leading-relaxed">
+                <span class="text-slate-400 font-semibold block mb-0.5">無法下單 / 限制原因：</span>${g.reason}
+              </div>
+              <div class="lg:col-span-3 text-slate-200 whitespace-pre-line leading-relaxed bg-[#11131a] p-3 rounded-lg border border-white/[0.05]">
+                <span class="text-indigo-300 font-semibold block mb-0.5">💡 Firstrade 實戰替代方案：</span>${g.workaround}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
   // 4. Render Full 12 Pre-IPO & Pending Listing Unicorns Grid
   const container = document.getElementById('preIpoGridContainer');
   if (!container) return;

@@ -170,14 +170,14 @@ TRACKED_STOCKS: List[Dict[str, Any]] = [
         "key_edge": "QuantumCloud 零信任對稱金鑰協議，純軟體高毛利 (~71%)，獲英國國防部與歐美電信商採用"
     },
     {
-        "ticker": "WKEY",
-        "name": "WISeKey International",
+        "ticker": "WQEY",
+        "name": "WISeQey Corp. (原 WKEY)",
         "category": "pure-pqc",
         "modality_group": "PQC IoT & Quantum Satellites (抗量子物聯網衛星)",
         "modality_id": "pqc-crypto",
         "tech_score": 85,
         "commercial_score": 84,
-        "key_edge": "母公司控股 SEALSQ 與 WISeSat 低軌抗量子衛星群，受惠歐盟 Cyber Resilience Act 強制升級"
+        "key_edge": "2026/10/05 由 WKEY 更名為 WQEY，母公司控股 SEALSQ 與 WISeSat 低軌抗量子衛星群"
     },
     # Big Tech Quantum & Hybrid Supercomputing Leaders (6)
     {

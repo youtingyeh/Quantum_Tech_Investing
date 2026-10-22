@@ -837,19 +837,19 @@ window.QUANTUM_DATA = {
     },
     {
       id: "wkey",
-      ticker: "WKEY",
-      exchange: "NASDAQ",
-      name: "WISeKey International Holding (WISeQey)",
+      ticker: "WQEY",
+      exchange: "NASDAQ (2026/10/05 由 WKEY 變更為 WQEY)",
+      name: "WISeQey Corp. (原 WISeKey International / WKEY)",
       category: "pure-pqc",
       subCategories: ["太空量子信任根衛星", "後量子物聯網生態", "SEALSQ 控股母公司"],
       modality: "低軌奈米衛星後量子金鑰分發 (WISeSat.Space) + PQC 硬體生態",
-      price: 6.08,
-      marketCap: "$62M",
-      marketCapNum: 62,
+      price: 9.15,
+      marketCap: "$68M",
+      marketCapNum: 68,
       revenue: "$22.8M (2026 年化 / H1'26 合併營收 $11.4M, +116% YoY)",
-      revenueNum: 22.8,
       revenueYoY: "+116%",
       revenueYoYNum: 116,
+      revenueNum: 22.8,
       bookingsOrBacklog: "透過控股子公司 SEALSQ 與 WISeSat 衛星物聯網服務共享龐大訂單池",
       cashReserves: "$500M+ (合併報表含子公司 SEALSQ 現金部位)",
       cashNum: 500,
@@ -862,21 +862,27 @@ window.QUANTUM_DATA = {
       gateSpeed: "低軌衛星直連終端 (Direct-to-Device PQC IoT)",
       errorCorrection: "太空隔離抗實體篡改硬體安全模組 (HSM)",
       pqcOrCryptoRole: "結合 SpaceX 發射之低軌奈米衛星與 SEALSQ 抗量子晶片，打造太空定錨之「Quantum RootKey」全球安全通訊網",
-      summary: "瑞士網路安全與物聯網控股母公司（持有 SEALSQ 多數控制權，並於 2026 年推進 WISeQey 品牌重組）。除了合併認列 SEALSQ 高速成長的後量子晶片營收外，更透過旗下 WISeSat.Space 持續搭乘 SpaceX 火箭發射搭載後量子密碼晶片的低軌微型衛星，為偏遠地區、海事與國防提供太空級抗量子加密通訊。",
+      summary: "瑞士網路安全與物聯網控股母公司（持有 SEALSQ 多數控制權）。⚠️【Firstrade 下單重要提醒】公司於 2026 年 10 月 1 日完成自瑞士遷冊至英屬維京群島 (BVI) 並更名為 WISeQey Corp.，原美國存託憑證代號 WKEY 已於 2026 年 10 月 5 日終止交易（每 1 股舊 WKEY ADS 換發 0.5 股新普通股），在 Firstrade 輸入舊代號 WKEY 無法下單，必須改輸入新代號 WQEY！",
       technicalAdvantages: [
         "太空級硬體信任根 (Quantum Space Orbital Cloud)：將根憑證與金鑰儲存在外太空低軌衛星中，免受地面資料中心物理入侵或海底光纜竊聽威脅。",
-        "顯著的母子控股折價：WKEY 本身市值僅約 $6,200 萬美元，卻控股市值 $4.4 億美元的 SEALSQ (LAES)，同時擁有 WISeSat 太空業務與 SEALCOIN 物聯網微支付生態。"
+        "顯著的母子控股折價：WQEY (原 WKEY) 本身市值僅約 $6,800 萬美元，卻控股市值近 $4 億美元的 SEALSQ (LAES)，同時擁有 WISeSat 太空業務與 SEALCOIN 物聯網微支付生態。"
       ],
       outlook: {
         rating: "太空後量子通訊與深度控股折價股 (Space PQC & Deep Holding Discount)",
         bullCase: "母公司市值遠低於其持有的 SEALSQ 股權價值與合併現金部位；低軌衛星抗量子物聯網題材具備高度稀缺性。",
-        bearCase: "集團控股架構較複雜，成交量主要集中在子公司 LAES。",
+        bearCase: "集團控股架構較複雜，成交量主要集中在子公司 LAES；剛完成 WKEY → WQEY 代號轉換，短期需留意流動性。",
         catalysts2026_2027: [
           "WISeSat 新一批次後量子衛星搭乘 SpaceX Transporter 發射升空",
-          "WISeQey 架構重組釋放母公司控股價值"
+          "2026/10/05 完成 WISeQey (NASDAQ: WQEY) 遷冊與普通股直接掛牌，消除過往 ADS 託管費與結構折價"
         ]
       },
       news: [
+        {
+          date: "2026-10",
+          title: "完成 BVI 遷冊重組為 WISeQey Corp.，自 2026 年 10 月 5 日起於 Nasdaq 正式啟用新交易代號 WQEY（原 WKEY 終止交易）",
+          source: "Nasdaq Trader & Company PR",
+          impact: "代號變更"
+        },
         {
           date: "2026-08",
           title: "H1 2026 集團合併營收達 1,140 萬美元 (年增 116%)，加速部署 Quantum Space Orbital Cloud",
@@ -1822,6 +1828,48 @@ window.QUANTUM_DATA = {
       {
         title: "法則 5：還原 Non-GAAP 真實燒錢率（剔除一次性上市費與 SBC 股權獎勵）",
         detail: "量子招股書的帳面 GAAP 淨虧損往往被「一次性 SPAC 併購顧問費」與「里程碑股份基礎給付 (SBC)」大幅誇大。例如 Pasqal H1 2026 營業虧損 €59.2M 中，高達 €37.5M 為非現金 SBC (€27.3M) 與上市費用 (€10.2M)；投資人應直接查閱「營業活動現金流量 (Operating Cash Outflow)」以計算真實現金跑道。"
+      }
+    ],
+    firstradeGuide: [
+      {
+        category: "🔄 舊代號已失效・須改用新代號下單",
+        statusBadge: "改輸入新代號即可買賣",
+        statusColor: "text-amber-300 bg-amber-500/15 border-amber-400/25",
+        tickers: "舊代號 WKEY ❌ → 請改輸入 WQEY ✅\n舊 SPAC 代號 CCCX / CHAC / DMYY / RAAQ / BBCQ ❌ → 請改輸入 INFQ / XNDU / HQ / IQMX / PSQL ✅",
+        reason: "1. WISeKey 已於 2026/10/01 完成自瑞士遷冊至英屬維京群島 (BVI) 並更名為 WISeQey Corp.，原 ADS 代號 WKEY 於 2026/10/05 正式自 Nasdaq 終止下市（每 1 股舊 WKEY 換發 0.5 股新普通股），在 Firstrade 輸入 WKEY 會顯示無法下單，必須改輸入新代號 WQEY。\n2. 2026 年完成合併之 5 檔量子 SPAC 原代號皆已註銷，須直接輸入合併後正股代號。",
+        workaround: "在 Firstrade 搜尋欄直接輸入 WQEY、INFQ、XNDU、HQ、IQMX、PSQL 即可正常免佣金買賣。"
+      },
+      {
+        category: "⏳ 準上市招股書階段・新代號尚未掛牌",
+        statusBadge: "新代號無法下單",
+        statusColor: "text-rose-300 bg-rose-500/15 border-rose-400/25",
+        tickers: "SEQC (SEEQC, Form S-1/A) ❌\nEIGQ (EigenQ, Form S-4) ❌ → 可先買 SVAQ ✅\nKQC (KQC Quantum, Form S-4) ❌ → 可先買 CHAR ✅",
+        reason: "1. SEEQC (SEQC) 處於傳統 S-1 IPO 承銷詢價階段，尚未正式敲鐘掛牌，且 Firstrade 不支援美股 S-1 IPO 新股抽籤申購。\n2. EigenQ (EIGQ) 與 KQC Quantum (KQC) 尚處於 SEC Form S-4 審查與股東投票前階段，新代號尚未啟用。",
+        workaround: "• SEQC：須等待 Nasdaq 正式定價掛牌首日開盤後再於次級市場下單。\n• EIGQ / KQC：若欲於合併交割前卡位，可在 Firstrade 直接買入其 SPAC 母體普通股 SVAQ（對應 EigenQ）或 CHAR（對應 KQC）。"
+      },
+      {
+        category: "🚫 Firstrade 平台明文禁止買入之衍生性標的（權證 Warrants / 權利 Rights）",
+        statusBadge: "Firstrade 禁止買入",
+        statusColor: "text-rose-300 bg-rose-500/15 border-rose-400/25",
+        tickers: "HQWWW、PSQLW、INFQ.WS、IONQ.WS、QBTS.WT、ARQQW、SVAQW / EIGQW、CHARR ❌",
+        reason: "根據 Firstrade 官方交易規範，平台已全面停止接受任何上市權證 (Warrants，字尾 W / WS / WT) 與權利 (Rights，字尾 R) 的新建買入委託（若原持有僅能以限價單賣出平倉，申請履約須人工收費 $25）。",
+        workaround: "在 Firstrade 請一律下單 4 字母普通股（如 HQ、PSQL、INFQ、IONQ、QBTS、ARQQ、SVAQ、CHAR）；若一定要交易高槓桿量子權證，須改用 Interactive Brokers (IBKR) 或 Charles Schwab。"
+      },
+      {
+        category: "🔒 純私有未上市獨角獸（9 家）與海外原股（5 字母 F 尾碼 OTC）",
+        statusBadge: "未上市 / 禁止買入",
+        statusColor: "text-rose-300 bg-rose-500/15 border-rose-400/25",
+        tickers: "PsiQuantum、SandboxAQ、Classiq、QuEra、Atom Computing、Alice & Bob、Riverlane、PQShield、Diraq ❌\n以及所有 5 字母 F 結尾之海外 OTC 原股 ❌",
+        reason: "1. 上述 9 家獨角獸尚未向 SEC 遞交公開上市申請，僅於 Forge Global / Nasdaq Private Market 供合格機構交易。\n2. Firstrade 禁止線上買賣 5 字母 F 結尾之外國發行 OTC 股票（平倉須收 $75 清算費）。",
+        workaround: "可於 Firstrade 買入其上市母公司或核心戰略股東間接佈局：如透過 GOOGL 參與 QuEra 與 SandboxAQ；透過 MSFT 參與 Atom Computing；透過 NVDA 參與 PsiQuantum 與 QuEra。"
+      },
+      {
+        category: "⚠️ 可正常下單但受「低價股 (<$3 / <$1) 保證金與限價單規則」限制之標的",
+        statusBadge: "可下單・限現股/限價",
+        statusColor: "text-emerald-300 bg-emerald-500/15 border-emerald-400/25",
+        tickers: "LAES (SEALSQ, 現價 ~$1.64) ✅\nXNDU (Xanadu, 現價 ~$2.84) ✅\n其餘 21 檔美股 (IONQ, QNT, QBTS, RGTI, IQMX, INFQ, PSQL, HQ, QUBT, ARQQ, WQEY, 巨頭群) & 3 檔 ETF (QTUM, SPRX, CIBR) 皆可正常下單 ✅",
+        reason: "Firstrade 針對股價低於 $3.00 之標的（如 LAES、XNDU）要求 100% 現股保證金（不可融資買進、不可放空）；且一旦股價跌破 $1.00，系統將強制要求「單筆最低買入 100 股、僅限使用限價單 (Limit Order)、且禁止盤前盤後交易」。",
+        workaround: "於 Firstrade 下單 LAES、XNDU、ARQQ、WQEY 等小型量子股時，建議直接使用「正規交易時段 (Regular Hours) + 限價單 (Limit Order)」現股買入。"
       }
     ]
   },
