@@ -93,7 +93,7 @@
           量子與資安 ETF <span class="font-mono-num text-[11px] opacity-70">(3)</span>
         </button>
         <button data-nav-target="pre-ipo" class="nav-tab shrink-0 px-3.5 py-1.5 rounded-lg">
-          未上市獨角獸 <span class="font-mono-num text-[11px] opacity-70">(10)</span>
+          準上市招股書 &amp; 獨角獸 <span class="font-mono-num text-[11px] opacity-70">(12)</span>
         </button>
         <button data-nav-target="pqc-hub" class="nav-tab shrink-0 px-3.5 py-1.5 rounded-lg">
           PQC 後量子資安專題
@@ -390,25 +390,57 @@
     </section>
 
     <!-- ====================================================================== -->
-    <!-- SECTION 5: PRE-IPO UNICORN PIPELINE (未來可能上市之潛力獨角獸追蹤)     -->
+    <!-- SECTION 5: SEC PROSPECTUS ANALYSIS & PRE-IPO UNICORN PIPELINE          -->
     <!-- ====================================================================== -->
-    <section id="section-pre-ipo" class="app-section hidden space-y-6">
-      <div class="quantum-card-static p-6 border-l-2 border-l-emerald-400">
+    <section id="section-pre-ipo" class="app-section hidden space-y-8">
+      <!-- Intro & Status Calibration Header -->
+      <div class="quantum-card-static p-6 border-l-2 border-l-indigo-400">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">2026 已掛牌與未上市狀態校驗說明</div>
-            <h3 class="text-base font-bold text-white mt-1">Quantinuum (QNT)、IQM (IQMX)、Infleqtion (INFQ)、Xanadu (XNDU)、Pasqal (PSQL)、Horizon (HQ) 已於 2026 年完成上市</h3>
-            <p class="text-xs text-slate-400 mt-1">
-              上述 6 家於 2026 年完成 IPO 或 SPAC 合併之公司已移入「美股資料庫」。下方僅列出<strong class="text-slate-200">截至 2026 年 10 月真正仍維持私有未上市狀態之 10 大量子與 PQC 獨角獸</strong>：
+          <div class="space-y-1.5">
+            <div class="text-xs font-semibold text-indigo-300 uppercase tracking-wider">SEC EDGAR 招股書深度拆解 (Form S-1 / S-4 / F-4) &amp; 未上市獨角獸追蹤</div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">準上市量子公司 SEC 招股書財務底牌、風險條款與估值對照</h2>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              完整剖析目前正處於 SEC 審查與準掛牌階段之 <strong class="text-slate-200">SEEQC (Form S-1/A)</strong>、<strong class="text-slate-200">EigenQ / SVAQ (Form S-4)</strong>、<strong class="text-slate-200">KQC Quantum / CHAR (Form S-4)</strong> 與 <strong class="text-slate-200">Classiq</strong> 招股書細節，並與 2026 年剛完成招股書審查掛牌之 6 大同業（<code class="text-slate-200">QNT</code>、<code class="text-slate-200">INFQ</code>、<code class="text-slate-200">IQMX</code>、<code class="text-slate-200">XNDU</code>、<code class="text-slate-200">PSQL</code>、<code class="text-slate-200">HQ</code>）進行財務與估值基準比對。
             </p>
           </div>
           <button onclick="switchSection('stocks')" class="shrink-0 px-4 py-2 rounded-lg bg-[#161922] hover:bg-[#1c202b] border border-white/[0.1] text-slate-200 text-xs font-medium transition">
-            查看 QNT / IQMX 已上市研報 →
+            查看 2026 已上市 6 新股研報 →
           </button>
         </div>
       </div>
 
-      <div id="preIpoGridContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      <!-- Part 1: Active SEC Filings & Pending Listings Deep-Dive -->
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-white">一、正在衝刺掛牌之準上市公司 SEC 招股書逐案拆解 (Active S-1 / S-4 Filings)</h3>
+            <p class="text-xs text-slate-400 mt-0.5">涵蓋營收結構、淨虧損與累計赤字、審計師「繼續經營疑慮 (Going Concern)」提示、PIPE / 可轉債條款與多空投資判讀</p>
+          </div>
+          <span class="text-[11px] font-mono-num px-2.5 py-1 rounded bg-[#161922] border border-white/[0.08] text-slate-300 self-start sm:self-auto">SEC EDGAR 2026/10 最新申報</span>
+        </div>
+        <div id="prospectusActiveFilingsContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-5"></div>
+      </div>
+
+      <!-- Part 2: 2026 Newly Listed 6-Company Prospectus Benchmark Comparison Table -->
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-base sm:text-lg font-bold text-white">二、2026 已生效掛牌 6 大量子新股之 SEC 招股書財務基準對照表 (Benchmarking Comps)</h3>
+          <p class="text-xs text-slate-400 mt-0.5">評估準上市公司估值是否合理，最客觀的尺標即是對照 2026 年剛通過 SEC S-1 / S-4 / F-4 審查上市之 6 家同業在招股書中揭露的真實營收、Bookings 與募資規模</p>
+        </div>
+        <div id="prospectusBenchmarksContainer" class="quantum-card-static overflow-hidden"></div>
+      </div>
+
+      <!-- Part 3: Institutional Prospectus Due-Diligence Checklist -->
+      <div id="prospectusChecklistContainer" class="quantum-card-static p-6"></div>
+
+      <!-- Part 4: Full 12 Pre-IPO & Pending Listing Unicorns Grid -->
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-base sm:text-lg font-bold text-white">三、全球 12 大準上市與未上市量子 / PQC 獨角獸完整追蹤清單</h3>
+          <p class="text-xs text-slate-400 mt-0.5">依 IPO 準備度評分排序，涵蓋已遞交 S-1/S-4 招股書之準掛牌標的與 PsiQuantum、SandboxAQ、QuEra、Atom Computing 等未上市頂級獨角獸</p>
+        </div>
+        <div id="preIpoGridContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </div>
     </section>
 
     <!-- ====================================================================== -->

@@ -618,9 +618,149 @@ function renderEtfsSection() {
 }
 
 // ============================================================================
-// PRE-IPO UNICORN PIPELINE RENDERER (未來可能上市之潛力獨角獸)
+// SEC PROSPECTUS DEEP-DIVE & PRE-IPO UNICORN PIPELINE RENDERER
 // ============================================================================
 function renderPreIpoSection() {
+  const pa = window.QUANTUM_DATA.prospectusAnalysis;
+
+  // 1. Render Active SEC Filings (S-1 / S-4 / Pre-Filing)
+  const activeFilingsEl = document.getElementById('prospectusActiveFilingsContainer');
+  if (activeFilingsEl && pa?.activeFilings) {
+    activeFilingsEl.innerHTML = pa.activeFilings.map(f => `
+      <div class="quantum-card-static p-6 flex flex-col justify-between space-y-4">
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-start justify-between gap-2 border-b border-white/[0.07] pb-3.5">
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <h4 class="text-base sm:text-lg font-bold text-white">${f.company}</h4>
+                <span class="text-[11px] font-mono-num px-2 py-0.5 rounded bg-indigo-500/15 text-indigo-300 border border-indigo-400/25 font-semibold">${f.proposedTicker}</span>
+              </div>
+              <div class="text-xs text-slate-400 mt-1">${f.dealPath}</div>
+            </div>
+            <span class="text-[11px] font-mono-num px-2.5 py-1 rounded bg-[#161922] text-slate-200 border border-white/[0.08]">${f.filingType}</span>
+          </div>
+
+          <!-- Prospectus Core Financial Metrics Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+            <div class="p-3 rounded-xl bg-[#161922] border border-white/[0.06]">
+              <div class="text-[11px] text-slate-400">目標估值 / 定價結構</div>
+              <div class="font-mono-num font-bold text-white mt-0.5">${f.targetValuation}</div>
+            </div>
+            <div class="p-3 rounded-xl bg-[#161922] border border-white/[0.06]">
+              <div class="text-[11px] text-slate-400">SEC 遞件與審查時程</div>
+              <div class="font-mono-num font-semibold text-slate-200 mt-0.5">${f.filingDate}</div>
+            </div>
+            <div class="p-3 rounded-xl bg-[#161922] border border-white/[0.06]">
+              <div class="text-[11px] text-slate-400">FY2025 招股書揭露營收</div>
+              <div class="font-mono-num font-semibold text-emerald-400 mt-0.5">${f.fy25Revenue}</div>
+            </div>
+            <div class="p-3 rounded-xl bg-[#161922] border border-white/[0.06]">
+              <div class="text-[11px] text-slate-400">2026 最新期中營收進度</div>
+              <div class="font-mono-num font-semibold text-slate-200 mt-0.5">${f.h1_2026Revenue}</div>
+            </div>
+            <div class="p-3 rounded-xl bg-[#161922] border border-white/[0.06] sm:col-span-2">
+              <div class="text-[11px] text-slate-400">損益表淨虧損與累計赤字 (Net Loss &amp; Accumulated Deficit)</div>
+              <div class="font-mono-num text-rose-300 mt-0.5">${f.netLossAndDeficit}</div>
+            </div>
+            <div class="p-3 rounded-xl bg-[#161922] border border-white/[0.06] sm:col-span-2">
+              <div class="text-[11px] text-slate-400">現金部位、SPAC 信託與過橋融資 / 承銷團</div>
+              <div class="text-slate-200 mt-0.5">${f.cashAndProceeds}</div>
+              <div class="text-[11px] text-slate-400 mt-1">${f.underwritersOrSponsor}</div>
+            </div>
+          </div>
+
+          <!-- Going Concern / Audit Opinion Box -->
+          <div class="p-3.5 rounded-xl bg-[#161922] border border-white/[0.06] border-l-2 ${f.goingConcernFlag ? 'border-l-amber-400' : 'border-l-emerald-400'} text-xs">
+            <div class="font-bold ${f.goingConcernFlag ? 'text-amber-300' : 'text-emerald-300'} mb-1">
+              ${f.goingConcernFlag ? '⚠️ 招股書審計意見與流動性風險提示 (Going Concern & Liquidity)' : '✅ 招股書財務體質與交割保護條款'}
+            </div>
+            <p class="text-slate-300 leading-relaxed">${f.goingConcernText}</p>
+          </div>
+
+          <!-- Pros & Risks from Prospectus -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3.5 rounded-xl bg-[#161922] border border-white/[0.05] space-y-1.5">
+              <div class="font-bold text-emerald-400">招股書核心亮點 (Bull Case)</div>
+              ${f.pros.map(p => `<div class="text-slate-300 leading-relaxed">• ${p}</div>`).join('')}
+            </div>
+            <div class="p-3.5 rounded-xl bg-[#161922] border border-white/[0.05] space-y-1.5">
+              <div class="font-bold text-rose-400">招股書風險揭露 (Risk Factors)</div>
+              ${f.risks.map(r => `<div class="text-slate-300 leading-relaxed">• ${r}</div>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Verdict -->
+        <div class="pt-3 border-t border-white/[0.07] text-xs font-medium text-white">
+          ${f.verdict}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // 2. Render 2026 Newly Listed 6-Company SEC Prospectus Benchmark Table
+  const benchEl = document.getElementById('prospectusBenchmarksContainer');
+  if (benchEl && pa?.recent2026Benchmarks) {
+    benchEl.innerHTML = `
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-white/[0.08] bg-[#161922] text-slate-400">
+              <th class="py-3 px-4 font-semibold">股票代號 &amp; 公司</th>
+              <th class="py-3 px-3 font-semibold">SEC 招股書型態與生效時間</th>
+              <th class="py-3 px-3 font-semibold">FY25 招股書營收</th>
+              <th class="py-3 px-3 font-semibold">簽約 Bookings / 2026 財測</th>
+              <th class="py-3 px-3 font-semibold">招股書揭露虧損規模</th>
+              <th class="py-3 px-3 font-semibold">IPO / SPAC 募資與現金</th>
+              <th class="py-3 px-4 font-semibold min-w-[240px]">招股書關鍵投資啟示</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/[0.05]">
+            ${pa.recent2026Benchmarks.map(b => `
+              <tr class="hover:bg-white/[0.02] transition align-top">
+                <td class="py-3.5 px-4">
+                  <div class="font-mono-num font-bold text-sm text-white">${b.ticker}</div>
+                  <div class="text-slate-400 mt-0.5">${b.company}</div>
+                </td>
+                <td class="py-3.5 px-3">
+                  <span class="font-mono-num px-2 py-0.5 rounded bg-white/[0.05] text-slate-200 border border-white/[0.08]">${b.filingType}</span>
+                  <div class="text-slate-400 mt-1 leading-relaxed">${b.effectiveAndListDate}</div>
+                </td>
+                <td class="py-3.5 px-3 font-mono-num font-bold text-emerald-400">${b.fy25Revenue}</td>
+                <td class="py-3.5 px-3 font-mono-num text-slate-200 leading-relaxed">${b.bookingsOrGuidance}</td>
+                <td class="py-3.5 px-3 font-mono-num text-rose-300 leading-relaxed">${b.lossMetric}</td>
+                <td class="py-3.5 px-3 font-mono-num text-slate-200 leading-relaxed">${b.proceedsAndCash}</td>
+                <td class="py-3.5 px-4 text-slate-300 leading-relaxed">${b.keyProspectusInsight}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  // 3. Render Institutional Prospectus Due-Diligence Checklist
+  const checkEl = document.getElementById('prospectusChecklistContainer');
+  if (checkEl && pa?.checklistRules) {
+    checkEl.innerHTML = `
+      <div class="space-y-4">
+        <div>
+          <div class="text-xs font-semibold text-indigo-300 uppercase tracking-wider">Institutional SEC Filing Due Diligence</div>
+          <h3 class="text-base sm:text-lg font-bold text-white mt-0.5">機構投資人審閱量子公司 SEC 招股書 (S-1 / S-4 / F-4) 的 5 大避坑與淘金法則</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+          ${pa.checklistRules.map((rule, idx) => `
+            <div class="p-4 rounded-xl bg-[#161922] border border-white/[0.06] ${idx === 4 ? 'md:col-span-2 lg:col-span-2' : ''}">
+              <div class="font-bold text-white mb-1.5">${rule.title}</div>
+              <p class="text-slate-300 leading-relaxed">${rule.detail}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // 4. Render Full 12 Pre-IPO & Pending Listing Unicorns Grid
   const container = document.getElementById('preIpoGridContainer');
   if (!container) return;
 

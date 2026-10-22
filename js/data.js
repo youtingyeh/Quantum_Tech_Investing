@@ -1628,12 +1628,270 @@ window.QUANTUM_DATA = {
   // ============================================================================
   // 3. PRE-IPO QUANTUM & PQC UNICORN PIPELINE (截至 2026/10 尚未上市之純未上市獨角獸)
   // ============================================================================
+  // 3A. SEC PROSPECTUS DEEP-DIVE (S-1 / S-4 / F-4 招股書深度拆解與對照分析)
+  // ============================================================================
+  prospectusAnalysis: {
+    activeFilings: [
+      {
+        id: "filing-seeqc",
+        company: "SEEQC, Inc.",
+        proposedTicker: "NASDAQ: SEQC",
+        filingType: "SEC Form S-1 / S-1/A (File No. 333-297133)",
+        filingDate: "2026-06-29 首遞 S-1 → 2026-09/10 更新 S-1/A",
+        dealPath: "傳統承銷 IPO（2026/08/25 終止原 Allegro $1B SPAC Form S-4，轉向獨立 S-1 掛牌）",
+        underwritersOrSponsor: "主承銷商：Cantor Fitzgerald、BTIG（協辦：Needham & Co.、Craig-Hallum）",
+        targetValuation: "待定價 (原 S-4 估值 ~$1.0B；S-1 採機構詢價圈購)",
+        fy25Revenue: "$4.16M ($4,157K, +420% YoY vs FY24 ~$0.8M)",
+        h1_2026Revenue: "$1.80M (+23.7% YoY vs H1 2025 $1.46M)",
+        netLossAndDeficit: "FY25 淨虧損 $(12.2M) | H1 2026 淨虧損 $(9.61M) | 累計赤字 $(65.3M)",
+        cashAndProceeds: "帳上現金 $18.1M (截至 2026/06/30，較 Q1 $23.1M 減少) | 原 $64.9M SPAC PIPE 已隨協議終止取消",
+        goingConcernFlag: true,
+        goingConcernText: "獨立審計師出具「繼續經營能力重大疑慮 (Going Concern Warning)」：現有 $18.1M 現金不足以支應未來 12 個月資本支出與研發燒錢，高度仰賴本次 S-1 IPO 募資成功。",
+        pros: [
+          "技術稀缺性極高：全球唯一擁有專屬多層超導晶圓代工廠（紐約 Elmsford）的「單磁通量子 (SFQ) 10mK 極低溫數位控制晶片」商，解決百萬位元機櫃 I/O 線路散熱瓶頸。",
+          "放棄高贖回風險的 SPAC，改由 Cantor 與 BTIG 主導傳統 S-1 承銷上市，機構定價將更透明紮實。",
+          "與 NVIDIA (極低溫 QPU-GPU 超高速互連)、IBM 及 DARPA 擁有實質工程研發合約。"
+        ],
+        risks: [
+          "現金跑道吃緊：截至 2026 年中現金僅剩 $18.1M，上半年淨虧損擴大至 $(9.61M)，若 IPO 延宕將面臨過橋融資壓力。",
+          "客戶集中度極高：S-1 風險揭露指出歷史營收 ($4.16M) 高度集中於少數美國政府機構與主要量子策略夥伴。"
+        ],
+        verdict: "🛠️ 超導控制晶片關鍵「賣鏟人」— 建議待 S-1 最終發行價區間公布、確認募資總額大於 $50M 解除現金警報後再行佈局。"
+      },
+      {
+        id: "filing-eigenq",
+        company: "EigenQ, Inc. (EigenQ Holdings, Inc.)",
+        proposedTicker: "NASDAQ: EIGQ / EIGQW (現 SPAC 代號: SVAQ)",
+        filingType: "SEC Form S-4 註冊聲明暨初步招股書",
+        filingDate: "2026-08 秘密遞交 → 2026-09-28 正式公開 Form S-4",
+        dealPath: "與 Silicon Valley Acquisition Corp. (NASDAQ: SVAQ) 進行 de-SPAC 業務合併（預計 2026 Q4 交割）",
+        underwritersOrSponsor: "SPAC 發起人：Silicon Valley Acquisition Corp. (SVAQ)",
+        targetValuation: "備考企業價值 (Pro Forma EV) ~$3.0B (30 億美元)",
+        fy25Revenue: "早期商業化階段 (2025 年創立，營收規模尚處初期導入期)",
+        h1_2026Revenue: "早期商業化階段 (Form S-4 揭露以政府與企業 PQC 先導部署為主)",
+        netLossAndDeficit: "研發與安全架構擴張期，處於營業虧損與負自由現金流狀態",
+        cashAndProceeds: "SVAQ 信託現金 ~$215M (視贖回率而定) + 上市前 $45M 優先擔保可轉債 (2026/09) + $5M 次順位票據 (2026/10)",
+        goingConcernFlag: true,
+        goingConcernText: "處於早期高研發投入階段，持續性營業虧損與負營運現金流需仰賴 $50M 上市前票據融資與 SVAQ 合併交割資金支撐。",
+        pros: [
+          "卡位美國政府 CNSA 2.0 強制升級潮，提供硬體信任根級後量子密碼 (Hardware-Rooted PQC)、量子安全通訊與分散式量子網路。",
+          "交割前已成功向機構募集 $45M 優先擔保可轉債與 $5M 無擔保票據，確保商業化推廣不斷炊。"
+        ],
+        risks: [
+          "估值嚴重偏高風險：2025 年成立之新創即在 Form S-4 開出高達 $3.0B 的備考企業價值（甚至高於已年營收逾 $30M 的 Infleqtion 與 IQM），完全建立在遠期預測而非歷史實績。",
+          "可轉債與認股權證稀釋壓力：$45M 優先擔保可轉債附帶大量認股權證，若 de-SPAC 時散戶贖回率過高，掛牌後恐面臨較大轉股拋壓。"
+        ],
+        verdict: "⚠️ 高估值 PQC 主題 SPAC — 題材契合後量子資安熱潮，但 $3.0B 估值缺乏當期營收支撐，切勿於合併交割初期盲目追高。"
+      },
+      {
+        id: "filing-kqc",
+        company: "KQC Quantum, Inc. (Korea Quantum Computing)",
+        proposedTicker: "NASDAQ: KQC (現 SPAC 代號: CHAR)",
+        filingType: "Definitive BCA & SEC Form S-4 招股書程序",
+        filingDate: "2026-10 簽署最終業務合併協議 (預計 2027 H1 完成交割)",
+        dealPath: "與 Charlton Aria Acquisition Corp. (NASDAQ: CHAR) 進行 de-SPAC 業務合併",
+        underwritersOrSponsor: "SPAC 發起人：Charlton Aria Acquisition Corp. (CHAR)",
+        targetValuation: "投前股權估值 $80M (每股 $11.00) | 備考合併後股權估值 ~$215M",
+        fy25Revenue: "企業量子中介軟體與後量子 HSM 安全專案收入（於 Form S-4 完整揭露）",
+        h1_2026Revenue: "2026 年中推出 Qubiteer™ AI 混合量子平台 Beta 版，商業專案加速認列",
+        netLossAndDeficit: "輕資產軟體與資安整合模式，資本支出與燒錢率遠低於硬體製造商",
+        cashAndProceeds: "CHAR 信託帳戶持有 ~$93.5M (截至 2026/09) | 設有 $30M 最低現金交割條件 (Minimum Cash Condition)",
+        goingConcernFlag: false,
+        goingConcernText: "交易設有 $30M 最低現金交割保護門檻，且原股東 100% 股權留存展延 (100% Equity Rollover，合併後持股 37%–47%)，利益與公開市場高度綁定。",
+        pros: [
+          "估值極為務實划算：相較動輒 $1B–$3B 的歐美量子 SPAC，KQC 投前股權估值僅 $80M、備考估值 $215M，安全邊際顯著。",
+          "雙引擎商業落地：同時擁有「Qubiteer™ AI 驅動跨硬體量子最佳化平台」與「QuantumSpan 後量子密碼資產審計 + HSM 硬體安全模組」。",
+          "頂級韓國財閥與金融客戶背書：已完成浦項鋼鐵 (POSCO Holdings 電池材料)、釜山交通公社 (軌道排程)、韓國企業銀行 (IBK) 與 LS ITC 實戰專案。"
+        ],
+        risks: [
+          "區域市場集中度：目前商業合約高度集中於南韓大型財閥與公營機構，登陸 Nasdaq 後需證明具備拓展北美與全球市場的能力。",
+          "不自研底層 QPU 硬體：扮演「硬體中立中介層」角色，算力底座需仰賴 IBM、IonQ、D-Wave 等第三方量子硬體。"
+        ],
+        verdict: "💎 低估值亞洲量子軟體與 PQC 黑馬 — $80M 投前估值搭配 POSCO 與 IBK 等真實企業客戶，是準上市陣營中性價比極高的中小型標的。"
+      },
+      {
+        id: "filing-classiq",
+        company: "Classiq Technologies",
+        proposedTicker: "洽談掛牌中 (華爾街 SPAC / S-1 雙軌評估)",
+        filingType: "Pre-Filing / 投行盡職調查與招股書籌備階段",
+        filingDate: "2026 下半年深入談判中 (目標 2027 掛牌)",
+        dealPath: "正與華爾街投行洽談大型 SPAC 合併或傳統 S-1 IPO（同時保留私募增資彈性）",
+        underwritersOrSponsor: "既有策略股東：HPE、Samsung Next、HSBC、SoftBank、Intesa Sanpaolo",
+        targetValuation: "目標上市估值 $2.0B – $5.0B",
+        fy25Revenue: "企業級量子 EDA 軟體授權與雲端平台訂閱（累計私募融資 >$110M）",
+        h1_2026Revenue: "隨 NVIDIA CUDA-Q、Microsoft Azure 與 AWS Braket 深度整合高速成長",
+        netLossAndDeficit: "高毛利純軟體 EDA 商業模式，無晶圓廠或極低溫硬體重資本折舊負擔",
+        cashAndProceeds: "帳上私募資金充裕（累計募資逾 $110M），無迫切現金斷炊壓力",
+        goingConcernFlag: false,
+        goingConcernText: "純軟體高毛利架構，財務體質穩健，上市目的主要為擴大全球企業銷售與併購垂直演算法團隊。",
+        pros: [
+          "被譽為「量子界的 Cadence / Synopsys」：當量子電腦規模突破百顆邏輯位元，人類無法手繪量子邏輯閘，必須依賴 Classiq 自動將高階數學模型合成並壓縮為最省量子閘的線路。",
+          "硬體中立紅利：無論離子阱、超導或中性原子誰勝出，所有企業開發者都需要量子電路編譯與合成軟體。"
+        ],
+        risks: [
+          "目標估值 ($2B–$5B) 對於純量子軟體商而言偏高（對比已上市之量子軟體股 Horizon Quantum HQ 市值僅約 $275M），需觀察最終招股書揭露之 ARR 年度經常性收入規模。"
+        ],
+        verdict: "⭐ 量子 EDA 軟體龍頭 — 密切追蹤其正式向 SEC 公開遞交 S-1 或 S-4 招股書時揭露之 ARR 與毛利率數據。"
+      }
+    ],
+    recent2026Benchmarks: [
+      {
+        ticker: "QNT",
+        company: "Quantinuum Inc.",
+        filingType: "SEC Form S-1",
+        effectiveAndListDate: "2026/02/17 秘密遞交 → 2026/05/08 公開 S-1 → 2026/06/04 IPO ($60/股)",
+        fy25Revenue: "$30.9M (+34% YoY)",
+        bookingsOrGuidance: "FY25 簽約 Bookings $79.3M (Book-to-Bill 2.56x)",
+        lossMetric: "FY25 淨虧損 $(192.6M) | Q1 26 淨虧損 $(136.6M)",
+        proceedsAndCash: "IPO 募資 $1.68B (發行 2,800 萬股) | 現金 ~$1.95B+",
+        keyProspectusInsight: "招股書證明頂級離子阱主機（如 Oracle 採購之 Helios）已具備近 $8,000 萬美元年簽約力，Honeywell 於 IPO 後仍維持 ~54% 絕對控股。"
+      },
+      {
+        ticker: "INFQ",
+        company: "Infleqtion, Inc.",
+        filingType: "SEC Form S-4",
+        effectiveAndListDate: "2025/10/29 秘密遞交 → 2026/01/06 公開 S-4 → 2026/02/12 合併過關",
+        fy25Revenue: "$32.5M",
+        bookingsOrGuidance: "FY26 官方財測指引 $40.0M",
+        lossMetric: "FY25 營業虧損 $(35.3M) (較 FY24 $(53.0M) 大幅收斂) | Non-GAAP 淨損 $(24.6M)",
+        proceedsAndCash: "合併前現金僅 $11.9M → Churchill X 合併 + $125M PIPE 帶來逾 $540M 總募資額",
+        keyProspectusInsight: "S-4 揭露量子原子鐘與 RF 感測器已帶來穩定國防現金流，使全年營業現金流出控制在僅 $(24.1M)，為虧損收斂最快的純量子股。"
+      },
+      {
+        ticker: "IQMX",
+        company: "IQM Quantum Computers",
+        filingType: "SEC Form F-4",
+        effectiveAndListDate: "2026/06 F-4 生效 → 與 Real Asset Acquisition (RAAQ) 完成合併",
+        fy25Revenue: "€31.0M (~$36.0M USD)",
+        bookingsOrGuidance: "FY26 全年營收指引 €42M – €47M (H1 26 已認列 €8.9M)",
+        lossMetric: "H1 2026 營業虧損 €(60.5M) (因擴建芬蘭自有超導晶圓廠)",
+        proceedsAndCash: "含 $146M+ PIPE 機構增資，合併備考現金達 $465M+",
+        keyProspectusInsight: "F-4 展現歐洲主權超算中心「整機買斷 (On-Premise)」模式的威力，營收規模在 2026 新上市陣營中高居第一。"
+      },
+      {
+        ticker: "XNDU",
+        company: "Xanadu Quantum Technologies",
+        filingType: "SEC Form F-4",
+        effectiveAndListDate: "2026/01 公開 F-4 → 2026/03 與 Crane Harbor (CHAC) 完成合併",
+        fy25Revenue: "Q1 26 $2.83M / Q2 26 $1.51M (+42.5% YoY)",
+        bookingsOrGuidance: "受惠美國 DARPA QBI Stage B 里程碑合約與 PennyLane 企業授權",
+        lossMetric: "Q2 2026 營業虧損 $(29.99M) | Q2 淨虧損 $(42.05M)",
+        proceedsAndCash: "Q2 2026 帳上現金 $312.8M + $300M Yorkville 備用股權融資額度",
+        keyProspectusInsight: "F-4 審計報告曾列有合併前「繼續經營疑慮 (Going Concern)」，但透過 de-SPAC 與 $300M SEPA 額度已徹底解除流動性風險。"
+      },
+      {
+        ticker: "PSQL",
+        company: "Pasqal Holding SA",
+        filingType: "SEC Form F-4",
+        effectiveAndListDate: "2026/08 F-4 生效 → 2026/08/27 與 Bleichroeder II 完成合併",
+        fy25Revenue: "€16.5M (含 €7.2M 政府研發補助)",
+        bookingsOrGuidance: "H1 2026 營收 €4.87M (+14% YoY，其中 QPU 算力服務 €3.9M, +34% YoY)",
+        lossMetric: "FY25 淨虧損 >€(92M) | H1 26 營業虧損 €(59.2M) (含 €27.3M SBC 與 €10.2M 上市費)",
+        proceedsAndCash: "2026/08/27 交割後帳上現金達 €312.9M (~$360M USD)",
+        keyProspectusInsight: "閱讀 F-4 必須拆解收入結構：€16.5M 總收入中有 €7.2M 為政府補助，但高毛利的 QPU 服務收入正以 +34% YoY 加速成長。"
+      },
+      {
+        ticker: "HQ",
+        company: "Horizon Quantum Holdings",
+        filingType: "SEC Form F-4",
+        effectiveAndListDate: "2026/02/17 F-4 生效 (333-292737) → 2026/03/20 與 dMY Squared 合併",
+        fy25Revenue: "早期研發階段 (無顯著商業營收)",
+        bookingsOrGuidance: "於愛爾蘭都柏林建置混合量子硬體測試床 (採購 IonQ 系統整合 Triple Alpha IDE)",
+        lossMetric: "歷史年燒錢率極低 ($7M–$9M/年) | Q1 26 營業虧損 $(6.5M)、Adjusted EBITDA $(4.1M)",
+        proceedsAndCash: "含 $111.9M PIPE 共募資 ~$120M | Q1 26 帳上現金 $96.6M",
+        keyProspectusInsight: "F-4 顯示純軟體商極度精簡的資本消耗：創立至上市前累計僅花費 ~$29M，$96.6M 現金足以支撐超過 8 年研發跑道。"
+      }
+    ],
+    checklistRules: [
+      {
+        title: "法則 1：拆解「真實商業營收」vs.「政府補助與工程合約」",
+        detail: "閱讀量子招股書損益表時，切勿只看頂行總收入。例如 Pasqal 的 Form F-4 揭露 FY25 €16.5M 收入中包含 €7.2M 政府補助；SEEQC 的 Form S-1 揭露 $4.16M 集中於少數政府工程合約。具備高估值溢價的必須是「可重複銷售的主機訂單與雲端 QPU 算力訂閱」。"
+      },
+      {
+        title: "法則 2：緊盯「Bookings (簽約訂單) / RPO」與「Book-to-Bill 比值」",
+        detail: "量子電腦主機單價高達 $1,000 萬至 $2,000 萬美元，從簽約到機房驗收認列 GAAP 營收需時 9–18 個月。Quantinuum 在 Form S-1 中 FY25 帳面營收為 $30.9M，但簽約 Bookings 高達 $79.3M（Book-to-Bill 2.56x），這才是支撐百億市值的關鍵先行指標。"
+      },
+      {
+        title: "法則 3：核查審計師「繼續經營疑慮 (Going Concern)」與「PIPE 機構鎖倉比例」",
+        detail: "SEEQC (Form S-1/A, 現金僅 $18.1M)、Xanadu 與 Infleqtion 在上市前招股書中皆曾被會計師註記 Going Concern 警告。在 SPAC 合併案（如 S-4 / F-4）中，散戶贖回率常高達 70%–95%，唯有具備高額機構 PIPE 承諾（如 Infleqtion $125M PIPE、IQM $146M PIPE、Horizon $112M PIPE）或最低現金交割條款（如 KQC $30M 門檻），才能確保上市後不斷炊。"
+      },
+      {
+        title: "法則 4：警惕「零營收卻開出數十億美元估值」的 SPAC 泡沫與可轉債稀釋",
+        detail: "對比 2026 已上市硬體三強 QNT ($30.9M 營收)、INFQ ($32.5M 營收)、IQMX (~$36M 營收)，若一家剛成立、尚無顯著商業營收的公司在 Form S-4 開出 $3.0B 估值（如 EigenQ），且伴隨大量附認股權證之優先擔保可轉債，交割後往往面臨劇烈的估值修正與轉股賣壓。"
+      },
+      {
+        title: "法則 5：還原 Non-GAAP 真實燒錢率（剔除一次性上市費與 SBC 股權獎勵）",
+        detail: "量子招股書的帳面 GAAP 淨虧損往往被「一次性 SPAC 併購顧問費」與「里程碑股份基礎給付 (SBC)」大幅誇大。例如 Pasqal H1 2026 營業虧損 €59.2M 中，高達 €37.5M 為非現金 SBC (€27.3M) 與上市費用 (€10.2M)；投資人應直接查閱「營業活動現金流量 (Operating Cash Outflow)」以計算真實現金跑道。"
+      }
+    ]
+  },
+
+  // ============================================================================
+  // 3B. PRE-IPO QUANTUM & PQC UNICORN PIPELINE (截至 2026/10 準備上市與未上市獨角獸)
+  // ============================================================================
   preIpoPipeline: [
+    {
+      id: "seeqc",
+      name: "SEEQC, Inc.",
+      status: "📄 已公開遞交 SEC Form S-1/A 招股書 (File No. 333-297133，衝刺 Nasdaq 掛牌)",
+      expectedTicker: "NASDAQ: SEQC (已遞交 S-1/A)",
+      expectedTimeline: "2026 Q4 – 2027 Q1",
+      latestValuation: "S-1 詢價圈購中 (原 2026/01 S-4 協議估值 ~$1.0B)",
+      totalFunding: "$150M+ 私募 + Cantor Fitzgerald & BTIG 領銜承銷 S-1 IPO",
+      parentOrBackers: "EQT Ventures、Booz Allen Ventures、LG Technology Ventures、Merck (M Ventures)",
+      modality: "超導單磁通量子數位控制晶片 (Digital SFQ Superconducting Control & Readout Chip)",
+      flagshipSystem: "10mK 極低溫 3D 堆疊 SFQ 數位控制與讀取晶片（取代室溫龐大微波機櫃）",
+      cryptoOrSoftware: "與 NVIDIA 合作極低溫 QPU-GPU 超高速數位互連；S-1 揭露 FY25 營收 $4.16M (+420% YoY)",
+      ipoReadinessScore: 95,
+      highlights: [
+        "【招股書進度】2026 年 6 月 29 日正式向 SEC 遞交傳統 IPO 招股書 Form S-1，並於 2026 年 8 月 25 日合意終止原 Allegro Merger Corp. SPAC 協議，全心由 Cantor 與 BTIG 承銷推進 Nasdaq 直接掛牌 (代號 SEQC)。",
+        "【招股書財務揭露】FY2025 營收達 $4.16M（較 FY24 ~$0.8M 暴增 420%），H1 2026 營收 $1.80M (+23.7% YoY)；FY25 淨虧損 $(12.2M)、H1 2026 淨虧損 $(9.61M)。",
+        "【招股書風險提示】截至 2026/06/30 帳上現金為 $18.1M、累計赤字 $(65.3M)，審計師出具「繼續經營疑慮 (Going Concern)」提示，亟需透過本次 S-1 IPO 補充資本以擴充紐約超導晶圓廠產能。"
+      ]
+    },
+    {
+      id: "eigenq",
+      name: "EigenQ, Inc.",
+      status: "📄 已公開遞交 SEC Form S-4 招股書 (與 SVAQ 合併，預計 2026 Q4 掛牌)",
+      expectedTicker: "NASDAQ: EIGQ (現 SPAC: SVAQ)",
+      expectedTimeline: "2026 Q4",
+      latestValuation: "$3.0B (Form S-4 備考企業價值 Pro Forma EV)",
+      totalFunding: "SVAQ 信託 ~$215M + 上市前 $45M 優先擔保可轉債 + $5M 次順位票據",
+      parentOrBackers: "Silicon Valley Acquisition Corp. (NASDAQ: SVAQ) 與機構可轉債投資人",
+      modality: "硬體信任根級後量子密碼 (Hardware-Rooted PQC) 與量子安全網路基礎設施",
+      flagshipSystem: "NIST PQC 合規硬體安全架構、分散式量子安全通訊與金鑰管理系統",
+      cryptoOrSoftware: "鎖定美國國防與關鍵基礎設施之抗量子加密遷移與量子安全通訊網路",
+      ipoReadinessScore: 94,
+      highlights: [
+        "【招股書進度】繼 2026 年 8 月秘密遞件後，於 **2026 年 9 月 28 日正式向 SEC 公開遞交 Form S-4 招股書**，預計 2026 Q4 完成股東投票並更名為 EigenQ Holdings, Inc. (NASDAQ: EIGQ / EIGQW)。",
+        "【招股書財務與資本結構】Form S-4 揭露備考企業價值高達 $3.0B；為充實交割前營運資金，於 2026 年 9–10 月陸續簽署 $45M 優先擔保可轉債與 $5M 無擔保票據。",
+        "【招股書風險提示】公司於 2025 年成立，仍處於早期商業化與研發虧損階段，$3.0B 估值高度仰賴遠期 PQC 市場預測，投資人需留意可轉債轉股稀釋與 SPAC 贖回率。"
+      ]
+    },
+    {
+      id: "kqc-quantum",
+      name: "KQC Quantum (Korea Quantum Computing)",
+      status: "📄 已簽署最終 SPAC 合併協議・提交 SEC Form S-4 中 (與 CHAR 合併)",
+      expectedTicker: "NASDAQ: KQC (現 SPAC: CHAR)",
+      expectedTimeline: "2027 H1",
+      latestValuation: "投前股權估值 $80M | 備考合併後股權估值 ~$215M",
+      totalFunding: "Charlton Aria (CHAR) 信託帳戶 ~$93.5M (設 $30M 最低現金交割門檻)",
+      parentOrBackers: "Charlton Aria Acquisition Corp. (NASDAQ: CHAR)、韓國金融與產業創投群",
+      modality: "AI 驅動混合量子中介軟體 (Qubiteer™) + 後量子資安審計與 HSM 硬體安全模組",
+      flagshipSystem: "Qubiteer™ 跨硬體量子最佳化平台 / QuantumSpan 加密資產盤點與 PQC 遷移系統",
+      cryptoOrSoftware: "硬體中立企業級量子應用整合商，已落地韓國鋼鐵、交通與銀行業商業合約",
+      ipoReadinessScore: 91,
+      highlights: [
+        "【招股書進度】2026 年 10 月正式與 Charlton Aria Acquisition Corp. (NASDAQ: CHAR) 簽署最終業務合併協議，正提交 SEC Form S-4 招股書，預計 2027 H1 以代號 KQC 掛牌。",
+        "【招股書估值與條款優勢】投前股權估值僅 $80M（每股 $11.00）、備考估值 $215M，定價極為務實；且現有 KQC 股東 **100% 股權留存展延 (100% Rollover)**，搭配 $30M 最低現金交割條件。",
+        "【商業實績佐證】已完成浦項鋼鐵 (POSCO Holdings 二次電池材料模擬)、釜山交通公社 (城市軌道排程)、韓國企業銀行 (IBK) 與 LS ITC 等指標型客戶專案。"
+      ]
+    },
     {
       id: "psiquantum",
       name: "PsiQuantum",
       status: "未上市頭號獨角獸 (Series E 完成，僅於次級私募市場交易)",
-      expectedTicker: "尚未掛牌 (預估 2027+ IPO)",
+      expectedTicker: "尚未掛牌 (預估 2027+ S-1 IPO)",
       expectedTimeline: "2027 – 2028",
       latestValuation: "$7.0B – $10.0B (Series E 估值 $7B，次級私募市場估值破 $10B)",
       totalFunding: "$2.3B+ (含 BlackRock 領投之 $10 億美元 Series E + 美澳政府逾 $11 億補助)",
@@ -1653,7 +1911,7 @@ window.QUANTUM_DATA = {
       id: "sandboxaq",
       name: "SandboxAQ",
       status: "未上市準 IPO 獨角獸 (Alphabet 分拆獨立)",
-      expectedTicker: "尚未掛牌 (預估 2027 IPO)",
+      expectedTicker: "尚未掛牌 (預估 2027 S-1 IPO)",
       expectedTimeline: "2027",
       latestValuation: "$5.75B (Series E 投後估值)",
       totalFunding: "$950M+",
@@ -1671,7 +1929,7 @@ window.QUANTUM_DATA = {
     {
       id: "classiq",
       name: "Classiq Technologies",
-      status: "未上市・華爾街 SPAC / IPO 深入談判中",
+      status: "未上市・華爾街 SPAC / IPO 招股書深入談判中",
       expectedTicker: "洽談掛牌中 (目標估值 $2B–$5B)",
       expectedTimeline: "2026 Q4 – 2027",
       latestValuation: "目標上市估值 $2.0B – $5.0B",
@@ -1722,24 +1980,6 @@ window.QUANTUM_DATA = {
         "全球首家突破 1,000 顆量子位元大關的通用閘模型公司（1,180 顆中性鐿原子）。",
         "利用鐿-171 (¹⁷¹Yb) 的核自旋編碼量子資訊，相干時間長達 40 秒以上，支援線路中途測量與失落原子即時補充。",
         "與微軟共同創下 24 顆全糾纏邏輯量子位元紀錄，並獲得丹麥 QuNorth 等主權基金商用整機訂單。"
-      ]
-    },
-    {
-      id: "seeqc",
-      name: "SEEQC",
-      status: "未上市 (2026/08 終止原 SPAC 協議，重組上市路徑中)",
-      expectedTicker: "原擬用 SEQC (2026/08 終止 Allegro SPAC，維持私有)",
-      expectedTimeline: "2027 (重新評估獨立融資或新 IPO)",
-      latestValuation: "~$1.0B (2026/01 原 SPAC 協議估值)",
-      totalFunding: "$150M+ (含 Booz Allen Hamilton、EQT Ventures、LG Tech Ventures、Merck 投資)",
-      parentOrBackers: "EQT Ventures、Booz Allen Ventures、LG Technology Ventures、M Ventures",
-      modality: "超導單磁通量子數位控制晶片 (Digital SFQ Superconducting Chip)",
-      flagshipSystem: "將室溫龐大微波控制機櫃微縮為 10mK 極低溫下與 QPU 3D 堆疊之 SFQ 數位控制晶片",
-      cryptoOrSoftware: "與 NVIDIA 合作開發極低溫 QPU-GPU 超高速數位互連介面",
-      ipoReadinessScore: 76,
-      highlights: [
-        "自美國超導巨頭 Hypres 分拆，在紐約擁有專屬超導多層晶片代工廠。",
-        "2026 年 1 月曾宣布與 Allegro Merger Corp. 進行 10 億美元估值 SPAC 合併（原定代號 SEQC），後於 **2026 年 8 月 25 日雙方合意終止合併協議**，目前維持未上市私營狀態，持續推進與 NVIDIA 及 IBM 的低溫數位控制晶片合作。"
       ]
     },
     {
