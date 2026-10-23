@@ -1,0 +1,295 @@
+{
+  "updated_at": "2026-10-23T00:31:21Z",
+  "tracked_tickers": [
+    "IONQ",
+    "QNT",
+    "QBTS",
+    "IQMX",
+    "RGTI",
+    "INFQ",
+    "QUBT",
+    "PSQL",
+    "XNDU",
+    "HQ",
+    "LAES",
+    "ARQQ",
+    "WQEY",
+    "GOOGL",
+    "IBM",
+    "MSFT",
+    "NVDA",
+    "AMZN",
+    "HON",
+    "NET",
+    "PANW",
+    "LSCC",
+    "CRWD"
+  ],
+  "latest_arxiv_papers": [
+    {
+      "arxiv_id": "2610.29762v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Encoding a bosonic mode into qubits for simulating boson-matter interactions",
+      "authors": "Maarten Stroeks, Jelena Mackeprang, Yaroslav Herasymenko, Barbara Terhal",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We explore the space-time cost of encoding of a bosonic mode into a set of qubits via various encodings, and their resilience to noise. In particular, we compare the performance of the unary Fock state encoding, an unexplored encoding of Fock states into Dicke states (``Dicke'' encoding), and the binary quadrature encoding. We do so by considering a displ...",
+      "url": "http://arxiv.org/abs/2610.29762v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.29762v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.29718v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Semiclassical molecular dynamics simulations of electromagnetically induced transparency cooling of 2D and 3D ion crystals in a Penning trap",
+      "authors": "John Zaris, Wes Johnson, Krishna Balaji Sogathur, Athreya Shankar et al.",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph",
+        "physics.atom-ph"
+      ],
+      "summary": "Motional modes of trapped-ion crystals in Penning traps can now be cooled to near their ground states via electromagnetically induced transparency (EIT) cooling. Numerical simulations are valuable tools for interpreting EIT cooling results and optimizing experimental protocols, but existing molecular dynamics codes are limited to the simulation of Doppler...",
+      "url": "http://arxiv.org/abs/2610.29718v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.29718v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30087v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Injection is all you need: parallel universal logic in high-rate concatenated self-dual codes",
+      "authors": "Joseph Sullivan, David Amaro, Michael A. Perlin",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We propose a quantum architecture that achieves addressable and parallel universal fault-tolerant logical in high-rate codes. The codes are obtained from the flexible concatenation of small-distance high-rate self-dual CSS codes. Addressable and parallel universal logic on the resulting $K$ logical qubits is injected by fault-tolerantly preparing and then...",
+      "url": "http://arxiv.org/abs/2610.30087v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30087v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30056v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "High-fidelity and robust controlled-Z gates for superconducting transmon qubits. I. Intrinsic errors and decoherence",
+      "authors": "Chia-Hsien Huang, Hsi-Sheng Goan",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph",
+        "cond-mat.mes-hall",
+        "cond-mat.supr-con"
+      ],
+      "summary": "Fault-tolerant quantum computing requires quantum gates that combine short duration, high fidelity, and robustness to noise. As quantum processors scale, robustness becomes increasingly important because exhaustive characterization and frequent recalibration of individual gates become impractical. We present a comprehensive optimal-control framework for c...",
+      "url": "http://arxiv.org/abs/2610.30056v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30056v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.29986v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Meter-scale quantum interconnects between large quantum processors",
+      "authors": "Neereja M. Sundaresan, Nicholas Cotaj, Yadav Prasad Kandel, Eric Lewandowski et al.",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Modular quantum architecture requires long-distance quantum interconnects to stitch together individual processor modules. Such interconnects, long-distance couplers or L-couplers, must support coherent quantum operation over meter-scale distances and scale to multiple connections between any two modules. Here we demonstrate four L-couplers operating betw...",
+      "url": "http://arxiv.org/abs/2610.29986v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.29986v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30070v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "A random sampling method to test the weak Eigenstate Thermalization Hypothesis",
+      "authors": "Nicolaus A. Chlanda, John Keim, Isabel Martinez-Robles, Sarah E. Spielman et al.",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We introduce a random sampling method for testing the weak Eigenstate Thermalization Hypothesis (wETH) that is particularly useful for large, sparse Hamiltonians. We test the method on a well-studied Rydberg atom system that exhibits both two- and three-body dipole-dipole interactions. Our results show that our method allows for the study of system sizes ...",
+      "url": "http://arxiv.org/abs/2610.30070v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30070v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30040v1",
+      "modality_id": "topological-cat",
+      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "An entanglement band structure for general multiqubit states",
+      "authors": "Chon-Fai Kam",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Majorana drew a symmetric multiqubit state as points on the Bloch sphere, antipodal to the zeros of its overlap with spin coherent states. Projecting only one qubit of a general state leaves the others in a state that varies with direction. Its entanglement invariants are eigenvalues of a non-Hermitian matrix and form bands over the sphere. Exceptional po...",
+      "url": "http://arxiv.org/abs/2610.30040v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30040v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.29190v1",
+      "modality_id": "annealing",
+      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
+      "domain_tag": "Quantum AI / Hybrid",
+      "title": "Alignment of the amplitudes of stored states for solving the associative memory problem using quantum annealing",
+      "authors": "Vladimir E. Zobov, Ivan S. Pichkovskiy",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "The solution of combinatorial optimization problems by means of quantum annealing is based on the preparation of an equally superposition state. Such superposition is crucial to the associative memory problem of correctly recalling patterns. In this paper, we study the alignment of the amplitudes of stored states in memory using the proposed auxiliary Ham...",
+      "url": "http://arxiv.org/abs/2610.29190v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.29190v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.29058v1",
+      "modality_id": "annealing",
+      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
+      "domain_tag": "Quantum AI / Hybrid",
+      "title": "QUBO-Based Conformer Selection with Quantum-Classical Hybrid Optimization for Multiconformer Ligand Modeling",
+      "authors": "Jiyun Lee, Haeseong Kim, Junho Lee, Joonsuk Huh",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph",
+        "q-bio.BM"
+      ],
+      "summary": "A ligand can adopt multiple conformations within the same binding site, and these conformations can interact differently with the surrounding protein. Multiconformer modeling must therefore determine which candidate conformations to retain and what occupancies to assign to them. An established automated approach uses mixed-integer quadratic programming (M...",
+      "url": "http://arxiv.org/abs/2610.29058v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.29058v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.29035v1",
+      "modality_id": "annealing",
+      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
+      "domain_tag": "Quantum AI / Hybrid",
+      "title": "Optimization versus fair sampling in quantum annealing: An exactly characterized frustrated Ising benchmark",
+      "authors": "Masaru Hitomi, Masayuki Ohzeki",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Reaching a degenerate ground-state manifold and sampling it uniformly are distinct properties of a quantum annealer. We quantify this distinction using an Ising ring with additional couplings between maximally separated sites. For antiferromagnetic benchmark couplings and $N \\geq 5$, we derive the exact ground-state energy, degeneracy, and defect structur...",
+      "url": "http://arxiv.org/abs/2610.29035v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.29035v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.28453v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Quantum Simulation of the Static Yukawa Model via Effective Particles on a Trapped-Ion Quantum Simulator",
+      "authors": "Qingfeng Wang, Christopher G. Yale, Edward C. Tortorici, Brian K. McFarland et al.",
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Trapped-ion, neutral-atom, and circuit QED quantum computers naturally enable coupled qubit-boson simulations. Boson-fermion interactions arise in quantum field theory, where renormalization is required to obtain finite results. We study one of the simplest examples of a coupled fermion-boson system, the static Yukawa model, on the QSCOUT trapped-ion syst...",
+      "url": "http://arxiv.org/abs/2610.28453v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.28453v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.28538v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "NeST: ultra-high-rate qLDPC codes with sub-$50μ$s stabiliser cycles via spin shuttling",
+      "authors": "Adam Siegel",
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Quantum low-density parity-check codes now reach encoding rates up to 50% at useful distances. Their checks however are long-range group actions, not local neighbourhoods, and that connectivity has so far been supplied by neutral atoms. Silicon spin qubits offer the same primitive --- coherent transport of qubit blocks --- through electron shuttling, and ...",
+      "url": "http://arxiv.org/abs/2610.28538v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.28538v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.28528v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Efficient Ground-State Manifold Amplification for Rydberg Atom Arrays via Houdayer Cluster Updates",
+      "authors": "Andrew J. Ochoa, Martin J. A. Schuetz, Helmut G. Katzgraber",
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "categories": [
+        "quant-ph",
+        "cond-mat.dis-nn",
+        "cond-mat.quant-gas",
+        "math.OC"
+      ],
+      "summary": "We demonstrate a hybrid quantum-classical approach for exploring ground-state manifolds of maximum independent set problems, in which quantum hardware supplies the initial solutions and an entirely classical post-processing algorithm expands them, increasing the solution diversity of quantum hardware measurements by up to several orders of magnitude. Quan...",
+      "url": "http://arxiv.org/abs/2610.28528v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.28528v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.28349v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "CO$Φ$ - COmpiling PHotonics into dIgital quantum circuits",
+      "authors": "Grzegorz Czelusta, Marcin Markiewicz, Jakub Mielczarek, Artur Miroszewski",
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Photonic and qubit-based (digital) approaches to quantum computing are largely regarded as separate paradigms. This article aims to bridge these paradigms by developing a method for mapping quantum-optical systems onto qubit-based quantum circuits. The key ingredient enabling this mapping is the introduction of a truncation of the Fock space describing si...",
+      "url": "http://arxiv.org/abs/2610.28349v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.28349v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.27872v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Moments of Random Permanents and Hafnians: A Replica Approach",
+      "authors": "Paolo Facchi, Angelo Mariano, Giorgio Parisi, Saverio Pascazio et al.",
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "categories": [
+        "cond-mat.dis-nn",
+        "cond-mat.stat-mech",
+        "quant-ph"
+      ],
+      "summary": "Using contour-integral representations of the permanent and of the Hafnian, we turn the computation of their moments for random matrices into a replica calculation, analogous to that of the moments of the partition function of a mean-field spin glass. For the $2k$-th moment of $N\\times N$ matrices with independent entries, the dominant saddle point is rep...",
+      "url": "http://arxiv.org/abs/2610.27872v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.27872v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.28749v1",
+      "modality_id": "topological-cat",
+      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Bias-Preserving Entanglement of Kerr-Cat Qubits with an ATS Coupler",
+      "authors": "Kerem Yurtseven, Shantanu R. Jha, Apoorva Limaye, Risav Pokhrel et al.",
+      "published": "2026-10-20",
+      "updated": "2026-10-20",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Kerr-cat qubits offer a hardware-efficient route to fault-tolerant quantum computing by suppressing bit-flip errors exponentially, while phase-flip errors increase only linearly with the mean photon number. To maintain this protection, entangling operations must be bias-preserving, ensuring that phase-flip errors occurring during the gate do not propagate...",
+      "url": "http://arxiv.org/abs/2610.28749v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.28749v1.pdf"
+    }
+  ]
+}
