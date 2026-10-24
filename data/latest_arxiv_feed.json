@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T00:31:21Z",
+  "updated_at": "2026-10-24T00:26:59Z",
   "tracked_tickers": [
     "IONQ",
     "QNT",
@@ -26,6 +26,72 @@
     "CRWD"
   ],
   "latest_arxiv_papers": [
+    {
+      "arxiv_id": "2610.30614v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Mode-Selective Micromotion Compensation via Coherent Excitation of a Ground-State-Cooled Motional Mode",
+      "authors": "Tetsu Kinase, Ippei Nakamura, Atsushi Noguchi",
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Excess micromotion induced by stray DC electric fields limits the control fidelity of trapped-ion experiments. Various techniques have been developed to detect and compensate ion displacements from the RF null by monitoring modulated fluorescence, ion positions, or micromotion sidebands. Although these approaches are effective, they do not probe the displ...",
+      "url": "http://arxiv.org/abs/2610.30614v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30614v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30747v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Demand-Driven Routing Space for Lattice-Surgery Compilation",
+      "authors": "Hanyu Wang, Wan-Hsuan Lin, Zihan Chen, Eddy Z. Zhang et al.",
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Lattice-surgery compilation places logical qubits on a grid of surface-code tiles and routes their interactions. Sparse static layouts limit routing contention but reserve space that often remains idle. Reducing this reservation requires balancing area savings against additional gate serialization and qubit movement. In this paper, we present a co-designe...",
+      "url": "http://arxiv.org/abs/2610.30747v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30747v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30681v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "High-fidelity and robust controlled-Z gates for superconducting transmon qubits. II. System-parameter uncertainties and overall errors",
+      "authors": "Chia-Hsien Huang, Hsi-Sheng Goan",
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "In the companion paper (Part I), we developed an optimal-control framework to suppress intrinsic and decoherence-induced errors in controlled-Z (CZ) gates between directly coupled, frequency-tunable transmons. Here, we extend this framework to incorporate uncertainties in coupling strength, anharmonicities, and zero-flux qubit frequencies, enabling the de...",
+      "url": "http://arxiv.org/abs/2610.30681v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30681v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30645v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "FVQKD: A Formal Verification of Quantum Key Distribution Security in Rocq",
+      "authors": "Ruixuan Deng, Zhengfeng Ji, Jiayu Zhang, Li Zhou",
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "categories": [
+        "quant-ph",
+        "cs.CR",
+        "cs.LO"
+      ],
+      "summary": "Quantum key distribution (QKD), whose security is derived from quantum mechanics rather than computational assumptions, is moving into standardization and commercial deployment. Yet its security guarantees rest on technically delicate proofs checked by hand. Formal verification closes this gap, establishing a two-factor assurance: unconditional security f...",
+      "url": "http://arxiv.org/abs/2610.30645v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30645v1.pdf"
+    },
     {
       "arxiv_id": "2610.29762v1",
       "modality_id": "trapped-ion",
@@ -60,54 +126,20 @@
       "pdf_url": "http://arxiv.org/pdf/2610.29718v1.pdf"
     },
     {
-      "arxiv_id": "2610.30087v1",
+      "arxiv_id": "2610.30305v1",
       "modality_id": "superconducting",
       "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Injection is all you need: parallel universal logic in high-rate concatenated self-dual codes",
-      "authors": "Joseph Sullivan, David Amaro, Michael A. Perlin",
+      "title": "Dealing with low-weight errors that lead BP OSD to fail",
+      "authors": "Giacomo Fregona, Matthias C. Löbl, Benjamin J. Brown, Michael J. Kastoryano et al.",
       "published": "2026-10-21",
       "updated": "2026-10-21",
       "categories": [
         "quant-ph"
       ],
-      "summary": "We propose a quantum architecture that achieves addressable and parallel universal fault-tolerant logical in high-rate codes. The codes are obtained from the flexible concatenation of small-distance high-rate self-dual CSS codes. Addressable and parallel universal logic on the resulting $K$ logical qubits is injected by fault-tolerantly preparing and then...",
-      "url": "http://arxiv.org/abs/2610.30087v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30087v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.30056v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "High-fidelity and robust controlled-Z gates for superconducting transmon qubits. I. Intrinsic errors and decoherence",
-      "authors": "Chia-Hsien Huang, Hsi-Sheng Goan",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
-      "categories": [
-        "quant-ph",
-        "cond-mat.mes-hall",
-        "cond-mat.supr-con"
-      ],
-      "summary": "Fault-tolerant quantum computing requires quantum gates that combine short duration, high fidelity, and robustness to noise. As quantum processors scale, robustness becomes increasingly important because exhaustive characterization and frequent recalibration of individual gates become impractical. We present a comprehensive optimal-control framework for c...",
-      "url": "http://arxiv.org/abs/2610.30056v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30056v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.29986v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Meter-scale quantum interconnects between large quantum processors",
-      "authors": "Neereja M. Sundaresan, Nicholas Cotaj, Yadav Prasad Kandel, Eric Lewandowski et al.",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Modular quantum architecture requires long-distance quantum interconnects to stitch together individual processor modules. Such interconnects, long-distance couplers or L-couplers, must support coherent quantum operation over meter-scale distances and scale to multiple connections between any two modules. Here we demonstrate four L-couplers operating betw...",
-      "url": "http://arxiv.org/abs/2610.29986v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.29986v1.pdf"
+      "summary": "Belief Propagation combined with Ordered Statistics Decoding (BP OSD) is an open-source decoding tool used widely within the community due to its versatility and ease of application to Quantum Low Density Parity Check (QLDPC) codes. However, the degeneracy of quantum codes has been observed to degrade the performance of BP OSD, particularly leading to err...",
+      "url": "http://arxiv.org/abs/2610.30305v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30305v1.pdf"
     },
     {
       "arxiv_id": "2610.30070v1",
@@ -140,6 +172,24 @@
       "summary": "Majorana drew a symmetric multiqubit state as points on the Bloch sphere, antipodal to the zeros of its overlap with spin coherent states. Projecting only one qubit of a general state leaves the others in a state that varies with direction. Its entanglement invariants are eigenvalues of a non-Hermitian matrix and form bands over the sphere. Exceptional po...",
       "url": "http://arxiv.org/abs/2610.30040v1",
       "pdf_url": "http://arxiv.org/pdf/2610.30040v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.30301v1",
+      "modality_id": "annealing",
+      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
+      "domain_tag": "Quantum AI / Hybrid",
+      "title": "Non-adiabatic Optimisation via Localisation-Delocalisation Transitions",
+      "authors": "Ryan Smith, Sabrina Yue Wang, Filippo Maria Gambetta, Raul A. Santos",
+      "published": "2026-10-21",
+      "updated": "2026-10-21",
+      "categories": [
+        "cond-mat.dis-nn",
+        "cond-mat.stat-mech",
+        "quant-ph"
+      ],
+      "summary": "The promise of efficiently solving classical optimisation problems on quantum computers is tantalizing. As many such problems can be mapped to approximating the ground state of spin-glasses, paradigmatic models for studying many-body localisation, it is natural to ask if some of the intuition coming from quantum statistical mechanics can help guide the co...",
+      "url": "http://arxiv.org/abs/2610.30301v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30301v1.pdf"
     },
     {
       "arxiv_id": "2610.29190v1",
@@ -175,36 +225,20 @@
       "pdf_url": "http://arxiv.org/pdf/2610.29058v1.pdf"
     },
     {
-      "arxiv_id": "2610.29035v1",
-      "modality_id": "annealing",
-      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
-      "domain_tag": "Quantum AI / Hybrid",
-      "title": "Optimization versus fair sampling in quantum annealing: An exactly characterized frustrated Ising benchmark",
-      "authors": "Masaru Hitomi, Masayuki Ohzeki",
+      "arxiv_id": "2610.30383v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "Rank Ceiling for Twiddle-Perturbation Faults on the Forward NTT",
+      "authors": "Chakshu Gupta",
       "published": "2026-10-21",
       "updated": "2026-10-21",
       "categories": [
-        "quant-ph"
+        "cs.CR"
       ],
-      "summary": "Reaching a degenerate ground-state manifold and sampling it uniformly are distinct properties of a quantum annealer. We quantify this distinction using an Ising ring with additional couplings between maximally separated sites. For antiferromagnetic benchmark couplings and $N \\geq 5$, we derive the exact ground-state energy, degeneracy, and defect structur...",
-      "url": "http://arxiv.org/abs/2610.29035v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.29035v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.28453v1",
-      "modality_id": "trapped-ion",
-      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Quantum Simulation of the Static Yukawa Model via Effective Particles on a Trapped-Ion Quantum Simulator",
-      "authors": "Qingfeng Wang, Christopher G. Yale, Edward C. Tortorici, Brian K. McFarland et al.",
-      "published": "2026-10-20",
-      "updated": "2026-10-20",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Trapped-ion, neutral-atom, and circuit QED quantum computers naturally enable coupled qubit-boson simulations. Boson-fermion interactions arise in quantum field theory, where renormalization is required to obtain finite results. We study one of the simplest examples of a coupled fermion-boson system, the static Yukawa model, on the QSCOUT trapped-ion syst...",
-      "url": "http://arxiv.org/abs/2610.28453v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.28453v1.pdf"
+      "summary": "NIST standardised ML-KEM and ML-DSA in 2024 for post-quantum key establishment and digital signatures. Both compute forward number-theoretic transforms (NTTs) on secret polynomials. Published attacks zero every fixed multiplier, or twiddle, during Kyber key generation with a single fault, or individual twiddles in one Dilithium signing variant; countermea...",
+      "url": "http://arxiv.org/abs/2610.30383v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.30383v1.pdf"
     },
     {
       "arxiv_id": "2610.28538v1",
@@ -256,40 +290,6 @@
       "summary": "Photonic and qubit-based (digital) approaches to quantum computing are largely regarded as separate paradigms. This article aims to bridge these paradigms by developing a method for mapping quantum-optical systems onto qubit-based quantum circuits. The key ingredient enabling this mapping is the introduction of a truncation of the Fock space describing si...",
       "url": "http://arxiv.org/abs/2610.28349v1",
       "pdf_url": "http://arxiv.org/pdf/2610.28349v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.27872v1",
-      "modality_id": "photonic",
-      "topic_stream": "光量子電腦與矽光子 (Photonic)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Moments of Random Permanents and Hafnians: A Replica Approach",
-      "authors": "Paolo Facchi, Angelo Mariano, Giorgio Parisi, Saverio Pascazio et al.",
-      "published": "2026-10-20",
-      "updated": "2026-10-20",
-      "categories": [
-        "cond-mat.dis-nn",
-        "cond-mat.stat-mech",
-        "quant-ph"
-      ],
-      "summary": "Using contour-integral representations of the permanent and of the Hafnian, we turn the computation of their moments for random matrices into a replica calculation, analogous to that of the moments of the partition function of a mean-field spin glass. For the $2k$-th moment of $N\\times N$ matrices with independent entries, the dominant saddle point is rep...",
-      "url": "http://arxiv.org/abs/2610.27872v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.27872v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.28749v1",
-      "modality_id": "topological-cat",
-      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Bias-Preserving Entanglement of Kerr-Cat Qubits with an ATS Coupler",
-      "authors": "Kerem Yurtseven, Shantanu R. Jha, Apoorva Limaye, Risav Pokhrel et al.",
-      "published": "2026-10-20",
-      "updated": "2026-10-20",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Kerr-cat qubits offer a hardware-efficient route to fault-tolerant quantum computing by suppressing bit-flip errors exponentially, while phase-flip errors increase only linearly with the mean photon number. To maintain this protection, entangling operations must be bias-preserving, ensuring that phase-flip errors occurring during the gate do not propagate...",
-      "url": "http://arxiv.org/abs/2610.28749v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.28749v1.pdf"
     }
   ]
 }
