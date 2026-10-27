@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T00:26:59Z",
+  "updated_at": "2026-10-27T01:22:50Z",
   "tracked_tickers": [
     "IONQ",
     "QNT",
@@ -27,119 +27,256 @@
   ],
   "latest_arxiv_papers": [
     {
-      "arxiv_id": "2610.30614v1",
+      "arxiv_id": "2610.33545v1",
       "modality_id": "trapped-ion",
       "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Mode-Selective Micromotion Compensation via Coherent Excitation of a Ground-State-Cooled Motional Mode",
-      "authors": "Tetsu Kinase, Ippei Nakamura, Atsushi Noguchi",
-      "published": "2026-10-22",
-      "updated": "2026-10-22",
+      "title": "When is a bosonic operator a Hamiltonian?",
+      "authors": "Felix Fischer, Hermann Schulz-Baldes, Daniel Burgarth, Davide Lonigro",
+      "published": "2026-10-24",
+      "updated": "2026-10-24",
       "categories": [
         "quant-ph"
       ],
-      "summary": "Excess micromotion induced by stray DC electric fields limits the control fidelity of trapped-ion experiments. Various techniques have been developed to detect and compensate ion displacements from the RF null by monitoring modulated fluorescence, ion positions, or micromotion sidebands. Although these approaches are effective, they do not probe the displ...",
-      "url": "http://arxiv.org/abs/2610.30614v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30614v1.pdf"
+      "summary": "Hermitian polynomials in the quadrature operators $x$ and $p$ are the basic ingredients of continuous-variable quantum information, and increasingly exotic ones are now routinely engineered in superconducting circuits and trapped ions. However, such a polynomial need not define unique quantum dynamics: it may define exactly one, none, or an infinite famil...",
+      "url": "http://arxiv.org/abs/2610.33545v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.33545v1.pdf"
     },
     {
-      "arxiv_id": "2610.30747v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "arxiv_id": "2610.33773v1",
+      "modality_id": "topological-cat",
+      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Demand-Driven Routing Space for Lattice-Surgery Compilation",
-      "authors": "Hanyu Wang, Wan-Hsuan Lin, Zihan Chen, Eddy Z. Zhang et al.",
-      "published": "2026-10-22",
-      "updated": "2026-10-22",
+      "title": "Induced Bell-CHSH observables in the Fewster-Verch measurement scheme",
+      "authors": "M. S. Guimaraes, I. Roditi, S. P. Sorella",
+      "published": "2026-10-24",
+      "updated": "2026-10-24",
       "categories": [
-        "quant-ph"
+        "quant-ph",
+        "hep-th",
+        "math-ph"
       ],
-      "summary": "Lattice-surgery compilation places logical qubits on a grid of surface-code tiles and routes their interactions. Sparse static layouts limit routing contention but reserve space that often remains idle. Reducing this reservation requires balancing area savings against additional gate serialization and qubit movement. In this paper, we present a co-designe...",
-      "url": "http://arxiv.org/abs/2610.30747v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30747v1.pdf"
+      "summary": "The Summers-Werner theorem shows that the vacuum of a relativistic quantum field theory violates the Bell-CHSH inequality maximally on complementary wedges, but it is an existence statement: it exhibits neither the observables nor an apparatus that measures them. We give an explicit operator-level realization within the Fewster-Verch measurement framework...",
+      "url": "http://arxiv.org/abs/2610.33773v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.33773v1.pdf"
     },
     {
-      "arxiv_id": "2610.30681v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "High-fidelity and robust controlled-Z gates for superconducting transmon qubits. II. System-parameter uncertainties and overall errors",
-      "authors": "Chia-Hsien Huang, Hsi-Sheng Goan",
-      "published": "2026-10-22",
-      "updated": "2026-10-22",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "In the companion paper (Part I), we developed an optimal-control framework to suppress intrinsic and decoherence-induced errors in controlled-Z (CZ) gates between directly coupled, frequency-tunable transmons. Here, we extend this framework to incorporate uncertainties in coupling strength, anharmonicities, and zero-flux qubit frequencies, enabling the de...",
-      "url": "http://arxiv.org/abs/2610.30681v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30681v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.30645v1",
+      "arxiv_id": "2610.33862v1",
       "modality_id": "pqc-crypto",
       "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
       "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "FVQKD: A Formal Verification of Quantum Key Distribution Security in Rocq",
-      "authors": "Ruixuan Deng, Zhengfeng Ji, Jiayu Zhang, Li Zhou",
-      "published": "2026-10-22",
-      "updated": "2026-10-22",
+      "title": "Securing Edge & Physical AI: Post-Quantum IoT Blockchain for Mission-Critical Cyber-Physical Agents",
+      "authors": "Kürşat Çakal, Suat Özdemir",
+      "published": "2026-10-24",
+      "updated": "2026-10-24",
       "categories": [
-        "quant-ph",
         "cs.CR",
-        "cs.LO"
+        "cs.ET",
+        "cs.RO"
       ],
-      "summary": "Quantum key distribution (QKD), whose security is derived from quantum mechanics rather than computational assumptions, is moving into standardization and commercial deployment. Yet its security guarantees rest on technically delicate proofs checked by hand. Formal verification closes this gap, establishing a two-factor assurance: unconditional security f...",
-      "url": "http://arxiv.org/abs/2610.30645v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30645v1.pdf"
+      "summary": "Distributed Cyber-Physical Systems (CPS) and Edge AI networks increasingly depend on public-key authentication and key-establishment mechanisms that are vulnerable to cryptographically relevant Quantum Computers (QC). Shor's algorithm threatens widely deployed asymmetric primitives, while Grover's algorithm reduces the effective security margins of symmet...",
+      "url": "http://arxiv.org/abs/2610.33862v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.33862v1.pdf"
     },
     {
-      "arxiv_id": "2610.29762v1",
+      "arxiv_id": "2610.32762v1",
       "modality_id": "trapped-ion",
       "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Encoding a bosonic mode into qubits for simulating boson-matter interactions",
-      "authors": "Maarten Stroeks, Jelena Mackeprang, Yaroslav Herasymenko, Barbara Terhal",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
+      "title": "Quantum Machine Learning in Medical Imaging: A Primer for Radiologists",
+      "authors": "Ruben Ortiz Cordero, Gaven K. Smart, Harshada Gothankar, Emilio Supsupin et al.",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
       "categories": [
         "quant-ph"
       ],
-      "summary": "We explore the space-time cost of encoding of a bosonic mode into a set of qubits via various encodings, and their resilience to noise. In particular, we compare the performance of the unary Fock state encoding, an unexplored encoding of Fock states into Dicke states (``Dicke'' encoding), and the binary quadrature encoding. We do so by considering a displ...",
-      "url": "http://arxiv.org/abs/2610.29762v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.29762v1.pdf"
+      "summary": "Deep learning has transformed radiology, but the computational cost of training and deploying modern models is outpacing what classical hardware can support. Quantum computing has been proposed as one response to this bottleneck: an n-qubit system can represent $2^n$ states simultaneously, although practical speedups require efficient algorithms, data enc...",
+      "url": "http://arxiv.org/abs/2610.32762v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32762v1.pdf"
     },
     {
-      "arxiv_id": "2610.29718v1",
+      "arxiv_id": "2610.32518v1",
       "modality_id": "trapped-ion",
       "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Semiclassical molecular dynamics simulations of electromagnetically induced transparency cooling of 2D and 3D ion crystals in a Penning trap",
-      "authors": "John Zaris, Wes Johnson, Krishna Balaji Sogathur, Athreya Shankar et al.",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
+      "title": "LYNX - A trapped-ion quantum information processor",
+      "authors": "Alexander Erhard, Georg Jacob, Max Hettrich, Philip C. Holz et al.",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
       "categories": [
-        "quant-ph",
-        "physics.atom-ph"
+        "quant-ph"
       ],
-      "summary": "Motional modes of trapped-ion crystals in Penning traps can now be cooled to near their ground states via electromagnetically induced transparency (EIT) cooling. Numerical simulations are valuable tools for interpreting EIT cooling results and optimizing experimental protocols, but existing molecular dynamics codes are limited to the simulation of Doppler...",
-      "url": "http://arxiv.org/abs/2610.29718v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.29718v1.pdf"
+      "summary": "We introduce LYNX, a quantum information processor based on trapped $^{40}$Ca$^+$ ions. It utilizes up to 31 qubits with all-to-all connectivity. We characterize the system performance using rigorous benchmarks, such as randomized benchmarking (RB), GHZ state fidelity estimates, and quantum volume (QV) tests. The LYNX processor shows average 1-qubit gate ...",
+      "url": "http://arxiv.org/abs/2610.32518v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32518v1.pdf"
     },
     {
-      "arxiv_id": "2610.30305v1",
+      "arxiv_id": "2610.32622v1",
       "modality_id": "superconducting",
       "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Dealing with low-weight errors that lead BP OSD to fail",
-      "authors": "Giacomo Fregona, Matthias C. Löbl, Benjamin J. Brown, Michael J. Kastoryano et al.",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
+      "title": "Trace-distance characterization of recurrent pairwise synchronization in cavity-coupled superconducting qubits",
+      "authors": "Tiantian Huan",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
       "categories": [
         "quant-ph"
       ],
-      "summary": "Belief Propagation combined with Ordered Statistics Decoding (BP OSD) is an open-source decoding tool used widely within the community due to its versatility and ease of application to Quantum Low Density Parity Check (QLDPC) codes. However, the degeneracy of quantum codes has been observed to degrade the performance of BP OSD, particularly leading to err...",
-      "url": "http://arxiv.org/abs/2610.30305v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30305v1.pdf"
+      "summary": "We theoretically investigate recurrent pairwise synchronization in three super?conducting qubits coupled to a common single-mode microwave cavity. The qubits interact indirectly through the cavity field and are driven by a coher?ent microwave field. We obtain the coherent dynamics in the dressed-state basis and quantify pairwise synchronization by the tra...",
+      "url": "http://arxiv.org/abs/2610.32622v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32622v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.32428v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Quantum Secret Sharing from CSS qLDPC Codes: Computable Access Structures, Accessible Logical Dimension, and Topology-Aware Network Cost",
+      "authors": "Malik Mouaji, Saif Al-Kuwari",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Quantum secret sharing (QSS) schemes can be constructed from quantum error-correcting codes, but characterizing their access structures and implementation costs becomes challenging for finite-length, high-rate quantum low-density parity-check (qLDPC) codes. We develop an exact computational framework for QSS induced by CSS qLDPC codes. The framework chara...",
+      "url": "http://arxiv.org/abs/2610.32428v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32428v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.32347v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Entangled logical qubits on a superconducting quantum processor",
+      "authors": "Robin Harper, Xanda C. Kolesnikow, Campbell K. McLauchlan, Georgia M. Nixon et al.",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We demonstrate high-fidelity logical qubit operations using \\texttt{ibm\\_phoenix}, a square-lattice array of 120 coupled superconducting qubits that are capable of fast reset. Using strategies to exclude underperforming components together with noise informed decoding, we routinely produce surface codes at distance-3 and distance-5 with logical error per ...",
+      "url": "http://arxiv.org/abs/2610.32347v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32347v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.33156v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Direct tests of conformal symmetry with Rydberg atoms: assessment and proposals",
+      "authors": "Junchen Rong, Slava Rychkov",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph",
+        "cond-mat.quant-gas",
+        "hep-th",
+        "physics.atom-ph"
+      ],
+      "summary": "We propose a direct test of conformal symmetry using Rydberg-atom arrays. By arranging the atoms on a circle and measuring equal-time two-point correlation functions, the characteristic functional form predicted by conformal field theory can be tested directly. We estimate the number of experimental snapshots required to resolve this behavior with suffici...",
+      "url": "http://arxiv.org/abs/2610.33156v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.33156v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.32315v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Fundamental bound on Wigner negativity generation from environmental collisions",
+      "authors": "Isaac Layton, Takahiro Sagawa, Ken Funo",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Beyond quadratic potentials, classical evolution laws are typically thought to arise from quantum theory as an approximate description. Here we show that classical evolution laws can emerge exactly, provided the environment interacts with the system via collisions. We use this to derive an inequality that lower bounds the distribution of environmental mom...",
+      "url": "http://arxiv.org/abs/2610.32315v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32315v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.32838v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Modular optical fault-tolerant quantum computation via an interface between verified resources and online logical operations",
+      "authors": "Kosuke Fukui, Takaya Matsuura, Yohji Chin, Shohei Kiryu et al.",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We introduce a factory--processor interface architecture for modular optical fault-tolerant quantum computation that separates code-dependent encoded-resource preparation from reusable online logical processing on a common Gaussian optical processor. Beyond encoded resources, the interface specifies logical outputs, code-to-mode mapping, measurement roles...",
+      "url": "http://arxiv.org/abs/2610.32838v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32838v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.32154v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Photon-Number Discrimination from Increasing Time-of-Arrival Separation in Wide Superconducting Microstrip Single-Photon Detectors",
+      "authors": "Hsin-Yeh Wu, Shu-Xiao Liu, Boris Tuchming, Xavier-François Navick et al.",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph",
+        "hep-ex",
+        "physics.app-ph"
+      ],
+      "summary": "Measurements of photon-number-dependent time-of-arrival (TOA) distributions in wide NbN superconducting microstrip single-photon detectors (SMSPDs) are presented. Two \\SI{10}{\\um}-long devices with widths of \\SI{3.2}{\\um} and \\SI{6.4}{\\um} are characterized under pulsed \\SI{515}{nm} excitation. The TOA histograms are described by sums of exponentially mod...",
+      "url": "http://arxiv.org/abs/2610.32154v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32154v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.33185v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "Post-Quantum Perfect Zero-Knowledge Arguments for NP From Any One-Way Permutation",
+      "authors": "Frédéric Dupuis, Rémi Ligez, Khaireddine Medhioub, Louis Salvail et al.",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph",
+        "cs.CR"
+      ],
+      "summary": "In this paper, we show for the first time that post-quantum one-way permutations are sufficient for perfect zero-knowledge classical arguments for all of NP with security guaranteed against quantum adversaries. We first establish that Naor, Ostrovsky,Venkatesen, and Yung's bit commitment scheme built from any permutation using interactive hashing, called ...",
+      "url": "http://arxiv.org/abs/2610.33185v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.33185v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.32923v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "One-sided-DIQKD using any pure bipartite entangled state secure against all attacks",
+      "authors": "Bohnishikha Ghosh, Chithra Raj, Shubhayan Sarkar",
+      "published": "2026-10-23",
+      "updated": "2026-10-23",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Quantum Key Distribution (QKD) allows spatially separated parties to establish a secret key among themselves based on quantum principles. While QKD systems are being deployed worldwide, their reliance on trusted measurements makes them vulnerable. Moreover, existing protocols have largely focussed on the qubit cases, and rely on the maximally entangled st...",
+      "url": "http://arxiv.org/abs/2610.32923v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.32923v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.31824v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "A Topology-Aware Quantum-Classical Framework for Multi-Target Active Debris Removal using Gaussian Boson Sampling",
+      "authors": "Komal Pandya, Saiyam Sakhuja, Nagaraj Kattian",
+      "published": "2026-10-22",
+      "updated": "2026-10-22",
+      "categories": [
+        "cs.CE",
+        "cs.ET",
+        "quant-ph"
+      ],
+      "summary": "The continued growth of orbital debris threatens the safety and sustainability of near-Earth space, making Active Debris Removal (ADR) an important mitigation strategy. Selecting $k$ targets from $N$ candidates yields a combinatorial search space of size $\\binom{N}{k}$, making joint target selection and mission sequencing computationally demanding. We pre...",
+      "url": "http://arxiv.org/abs/2610.31824v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.31824v1.pdf"
     },
     {
       "arxiv_id": "2610.30070v1",
@@ -156,140 +293,6 @@
       "summary": "We introduce a random sampling method for testing the weak Eigenstate Thermalization Hypothesis (wETH) that is particularly useful for large, sparse Hamiltonians. We test the method on a well-studied Rydberg atom system that exhibits both two- and three-body dipole-dipole interactions. Our results show that our method allows for the study of system sizes ...",
       "url": "http://arxiv.org/abs/2610.30070v1",
       "pdf_url": "http://arxiv.org/pdf/2610.30070v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.30040v1",
-      "modality_id": "topological-cat",
-      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "An entanglement band structure for general multiqubit states",
-      "authors": "Chon-Fai Kam",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Majorana drew a symmetric multiqubit state as points on the Bloch sphere, antipodal to the zeros of its overlap with spin coherent states. Projecting only one qubit of a general state leaves the others in a state that varies with direction. Its entanglement invariants are eigenvalues of a non-Hermitian matrix and form bands over the sphere. Exceptional po...",
-      "url": "http://arxiv.org/abs/2610.30040v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30040v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.30301v1",
-      "modality_id": "annealing",
-      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
-      "domain_tag": "Quantum AI / Hybrid",
-      "title": "Non-adiabatic Optimisation via Localisation-Delocalisation Transitions",
-      "authors": "Ryan Smith, Sabrina Yue Wang, Filippo Maria Gambetta, Raul A. Santos",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
-      "categories": [
-        "cond-mat.dis-nn",
-        "cond-mat.stat-mech",
-        "quant-ph"
-      ],
-      "summary": "The promise of efficiently solving classical optimisation problems on quantum computers is tantalizing. As many such problems can be mapped to approximating the ground state of spin-glasses, paradigmatic models for studying many-body localisation, it is natural to ask if some of the intuition coming from quantum statistical mechanics can help guide the co...",
-      "url": "http://arxiv.org/abs/2610.30301v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30301v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.29190v1",
-      "modality_id": "annealing",
-      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
-      "domain_tag": "Quantum AI / Hybrid",
-      "title": "Alignment of the amplitudes of stored states for solving the associative memory problem using quantum annealing",
-      "authors": "Vladimir E. Zobov, Ivan S. Pichkovskiy",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "The solution of combinatorial optimization problems by means of quantum annealing is based on the preparation of an equally superposition state. Such superposition is crucial to the associative memory problem of correctly recalling patterns. In this paper, we study the alignment of the amplitudes of stored states in memory using the proposed auxiliary Ham...",
-      "url": "http://arxiv.org/abs/2610.29190v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.29190v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.29058v1",
-      "modality_id": "annealing",
-      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
-      "domain_tag": "Quantum AI / Hybrid",
-      "title": "QUBO-Based Conformer Selection with Quantum-Classical Hybrid Optimization for Multiconformer Ligand Modeling",
-      "authors": "Jiyun Lee, Haeseong Kim, Junho Lee, Joonsuk Huh",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
-      "categories": [
-        "quant-ph",
-        "q-bio.BM"
-      ],
-      "summary": "A ligand can adopt multiple conformations within the same binding site, and these conformations can interact differently with the surrounding protein. Multiconformer modeling must therefore determine which candidate conformations to retain and what occupancies to assign to them. An established automated approach uses mixed-integer quadratic programming (M...",
-      "url": "http://arxiv.org/abs/2610.29058v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.29058v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.30383v1",
-      "modality_id": "pqc-crypto",
-      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
-      "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "Rank Ceiling for Twiddle-Perturbation Faults on the Forward NTT",
-      "authors": "Chakshu Gupta",
-      "published": "2026-10-21",
-      "updated": "2026-10-21",
-      "categories": [
-        "cs.CR"
-      ],
-      "summary": "NIST standardised ML-KEM and ML-DSA in 2024 for post-quantum key establishment and digital signatures. Both compute forward number-theoretic transforms (NTTs) on secret polynomials. Published attacks zero every fixed multiplier, or twiddle, during Kyber key generation with a single fault, or individual twiddles in one Dilithium signing variant; countermea...",
-      "url": "http://arxiv.org/abs/2610.30383v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.30383v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.28538v1",
-      "modality_id": "neutral-atom",
-      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "NeST: ultra-high-rate qLDPC codes with sub-$50μ$s stabiliser cycles via spin shuttling",
-      "authors": "Adam Siegel",
-      "published": "2026-10-20",
-      "updated": "2026-10-20",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Quantum low-density parity-check codes now reach encoding rates up to 50% at useful distances. Their checks however are long-range group actions, not local neighbourhoods, and that connectivity has so far been supplied by neutral atoms. Silicon spin qubits offer the same primitive --- coherent transport of qubit blocks --- through electron shuttling, and ...",
-      "url": "http://arxiv.org/abs/2610.28538v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.28538v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.28528v1",
-      "modality_id": "neutral-atom",
-      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Efficient Ground-State Manifold Amplification for Rydberg Atom Arrays via Houdayer Cluster Updates",
-      "authors": "Andrew J. Ochoa, Martin J. A. Schuetz, Helmut G. Katzgraber",
-      "published": "2026-10-20",
-      "updated": "2026-10-20",
-      "categories": [
-        "quant-ph",
-        "cond-mat.dis-nn",
-        "cond-mat.quant-gas",
-        "math.OC"
-      ],
-      "summary": "We demonstrate a hybrid quantum-classical approach for exploring ground-state manifolds of maximum independent set problems, in which quantum hardware supplies the initial solutions and an entirely classical post-processing algorithm expands them, increasing the solution diversity of quantum hardware measurements by up to several orders of magnitude. Quan...",
-      "url": "http://arxiv.org/abs/2610.28528v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.28528v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.28349v1",
-      "modality_id": "photonic",
-      "topic_stream": "光量子電腦與矽光子 (Photonic)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "CO$Φ$ - COmpiling PHotonics into dIgital quantum circuits",
-      "authors": "Grzegorz Czelusta, Marcin Markiewicz, Jakub Mielczarek, Artur Miroszewski",
-      "published": "2026-10-20",
-      "updated": "2026-10-20",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Photonic and qubit-based (digital) approaches to quantum computing are largely regarded as separate paradigms. This article aims to bridge these paradigms by developing a method for mapping quantum-optical systems onto qubit-based quantum circuits. The key ingredient enabling this mapping is the introduction of a truncation of the Fock space describing si...",
-      "url": "http://arxiv.org/abs/2610.28349v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.28349v1.pdf"
     }
   ]
 }
