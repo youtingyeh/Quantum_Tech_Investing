@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T01:07:33Z",
+  "updated_at": "2026-10-29T01:42:22Z",
   "tracked_tickers": [
     "IONQ",
     "QNT",
@@ -27,6 +27,73 @@
   ],
   "latest_arxiv_papers": [
     {
+      "arxiv_id": "2610.37660v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Optimal quantum discrimination at Liouvillian exceptional points",
+      "authors": "Aritra Ghosh, M. Bhattacharya",
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "categories": [
+        "quant-ph",
+        "math-ph",
+        "physics.optics"
+      ],
+      "summary": "Central to non-Hermitian sensing is the question of whether exceptional points (EPs) can make weak perturbations easier to detect. We show that despite enhanced spectral response, in finite-dimensional Lindblad systems with a unique stationary state and a nonzero relaxation gap, EPs offer no fundamental advantage in how the observation time required for r...",
+      "url": "http://arxiv.org/abs/2610.37660v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.37660v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.36965v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "From QCCD Trapped-Ion Hardware to Quantum Compilers: Capabilities, Architectures, and Compilation",
+      "authors": "Ludwig Schmid, Jurek Eisinger, Daniel Schoenberger, Christian D. Marciniak et al.",
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Shuttling-based trapped-ion quantum computers (QCCD) rank among the most mature hardware platforms. Existing and envisaged devices exhibit architectural differences in terms of register layout and connectivity. Platform-specific compilers are required to translate quantum circuits into resource-optimized hardware-level command chains. Hardware platforms a...",
+      "url": "http://arxiv.org/abs/2610.36965v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.36965v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.36984v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Quantum Evolution Kernel for Node-Attributed Graphs",
+      "authors": "Manuel Padovani, Alessandra Di Pierro, Claudia Daffara",
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "summary": "We present a novel approach to embed node-attributed graphs onto neutral-atom quantum computers, and propose an application to digit recognition. Our approach extends PASQAL's quantum evolution kernel (QEK) by introducing a node-level feature encoding based on three-level quantum states. To this purpose, we present a prototype showing how the resulting em...",
+      "url": "http://arxiv.org/abs/2610.36984v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.36984v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.36963v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Correlation-sensitive magic-state distillation from spin-squeezed neutral atoms",
+      "authors": "Ximo Wang, Ruyue Guo, Xinbo Li, Min Feng et al.",
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We show that interblock correlations can reverse magic-state distillation even when every input exceeds the threshold for independent states. For the five-to-one Bravyi-Kitaev protocol with independent local Clifford twirls, we express the output in terms of measurable target-axis moments. Fourth-order correlations determine acceptance, while third- and f...",
+      "url": "http://arxiv.org/abs/2610.36963v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.36963v1.pdf"
+    },
+    {
       "arxiv_id": "2610.36661v1",
       "modality_id": "neutral-atom",
       "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
@@ -45,36 +112,70 @@
       "pdf_url": "http://arxiv.org/pdf/2610.36661v1.pdf"
     },
     {
-      "arxiv_id": "2610.36808v1",
-      "modality_id": "pqc-crypto",
-      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
-      "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "HqcLethe: Streaming HQC Encapsulation for Tiny Stateless Servers",
-      "authors": "Wind Wong, Klaus v. Gleissenthall",
+      "arxiv_id": "2610.37040v1",
+      "modality_id": "annealing",
+      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
+      "domain_tag": "Quantum AI / Hybrid",
+      "title": "Quantum Annealing for Gamma-ray Source Detection and Localization with AGILE Data",
+      "authors": "Alessandro Rizzo, Nicolò Parmiggiani, Andrea Bulgarelli, Gabriele Panebianco et al.",
       "published": "2026-10-27",
       "updated": "2026-10-27",
       "categories": [
-        "cs.CR"
+        "quant-ph",
+        "astro-ph.HE",
+        "astro-ph.IM"
       ],
-      "summary": "Stateless post-quantum authenticated key exchanges such as post-quantum WireGuard hedge against unexpected cryptanalytic advances by combining a lattice KEM with code-based Classic McEliece. However, recent attacks have led Germany's BSI to advise against McEliece, which leaves these protocols with lattices alone. HQC, the code-based KEM that NIST selecte...",
-      "url": "http://arxiv.org/abs/2610.36808v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.36808v1.pdf"
+      "summary": "The detection and localization of gamma-ray sources via maximum-likelihood analysis is a complex parameter optimization problem. We address this challenge using quantum annealing, a computational approach that solves optimization tasks by encoding them into the ground state of an Ising Hamiltonian. Specifically, we apply this method to observations from A...",
+      "url": "http://arxiv.org/abs/2610.37040v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.37040v1.pdf"
     },
     {
-      "arxiv_id": "2610.36731v1",
+      "arxiv_id": "2610.37337v1",
       "modality_id": "pqc-crypto",
       "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
       "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "Beyond LWE: Post-Quantum Assumptions under a Counterfactual Break of the Dihedral Coset Problem",
-      "authors": "Ramses Fernandez",
+      "title": "Security Analysis of Ekert-type QKD Protocol Coming Under Cloning Attacks",
+      "authors": "Kaushiki Mukherjee, Sumana Karmakar",
       "published": "2026-10-27",
       "updated": "2026-10-27",
       "categories": [
-        "cs.CR"
+        "quant-ph"
       ],
-      "summary": "A refuted 2026 claim of an efficient quantum algorithm for the Dihedral Coset Problem (DCP) motivates this survey of the consequences of a genuine breakthrough. We distinguish a noiseless cyclic coset-state solver, a solver with a prescribed failure exponent, and an extrapolated-state solver. Regev's rare-corruption observation already makes the first hyp...",
-      "url": "http://arxiv.org/abs/2610.36731v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.36731v1.pdf"
+      "summary": "We analyze the security of an Ekert type bipartite key distribution protocol coming under cloning attacks by an untrusted observer. Precisely, an eavesdropper is assumed to intercept and apply an asymmetric, phase-variant cloner on one or both qubits which are transmitted over public channel from an authenticated source to the trusted parties. We partiall...",
+      "url": "http://arxiv.org/abs/2610.37337v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.37337v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.37296v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "Prepare-and-measure quantum key distribution from a bound on information leakage",
+      "authors": "Abhishek Mishra, Michele Masini, Maria Balanzó-Juandó, Armin Tavakoli et al.",
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Every quantum key distribution (QKD) protocol must limit the information available outside the users' laboratories. In device-independent QKD this is essentially the only assumption made on the devices. In a prepare-and-measure setting it cannot be imposed strictly, since the sender's device must emit a signal that depends on her private input. The natura...",
+      "url": "http://arxiv.org/abs/2610.37296v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.37296v1.pdf"
+    },
+    {
+      "arxiv_id": "2610.37268v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "Deployed entanglement-based BBM92 quantum key distribution using frequency-converted photons emitted by a quantum dot",
+      "authors": "Michal Vyvlecka, Raphael Joos, Benjamin Breiholz, Emma Marmasse et al.",
+      "published": "2026-10-27",
+      "updated": "2026-10-27",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Establishing secure communication is an important requirement in existing and future networks. Although current solutions rely on classical approaches, quantum mechanics offers the possibility of moving from computational to information-theoretic security. Quantum key distribution (QKD) has been extensively studied as a means of achieving such security. R...",
+      "url": "http://arxiv.org/abs/2610.37268v1",
+      "pdf_url": "http://arxiv.org/pdf/2610.37268v1.pdf"
     },
     {
       "arxiv_id": "2610.35253v1",
@@ -93,22 +194,6 @@
       "summary": "We identify the phase of a Bargmann invariant of two matter-wave interferometers as a quantum gravity signature that cannot be reproduced by any branchwise-definite classical gravitational field. For matter coupled linearly to linearized gravity, the interferometric coherence factorizes exactly into a conservative Newtonian phase, the characteristic funct...",
       "url": "http://arxiv.org/abs/2610.35253v1",
       "pdf_url": "http://arxiv.org/pdf/2610.35253v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.34666v1",
-      "modality_id": "trapped-ion",
-      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Neutrinos as Quantum Information Carriers? A Gap Analysis Against the DiVincenzo Criteria",
-      "authors": "Ramanuj Awasthi",
-      "published": "2026-10-26",
-      "updated": "2026-10-26",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Photons, trapped ions, neutral atoms, and superconducting circuits are all well-known quantum information platforms. Neutrinos offer a unique possibility, displaying quantum interference (flavour oscillation) over thousands of kilometres, yet interacting so weakly that they can travel through the Earth with minimal interaction. This short paper is a gap a...",
-      "url": "http://arxiv.org/abs/2610.34666v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.34666v1.pdf"
     },
     {
       "arxiv_id": "2610.36385v1",
@@ -141,57 +226,6 @@
       "summary": "As superconducting quantum processors scale to large qubit counts, unwanted microwave drive crosstalk becomes an important source of coherent errors. Here, we investigate the role of parasitic coupling paths in the suppression of drive crosstalk in a processor with two fixed-frequency transmon qubits and a tunable coupler. To account for the many differen...",
       "url": "http://arxiv.org/abs/2610.36365v1",
       "pdf_url": "http://arxiv.org/pdf/2610.36365v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.36029v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "AlgebrasTQD: Computing Algebras and Interfaces in Twisted Quantum Doubles",
-      "authors": "Alison Warman",
-      "published": "2026-10-26",
-      "updated": "2026-10-26",
-      "categories": [
-        "cond-mat.str-el",
-        "hep-th",
-        "math.QA",
-        "quant-ph"
-      ],
-      "summary": "We present AlgebrasTQD, an open-source code written in GAP (Groups, Algorithms, and Programming), for computing condensable algebras and the corresponding topological boundaries and interfaces of twisted quantum doubles $D^ω(G)$. These algebras can be used to classify 1+1d gapped and gapless phases whose symmetry is related by gauging to a finite group $G...",
-      "url": "http://arxiv.org/abs/2610.36029v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.36029v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.36167v1",
-      "modality_id": "neutral-atom",
-      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Analog Quantum Experiments Meet Automatic Differentiation - from Programs to Atoms",
-      "authors": "Yue Shi, Pengyu Liu, Yuxiang Peng",
-      "published": "2026-10-26",
-      "updated": "2026-10-26",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Gradient-based optimization of analog quantum hardware poses a concrete programming problem: given an executable experiment P(θ) that returns only measurement samples, what executable experiment should the system run to obtain (d/dθ_ell)P(θ)? Conventional automatic differentiation cannot propagate through the inaccessible quantum state, while finite diffe...",
-      "url": "http://arxiv.org/abs/2610.36167v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.36167v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.35301v1",
-      "modality_id": "neutral-atom",
-      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Spectral fingerprint recognition of mobile signals via Rydberg atomic sensors",
-      "authors": "Yi-Ming Yin, Ming-Yao Cui, Ling-Yu Du, Jin-Hang Fang et al.",
-      "published": "2026-10-26",
-      "updated": "2026-10-26",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Rydberg-atom sensors have emerged as a promising quantum technology for broadband radio-frequency detection owing to their intrinsic calibration, wide frequency coverage, and high sensitivity. However, their potential for intelligent identification of real-world wireless signals remains largely unexplored. Here, we demonstrate a quantum-enabled framework ...",
-      "url": "http://arxiv.org/abs/2610.35301v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.35301v1.pdf"
     },
     {
       "arxiv_id": "2610.36182v1",
@@ -259,39 +293,6 @@
       "summary": "Quantum-optimization-based computed tomography (CT) reconstruction has demonstrated quantum supremacy in reconstruction accuracy over conventional classical methods under sparse-view and corrupted-sinogram conditions. However, scaling this approach remains challenging because larger images require increasingly many binary variables and interactions in the...",
       "url": "http://arxiv.org/abs/2610.35657v1",
       "pdf_url": "http://arxiv.org/pdf/2610.35657v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.35478v1",
-      "modality_id": "annealing",
-      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
-      "domain_tag": "Quantum AI / Hybrid",
-      "title": "Benchmarking quantum-annealing-based approaches for factory layout planning",
-      "authors": "Xiangqian Wu, Philipp Schworm, Marcel Wagner, Jan C. Aurich",
-      "published": "2026-10-26",
-      "updated": "2026-10-26",
-      "categories": [
-        "quant-ph",
-        "math.OC"
-      ],
-      "summary": "The earlystage of factory layout planning has a direct effect on the operating costs, efficiency, and productivity of manufacturing systems. Conventional automated planning approaches often face a trade-off between solution quality and computational effort. Recent studies have investigated the potential of quantum annealing (QA) for solving factory layout...",
-      "url": "http://arxiv.org/abs/2610.35478v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.35478v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.35126v1",
-      "modality_id": "annealing",
-      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
-      "domain_tag": "Quantum AI / Hybrid",
-      "title": "Comparing classical and quantum QUBO solvers: optimality, trajectory diagnostics, and limits of solver selection",
-      "authors": "Gerhard Hellstern, Cedric Schacht, Martin Zaefferer",
-      "published": "2026-10-26",
-      "updated": "2026-10-26",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Comparing solvers for quadratic unconstrained binary optimization (QUBO) requires distinguishing solution quality from optimality certification. We compare classical, tensor-network, and fixed-schedule quantum approaches on 180 benchmark instances from ten families with 14-48 variables, supplemented by harder synthetic instances with known optimal solutio...",
-      "url": "http://arxiv.org/abs/2610.35126v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.35126v1.pdf"
     }
   ]
 }
