@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T03:25:59Z",
+  "updated_at": "2026-11-04T02:06:40Z",
   "tracked_tickers": [
     "IONQ",
     "QNT",
@@ -27,6 +27,137 @@
   ],
   "latest_arxiv_papers": [
     {
+      "arxiv_id": "2611.04179v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Hardware-Efficient Reinforcement-Learned Scheduling for Quantum LDPC Decoders",
+      "authors": "Mohsen Moradi, Vahid Nourozi, Wei Tang, David Mitchell",
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "categories": [
+        "cs.IT",
+        "quant-ph"
+      ],
+      "summary": "Quantum low-density parity-check (QLDPC) codes are promising for fault-tolerant quantum computing, but their decoding algorithms present significant hardware implementation challenges. Reinforcement-learned sequential belief propagation (RL-S) improves the error-correction performance of conventional belief propagation (BP) through adaptive variable-node ...",
+      "url": "http://arxiv.org/abs/2611.04179v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.04179v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.04129v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "Quantum identity authentication protocol via perturbed probability amplitudes",
+      "authors": "Xiangqun Fu, Zheng Han, Hongwei Li, Chun Zhou et al.",
+      "published": "2026-11-03",
+      "updated": "2026-11-03",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Quantum identity authentication is an effective solution for establishing mutual trust between communicating parties in the post-quantum era. To address the risk of partial secret information leakage under special measurements, this paper designs a quantum identity authentication protocol based on perturbed probability amplitudes. The protocol first propo...",
+      "url": "http://arxiv.org/abs/2611.04129v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.04129v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.04075v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Runtime Compilation for Quantum Circuits with PQF-Enabled $R_z$ Synthesis",
+      "authors": "Siddharth Dangwal, Christopher Kang, Jad Habhab, Ritvik Sharma et al.",
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "In Fault-Tolerant Quantum Computing (FTQC) using surface codes, reducing $T$-count is critical for efficient computation due to the high cost of $T$-state distillation. Probabilistic Quantum Circuit with Fallback (PQF) synthesis significantly lowers $T$-counts compared to standard protocols like Gridsynth, but introduces high circuit dynamism through extr...",
+      "url": "http://arxiv.org/abs/2611.04075v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.04075v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.03908v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Analog quantum simulation of paraparticle statistics",
+      "authors": "Gyunghun Kim, Cora N. Barrett, Sarah E. Muschinske, Junyoung An et al.",
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Bosonic and fermionic quantum statistics describe all known elementary and emergent particles in three dimensions, although many attempts have been made to discover other valid quantum statistical frameworks. One recent formulation proposes \"$R$-paraparticles,\" indistinguishable particles with nonlocal internal degrees of freedom governed by generalized e...",
+      "url": "http://arxiv.org/abs/2611.03908v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.03908v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.03811v1",
+      "modality_id": "topological-cat",
+      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Long-range entangled criticality from coherent errors",
+      "authors": "Amir-Reza Negari, Subhayan Sahu, Jan Behrends, Benjamin Béri et al.",
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "categories": [
+        "quant-ph",
+        "cond-mat.stat-mech"
+      ],
+      "summary": "We find that coherent error can induce a phase transition from the clean surface code phase into an extended long-range entangled critical regime with diverging Markov length. To demonstrate this, we establish two general results of independent interest. The first relates topology and quantum information to mixed-state entanglement: we show that when a no...",
+      "url": "http://arxiv.org/abs/2611.03811v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.03811v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.04052v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "On the (Quantum) Communication Complexity of Secure MPC from a Random Oracle",
+      "authors": "Alexander Hoover, Giuseppe Persiano, Kevin Yeo",
+      "published": "2026-11-02",
+      "updated": "2026-11-02",
+      "categories": [
+        "cs.CR",
+        "cs.CC"
+      ],
+      "summary": "Information-theoretic MPC among $n$ parties with $t$ corruptions can securely evaluate a circuit $C$ with $O(|C| \\cdot t/(n-t))$ online communication in the preprocessing model and $O(|C| \\cdot t/(n-2t))$ communication in the honest majority setting. Damgård, Larsen and Nielsen (CRYPTO 2019) showed that both communication bounds are tight for inner produc...",
+      "url": "http://arxiv.org/abs/2611.04052v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.04052v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.01434v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Boson sampling is fragile to loss",
+      "authors": "Youngrong Lim",
+      "published": "2026-11-01",
+      "updated": "2026-11-01",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Boson sampling experiments aim to demonstrate quantum computational advantage with increasing numbers of interfering photons. A central question is whether their computational hardness survives under photon loss. We show that even an arbitrarily small nonzero uniform loss rate permits efficient classical sampling in the average case when the rate remains ...",
+      "url": "http://arxiv.org/abs/2611.01434v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.01434v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.01983v1",
+      "modality_id": "annealing",
+      "topic_stream": "量子退火與伊辛最佳化 (Quantum Annealing)",
+      "domain_tag": "Quantum AI / Hybrid",
+      "title": "Quantum Path Finder: Navigating Constraint Space via Non-Abelian Gauge Dynamics",
+      "authors": "Chunyin Chen, Biao Wu",
+      "published": "2026-11-01",
+      "updated": "2026-11-01",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Quantum algorithms are commonly designed within the circuit paradigm or through adiabatic evolution. Here we introduce \\emph{Quantum Path Finder} (QPF), a distinct algorithm-design paradigm based on non-Abelian gauge dynamics in a constraint-protected degenerate manifold. Each Boolean variable is promoted to a qutrit whose additional state represents an u...",
+      "url": "http://arxiv.org/abs/2611.01983v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.01983v1.pdf"
+    },
+    {
       "arxiv_id": "2611.00878v1",
       "modality_id": "trapped-ion",
       "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
@@ -43,25 +174,9 @@
       "pdf_url": "http://arxiv.org/pdf/2611.00878v1.pdf"
     },
     {
-      "arxiv_id": "2611.01180v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "All-to-All Connectivity in Superconducting Qubits via Metamaterial-Mediated Interactions",
-      "authors": "Or Golan, Alexey V. Gorshkov, Andreas Butler, Gihwan Kim et al.",
-      "published": "2026-10-31",
-      "updated": "2026-10-31",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "We show that encoding superconducting qubits as dual-rail or spin-locked transmons lets a metamaterial waveguide couple them all-to-all while suppressing the spurious entanglement that burdens shared-mode architectures, a step toward the non-local connectivity that quantum low-density parity-check codes require. In a bare-transmon architecture, the disper...",
-      "url": "http://arxiv.org/abs/2611.01180v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.01180v1.pdf"
-    },
-    {
       "arxiv_id": "2611.00694v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
       "domain_tag": "Quantum Hardware / QEC",
       "title": "Photon-loss tolerance of the surface-GKP code with anti-photon-loss decoding",
       "authors": "Guan-Ju Yan, Pei-Lin Du, Ke-Min Hu, Jun-Jie He et al.",
@@ -143,22 +258,6 @@
       "pdf_url": "http://arxiv.org/pdf/2610.41413v1.pdf"
     },
     {
-      "arxiv_id": "2611.00404v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Early Fault-Tolerant Magic State Synthesis and Spacetime Efficient Analog Rotations with Color Code on a Superconducting Quantum Processor",
-      "authors": "Sean Garner, Aaron Hoyt, Shuwen Kan, Samuel Stein et al.",
-      "published": "2026-10-30",
-      "updated": "2026-10-30",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "With recent improvements to syndrome extraction scheduling and decoding, and the availability of complete transversal Clifford operations and lattice surgery, color code is an especially promising platform for quantum processors with local connectivity. The key ingredient for universal computation is thus generating useful magic states with limited resour...",
-      "url": "http://arxiv.org/abs/2611.00404v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.00404v1.pdf"
-    },
-    {
       "arxiv_id": "2610.41917v1",
       "modality_id": "neutral-atom",
       "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
@@ -192,106 +291,6 @@
       "summary": "Probabilistic and destructive Bell-measurements, also known as fusions, constitute a fundamental primitive for photonic quantum technologies. These operations rely only on pairwise photonic interference, whereas the computational power of photonic quantum systems originates from many-body interference. Here, we introduce a family of high-efficiency linear...",
       "url": "http://arxiv.org/abs/2610.41524v1",
       "pdf_url": "http://arxiv.org/pdf/2610.41524v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.41341v1",
-      "modality_id": "photonic",
-      "topic_stream": "光量子電腦與矽光子 (Photonic)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Time-Domain Multiplexing for Resource-Efficient Heralded GKP State Preparation",
-      "authors": "Ke-Ming Hu, Jun-Jie He, Yu-Ze Zhu, Pei-Lin Du et al.",
-      "published": "2026-10-30",
-      "updated": "2026-10-30",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Gottesman-Kitaev-Preskill (GKP) states are key resources for fault-tolerant photonic quantum computing, but their conditional preparation via Gaussian boson sampling involves a trade-off between source count and photon-number resolution. Distributing heralding photons across more measured modes reduces the resolution required per mode, yet increases the n...",
-      "url": "http://arxiv.org/abs/2610.41341v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.41341v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.42041v1",
-      "modality_id": "pqc-crypto",
-      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
-      "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "Benchmarking Single-Photon Sources for Measurement-Device-Independent Quantum Key Distribution",
-      "authors": "Janka Memmen, Yvonne Lasars, Tobias Heindel, Nathan Walk et al.",
-      "published": "2026-10-30",
-      "updated": "2026-10-30",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Measurement-Device-Independent Quantum Key Distribution (MDI-QKD) enables secure communication without trusting the measurement devices, but its performance critically depends on the quality of the employed photon sources. We compare MDI-QKD implementations based on Weak Coherent Pulses (WCPs) with those employing Quantum Dot (QD) single-photon sources. W...",
-      "url": "http://arxiv.org/abs/2610.42041v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.42041v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.41709v1",
-      "modality_id": "pqc-crypto",
-      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
-      "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "A Highly Nondegenerate Photon-Pair Source for Detector-Matched Quantum Key Distribution",
-      "authors": "Sander van Haagen, Bora Ulu, Alper Ozulker, Wardah Mahmood et al.",
-      "published": "2026-10-30",
-      "updated": "2026-10-30",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "In a commercial entanglement-distribution system over telecom fibre, the single-photon detectors are the largest part of the hardware cost. In entanglement-based quantum key distribution (QKD), both photons of each pair must be detected. With two telecom photons, each arm needs either an InGaAs single-photon avalanche diode (SPAD) of low efficiency or a s...",
-      "url": "http://arxiv.org/abs/2610.41709v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.41709v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.40952v1",
-      "modality_id": "neutral-atom",
-      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Characteristics of VHF and UHF band detection using Stark shifting in Rydberg-atom sensors",
-      "authors": "Rajavardhan Talashila, Noah Schlossberger, David S. La Mantia, Abby Halasi-Kun et al.",
-      "published": "2026-10-29",
-      "updated": "2026-10-29",
-      "categories": [
-        "physics.atom-ph",
-        "physics.optics",
-        "quant-ph"
-      ],
-      "summary": "We present a characterization of the sensitivity of broadband electric field measurements in the Very High Frequency (VHF) and Ultra High Frequency (UHF) bands using AC stark shifting of Rydberg states. The dependence of the sensitivity and dynamic range of the field measurements using nD5/2 states of cesium for principal quantum numbers n= 60, 70, 80, 90...",
-      "url": "http://arxiv.org/abs/2610.40952v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.40952v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.40299v1",
-      "modality_id": "topological-cat",
-      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Bulk gap stability and spectral flow for fermions with weak long-range interactions",
-      "authors": "Stefan Teufel",
-      "published": "2026-10-29",
-      "updated": "2026-10-29",
-      "categories": [
-        "math-ph",
-        "cond-mat.other",
-        "quant-ph"
-      ],
-      "summary": "We prove that weak long-range many-body interactions preserve the bulk gap of a free fermion system and that a quasi-local spectral flow transports the free ground state to ground states of the interacting system. Let $Φ_h$ be a free fermionic interaction, possibly including pairing terms, whose infinite-volume Majorana coefficient operator $h$ has no spe...",
-      "url": "http://arxiv.org/abs/2610.40299v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.40299v1.pdf"
-    },
-    {
-      "arxiv_id": "2610.39208v1",
-      "modality_id": "topological-cat",
-      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Force Sensing in a Recoverable Bosonic Quantum Memory",
-      "authors": "Tairong Bai, Wen Zheng, Haoyang Cai, Xianke Li et al.",
-      "published": "2026-10-29",
-      "updated": "2026-10-29",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "In continuous-variable quantum information, sensing and quantum error correction in the same mode face an intrinsic trade-off: sensors must accumulate weak external displacements, whereas bosonic codes typically suppress such shifts as errors. Here, we establish compatibility by constructing finite-energy bosonic codes that enable a single oscillator to s...",
-      "url": "http://arxiv.org/abs/2610.39208v1",
-      "pdf_url": "http://arxiv.org/pdf/2610.39208v1.pdf"
     }
   ]
 }
