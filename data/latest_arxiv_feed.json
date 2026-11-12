@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T01:49:32Z",
+  "updated_at": "2026-11-12T02:48:35Z",
   "tracked_tickers": [
     "IONQ",
     "QNT",
@@ -27,118 +27,234 @@
   ],
   "latest_arxiv_papers": [
     {
-      "arxiv_id": "2611.12672v1",
+      "arxiv_id": "2611.14114v1",
       "modality_id": "trapped-ion",
       "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Quantum Residual Exploration for Selected Configuration Interaction",
-      "authors": "Kentaro Yamamoto, Ikko Hamamura, Juan W. Pedersen, Duncan Gowland et al.",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
+      "title": "Cross-Platform Benchmarking of GHZ-State Generation in Quantum Processors via Cloud Services",
+      "authors": "Sergio Hernández, Unai Aseguinolaza, David Aguirre, Marta Gili et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
       "categories": [
         "quant-ph"
       ],
-      "summary": "We propose a modular hybrid quantum-classical method to improve selected configuration interaction at a fixed final determinant budget. Quantum measurements supply complementary determinants, accepted only when they outrank classical candidates under a common energetic criterion. This targets multistep excitations that perturbative discovery may miss in s...",
-      "url": "http://arxiv.org/abs/2611.12672v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12672v1.pdf"
+      "summary": "Quantum computing has rapidly evolved into a diverse ecosystem of hardware platforms that differ in their underlying technologies and operational characteristics. Consequently, benchmarking has become essential for identifying the strengths of quantum processors, comparing their performance, and enabling informed decisions when selecting the most appropri...",
+      "url": "http://arxiv.org/abs/2611.14114v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.14114v1.pdf"
     },
     {
-      "arxiv_id": "2611.11990v1",
+      "arxiv_id": "2611.13967v1",
       "modality_id": "trapped-ion",
       "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Rapid high-purity loading of barium ion via relayed selectivity from naturally abundant source",
-      "authors": "Zichun Zhou, Xuhui Yao, Jiaze Li, Yuncheng Xie et al.",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
+      "title": "Quantum propagation of vibrational excitation in harmonically confined trapped-ion crystal",
+      "authors": "Takumi Yuri, Yu-Xuan Chen, Kenji Toyoda",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Vibrational excitations, or phonons, in trapped ions serve as useful resources for quantum information processing, including quantum simulation and computing. Localized excitations of ions' vibrational motion (local phonons) can be used for simulating quantum particles that propagate over a system. Here, we experimentally investigate the propagation of a ...",
+      "url": "http://arxiv.org/abs/2611.13967v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13967v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.14484v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Nonperturbative string dynamics in a (2+1)D lattice gauge theory on a superconducting quantum processor",
+      "authors": "Sanziana Stelea, Anthony Gandon, Francesco Tacchino, Jad C. Halimeh et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Electric flux strings underpin confinement in gauge theories. In two spatial dimensions, their evolution involves competing processes of charge motion, pair creation, and transverse deformation. Accessing these dynamics beyond perturbative limits challenges classical approaches, as entanglement growth restricts the times accessible to tensor-network simul...",
+      "url": "http://arxiv.org/abs/2611.14484v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.14484v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.14391v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Implementing rapid reset of superconducting qubits with on-chip dissipation",
+      "authors": "Feiyu Li, Yang Liu, Zhen Yang, Zhenxing Liu et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Rapid and high-fidelity qubit reset is essential for quantum state initialization and quantum error correction. Conventional reset protocols for superconducting qubits often rely on dissipative elements connected to external circuitry, exposing qubits to thermal noise from higher-temperature environments. Here, we experimentally demonstrate a scalable app...",
+      "url": "http://arxiv.org/abs/2611.14391v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.14391v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.14358v1",
+      "modality_id": "superconducting",
+      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "High-Speed Control of a Fluxonium Qubit via Picosecond Pulses from Josephson Digital Circuits",
+      "authors": "M. V. Bastrakova, D. S. Pashin, V. A. Vozhakov, N. V. Klenov et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We develop a control strategy for fluxonium qubits based on picosecond single-flux-quantum (SFQ) pulses generated by Josephson digital circuits. A major challenge is that SFQ protocols originally designed for transmon control become inefficient for low-frequency fluxonium. In this regime, the asymmetry of flux and charge couplings leads either to excessiv...",
+      "url": "http://arxiv.org/abs/2611.14358v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.14358v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.14082v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Two atoms with strong light-induced dipolar interactions",
+      "authors": "Hanzhen Lin, Yoo Kyung Lee, Nabeel Rasheed, Vitaly Fedoseev et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
       "categories": [
         "physics.atom-ph",
         "quant-ph"
       ],
-      "summary": "Trapped ions is one of the promising platforms for realizing quantum information processing and quantum simulation. Selective and rapid loading of a specific isotope lays the critical foundation for such purpose particularly when scaling up the system size. Here we demonstrate a new method for rapid isotope-selective loading of $^{137}\\mathrm{Ba}^{+}$ or ...",
-      "url": "http://arxiv.org/abs/2611.11990v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.11990v1.pdf"
+      "summary": "We study how two atoms scatter light when they are closer than an optical wavelength and observe multiple new phenomena due to the strong interactions between laser-induced electric dipole moments. We identify a narrow range of densities where a fraction of the scattered light is coherent and shows a collective enhancement factor of two compared to indepe...",
+      "url": "http://arxiv.org/abs/2611.14082v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.14082v1.pdf"
     },
     {
-      "arxiv_id": "2611.12833v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "GARI++: A General-Purpose Decoder for Quantum Error Correction",
-      "authors": "Arshpreet Singh Maan, Francisco Garcia-Herrero, Daniel Bascones, Valentin Savin et al.",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "We present GARI++, a two-stage decoding pipeline achieving accuracy competitive with the state of the art across surface, bivariate bicycle and color codes without relying on ensembles. The first stage uses GARI, a normalized min-sum decoder with random serial scheduling on the GARI transformed matrix. The second stage decoder is used only for the cases t...",
-      "url": "http://arxiv.org/abs/2611.12833v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12833v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.12481v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Universal two-qubit control across dilution refrigerators via a 10-km coherent optical link",
-      "authors": "Chuanlong Ma, Jiajun Chen, Jia-Qi Wang, Zheng-Xu Zhu et al.",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Distributed quantum networks are important for scalable quantum processors and for potential applications in communication, distributed computation, and sensing, in which direct classical links for adaptive control are essential to harness the shared entanglement. However, controlling superconducting quantum processors from a separate refrigerator over lo...",
-      "url": "http://arxiv.org/abs/2611.12481v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12481v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.12280v1",
-      "modality_id": "superconducting",
-      "topic_stream": "超導邏輯閘量子電腦 (Superconducting)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Calibration-free quantum thermometry with strain-swept two-level defects",
-      "authors": "Asghar ullah, Özgür E. Müstecaplıoğlu, Mehmet Cengiz Onbaşlı",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Superconducting qubits operate within a well-defined temperature range, making local temperature monitoring important. Here we show that intrinsic two-level defects in Josephson-junction barriers can act as local thermometers by exploiting the shape of their population response, without requiring calibration of the readout offset or contrast. Marginalizin...",
-      "url": "http://arxiv.org/abs/2611.12280v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12280v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.12779v1",
+      "arxiv_id": "2611.13799v1",
       "modality_id": "neutral-atom",
       "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "Unified architecture for arbitrary two-qubit gates with neutral atoms",
-      "authors": "Nader Mostaan, Peter Schmelcher, Rick Mukherjee",
+      "title": "Coherent Optical Readout of Neutral-Atom Qubits via Homodyne Detection of Resonant Fluorescence",
+      "authors": "Minho Jang, Jaeyong Hwang, Minhyeok Kim, Sanghyo Park et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Fast, non-destructive qubit readout is essential for repeated sampling, mid-circuit measurement, and fault-tolerant neutral-atom quantum processing, but camera-based fluorescence detection introduces electronic latency beyond fluorescence-collection time. We propose coherent readout of the state-dependent resonant fluorescence using balanced homodyne dete...",
+      "url": "http://arxiv.org/abs/2611.13799v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13799v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.13796v1",
+      "modality_id": "neutral-atom",
+      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Analog quantum approximate optimization algorithm for solving the weighted MaxCut problem on three-dimensional single-atom Rydberg array",
+      "authors": "Junxi Chen, I. I. Beterov",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "We theoretically investigate an analog implementation of the quantum approximate optimization algorithm (QAOA) for the weighted maximum cut problem (MaxCut) problem. The protocol uses a three-dimensional array of individually trapped Rydberg atoms driven by globally addressed laser pulses, with site-dependent detunings applied near the Rydberg resonance. ...",
+      "url": "http://arxiv.org/abs/2611.13796v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13796v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.13671v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Quantum-Assisted Generative Anomaly Detection: A Dimension-Controlled Study of Latent Refinement",
+      "authors": "Thesath Wijayasiri, Omar Bacarreza, William Clements, Kar Wai Fok et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Anomaly-based malware detectors learn what benign files look like and flag deviations. Generative approaches to this problem can make use of a \"latent\" or \"prior\" data representation, which is often chosen to be a Gaussian distribution. We ask whether the choice of prior distribution matters, and whether one produced by quantum hardware behaves differentl...",
+      "url": "http://arxiv.org/abs/2611.13671v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13671v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.13630v1",
+      "modality_id": "photonic",
+      "topic_stream": "光量子電腦與矽光子 (Photonic)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Machine-learning decoders for fusion-based quantum computing in real time",
+      "authors": "Daniel Barter, Jacob C. Bridgeman, Chris Dawson, Terry Farrelly et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph",
+        "cs.AR",
+        "cs.LG"
+      ],
+      "summary": "Fault-tolerant quantum computation requires decoders that combine accuracy, throughput, low latency, and scalability to large numbers of physical qubits. In photonic fusion-based architectures, erasures from photon loss and probabilistic fusion measurements are a dominant error mechanism, motivating decoders that remain accurate at high erasure rates. We ...",
+      "url": "http://arxiv.org/abs/2611.13630v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13630v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.14461v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "Finite-Key Readiness and Authentication-Key Replenishment in QKD-Assisted UAV Edge Computing",
+      "authors": "Dang H. Le, Ban Q. Tran, Susan Mengel",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "A service that needs fresh quantum keys must wait for key release, and may be denied it, before protected computation starts. We quantify this cost for a trusted stationary UAV serving two ground gateways, each obtaining its keys from one finite-key decoy-state BB84 attempt with parameters fixed in advance. A count-level Monte Carlo model, reproduced by a...",
+      "url": "http://arxiv.org/abs/2611.14461v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.14461v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.14044v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "CV-TF-QKD",
+      "authors": "Stefano Pirandola",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph",
+        "math-ph",
+        "physics.optics"
+      ],
+      "summary": "We introduce a continuous-variable version of twin-field quantum key distribution, using independent Gaussian-modulated coherent states and an untrusted single-photon relay. Full-record reconciliation and a binary phase-disclosure protocol achieve nearly equal asymptotic key rates against collective attacks. At fixed weak input-referred excess noise per a...",
+      "url": "http://arxiv.org/abs/2611.14044v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.14044v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.13625v1",
+      "modality_id": "pqc-crypto",
+      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
+      "domain_tag": "Post-Quantum Crypto (PQC)",
+      "title": "Packet-wise multi-hop quantum routing of hybrid quantum-classical packets",
+      "authors": "Tae Yeong Park, Youn Chang Jeong, Myeong Soo Kang, Kwang Yong Song et al.",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "The ability to dynamically route quantum information across multiple nodes is a key requirement for realizing versatile and scalable quantum networks. Quantum routers are devices to achieve packet-level routing beyond static point-to-point connections by handling hybrid packets combining classical headers and quantum payloads. Previously proposed methods ...",
+      "url": "http://arxiv.org/abs/2611.13625v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13625v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.13079v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Quantum simulation of real-time bosonic dynamics with binary and unary position encodings on superconducting and trapped-ion processors",
+      "authors": "Masanori Hanada, Jiwoo Seo, Seok-Kyun Son, Junggi Yoon",
       "published": "2026-11-09",
       "updated": "2026-11-09",
       "categories": [
         "quant-ph",
-        "math-ph"
+        "hep-th"
       ],
-      "summary": "We propose a unified architecture for two-qubit gates in neutral-atom quantum processors which allows the implementation of the complete set of two-qubit gates. Our approach rests on a single resource that unlocks the entire gate set: an XXZ interaction with tunable anisotropy, combined only with single-qubit operations. We introduce a Rydberg-atom realiz...",
-      "url": "http://arxiv.org/abs/2611.12779v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12779v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.12098v1",
-      "modality_id": "neutral-atom",
-      "topic_stream": "中性原子陣列量子電腦 (Neutral-Atom)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "A Universal Fault-Tolerant Quantum Computing Architecture with Globally Driven Atom Arrays",
-      "authors": "Zhihao Zhang, Shuaifan Cao, Xinyang Yu, Yanyan Chen et al.",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Scalable quantum computation requires reconciling programmability with simple, high-fidelity control. Here, we propose a universal fault-tolerant architecture using globally driven dual-species atom arrays. In a hybrid neutral-atom system, interspecies Rydberg interactions enable qubit addressability without locally addressed quantum gates. We construct a...",
-      "url": "http://arxiv.org/abs/2611.12098v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12098v1.pdf"
+      "summary": "Simulating a bosonic degree of freedom on qubit hardware requires discretizing its position space, and the qubit encoding of the resulting lattice determines the circuits that realize its real-time dynamics. We compare binary and unary encodings of a position lattice on superconducting (IBM) and trapped-ion (IonQ) processors. Binary encoding applies the k...",
+      "url": "http://arxiv.org/abs/2611.13079v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13079v1.pdf"
     },
     {
       "arxiv_id": "2611.12876v1",
@@ -157,134 +273,23 @@
       "pdf_url": "http://arxiv.org/pdf/2611.12876v1.pdf"
     },
     {
-      "arxiv_id": "2611.12126v1",
-      "modality_id": "photonic",
-      "topic_stream": "光量子電腦與矽光子 (Photonic)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Modular and Looping Quantum Photonic Processing Unit for Quantum Computing",
-      "authors": "Denis Stanev, Nicolò Spagnolo, Fabio Sciarrino",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Photonic processors are emerging as promising platforms in the race towards the realization of practical universal quantum computers. Several architectures with universal capabilities have been proposed for their implementation via a photonic platform, each with their own set of benefits and drawbacks. In this work we propose an architecture for a univers...",
-      "url": "http://arxiv.org/abs/2611.12126v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12126v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.12479v1",
-      "modality_id": "pqc-crypto",
-      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
-      "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "Brief introduction to post-quantum cryptography in industrial applications",
-      "authors": "Mateusz Żarski, Jarosław Miszczak, Cédric Crettaz, Adela Georgescu et al.",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "cs.CR"
-      ],
-      "summary": "The development of Post-Quantum Cryptography (PQC) is directly motivated by the necessity to secure information in the face of the quantum threat. This paper provides an overview of recent developments relevant to PQC adoption across several industrial applications, including IoT, healthcare, civil and infrastructure engineering, and defense. We present a...",
-      "url": "http://arxiv.org/abs/2611.12479v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12479v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.12367v1",
-      "modality_id": "pqc-crypto",
-      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
-      "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "An Agile Homomorphic Encryption and ML-KEM Scheme for Privacy-Preserving Health Data Processing",
-      "authors": "Daniel Resende, Nadia El Mrabet, Ulrich K{ü}hne",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "cs.CR"
-      ],
-      "summary": "The storage and processing of health data raise serious privacy concerns; therefore, the data must be encrypted. Fully Homomorphic Encryption (FHE) allows computations on encrypted data, which makes it a very promising technology in this context. However, although the efficiency of FHE algorithms has improved in recent years, they remain very complex. The...",
-      "url": "http://arxiv.org/abs/2611.12367v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12367v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.12279v1",
-      "modality_id": "pqc-crypto",
-      "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
-      "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "Deploying QKD on the fiber links of the National Quantum Communication Infrastructure in Sweden",
-      "authors": "Giulio Foletto, Mira Abu Yahia, Shreya Gouravaram Navalur, Carlos Brotons Montoro et al.",
-      "published": "2026-11-09",
-      "updated": "2026-11-09",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Quantum key distribution (QKD) is being deployed across Europe to evaluate its performance and practicality in real-world scenarios. When preparing this deployment, it is important to survey the properties of the fiber links that will be used for the quantum channel, cross-checking them with those of QKD devices, to ensure compatibility and optimal perfor...",
-      "url": "http://arxiv.org/abs/2611.12279v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.12279v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.11044v1",
-      "modality_id": "photonic",
-      "topic_stream": "光量子電腦與矽光子 (Photonic)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Exact sampling beyond Fock inputs and linear optics: photon-number superpositions, photonic matrix-product states, adaptive and non-linear circuits",
-      "authors": "Jean Senellart, Stephen Wein, Pierre-Emmanuel Emeriau",
-      "published": "2026-11-08",
-      "updated": "2026-11-08",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Clifford and Clifford's algorithm samples single-photon boson sampling exactly, one output mode at a time, by adding the input photons in a uniformly random order. We extend this construction to other input states and to adaptive and non-linear circuits. It applies whenever non-negative weights on output prefixes and input sets satisfy one marginal identi...",
-      "url": "http://arxiv.org/abs/2611.11044v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.11044v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.09779v1",
-      "modality_id": "trapped-ion",
-      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Differentiable Digital Twins for Optimization, Calibration, and Characterization of Neutral-Atom- and Ion-based Quantum Computers",
-      "authors": "Marco Rossignolo, Lorena C. Bianchet, Anurag Saha Roy, Shai Machnes",
-      "published": "2026-11-06",
-      "updated": "2026-11-06",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Quantum technologies based on individually controlled atoms are among the most promising platforms for scalable quantum computing, owing to their favorable coherence properties and controllability. Nonetheless, achieving reliable and high-fidelity gate operations remains challenging due to the sensitivity of these systems to noise and hardware imperfectio...",
-      "url": "http://arxiv.org/abs/2611.09779v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.09779v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.09097v1",
+      "arxiv_id": "2611.13098v1",
       "modality_id": "topological-cat",
       "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
       "domain_tag": "Quantum Hardware / QEC",
-      "title": "$\\mathbb{Z}_2$ gauge and exact solution of the $\\pm J$ Edwards-Anderson model in a transverse field",
-      "authors": "Mikhail Vasin",
-      "published": "2026-11-06",
-      "updated": "2026-11-06",
+      "title": "Surface codes with coherent errors: optimal decoding and finite-size crossovers",
+      "authors": "Xu-Dong Dai, Zhou-Quan Wan, Xi Dai, Guo-Yi Zhu",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
       "categories": [
+        "quant-ph",
+        "cond-mat.dis-nn",
         "cond-mat.stat-mech",
-        "quant-ph"
+        "cond-mat.str-el"
       ],
-      "summary": "Using the Majorana representation of spin-1/2 operators, we study the $\\pm J$ Edwards--Anderson model in a transverse field at $T=0$. We show that, in this representation, the quantity describing the coupling between neighboring spins commutes with the Hamiltonian and, unlike in the Kitaev model, is not subject to any Gauss law. The resulting $\\mathbb{Z}_...",
-      "url": "http://arxiv.org/abs/2611.09097v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.09097v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.07645v1",
-      "modality_id": "topological-cat",
-      "topic_stream": "拓撲馬約拉納與玻色貓位元 (Topological & Cat)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Majorana corner modes and tunable braiding in an altermagnet-superconductor heterostructure",
-      "authors": "Yingli Gao, Kai Zhang, Ling-Zheng Meng, Junpeng Hou et al.",
-      "published": "2026-11-05",
-      "updated": "2026-11-05",
-      "categories": [
-        "cond-mat.supr-con",
-        "quant-ph"
-      ],
-      "summary": "Zeeman fields are usually required for realizing and manipulating Majorana corner modes at the cost of suppressed superconducting pairing. Altermagnetism offers a new route toward realizing Majorana corner modes under zero net external magnetic fields. Here we propose a theoretical scheme to host Majorana corner modes in a honeycomb-lattice altermagnet-su...",
-      "url": "http://arxiv.org/abs/2611.07645v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.07645v1.pdf"
+      "summary": "We study the surface code under uniform coherent $Z$ rotations $\\exp{(iθZ)}$ followed by perfect syndrome measurements, a setting known to exhibit strong finite-size effects that complicate the extraction of the asymptotic decoding threshold. We identify finite-size behavior of both Pauli decoding measures and the coherent information with two characteris...",
+      "url": "http://arxiv.org/abs/2611.13098v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.13098v1.pdf"
     }
   ]
 }
