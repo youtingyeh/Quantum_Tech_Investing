@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T04:04:14Z",
+  "updated_at": "2026-11-27T04:02:17Z",
   "tracked_tickers": [
     "IONQ",
     "QNT",
@@ -41,6 +41,22 @@
       "summary": "Critical metrology conventionally exploits enhanced susceptibility to a system parameter near a phase transition. Here we identify a complementary mechanism for critically enhanced estimation of intrinsic system parameters via suppressed quantum noise rather than enhanced response. We demonstrate both mechanisms in coherently radiating spin states (CRSS)-...",
       "url": "http://arxiv.org/abs/2611.34916v1",
       "pdf_url": "http://arxiv.org/pdf/2611.34916v1.pdf"
+    },
+    {
+      "arxiv_id": "2611.34429v1",
+      "modality_id": "trapped-ion",
+      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
+      "domain_tag": "Quantum Hardware / QEC",
+      "title": "Native higher-order optimization with entropy quantum computing",
+      "authors": "Narendra N. Hegade, Pranav Chandarana, Sebastian Wagner, Bahman Qawami et al.",
+      "published": "2026-11-25",
+      "updated": "2026-11-25",
+      "categories": [
+        "quant-ph"
+      ],
+      "summary": "Higher-order interactions are common in applied optimization: parity checks, radar-code sidelobes, portfolio skewness and kurtosis, and marketing-channel synergies all yield cubic or quartic objectives. Quantum annealers and most Ising machines accept only quadratic objectives, and gate-based quantum processors build every higher-order term from two-qubit...",
+      "url": "http://arxiv.org/abs/2611.34429v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.34429v1.pdf"
     },
     {
       "arxiv_id": "2611.34891v1",
@@ -195,20 +211,20 @@
       "pdf_url": "http://arxiv.org/pdf/2611.34470v1.pdf"
     },
     {
-      "arxiv_id": "2611.34229v1",
+      "arxiv_id": "2611.34417v1",
       "modality_id": "pqc-crypto",
       "topic_stream": "量子加密 (QKD) 與後量子密碼學 (PQC)",
       "domain_tag": "Post-Quantum Crypto (PQC)",
-      "title": "Evaluating Post-Quantum and Hybrid Signatures for Blockchains: Performance, Storage and Ledger Growth",
-      "authors": "Anthony Mikhaiel, Essam Ghadafi",
+      "title": "Northstar: Efficient Verifiable Negacyclic Polynomial Arithmetic with Applications to Encrypted Lattice-based Multi-Asset ERC-20 and Verifiable FHE",
+      "authors": "Yeoh Wei Zhu, Shaltiel Eloul, Yash Satsangi, Rob Otter",
       "published": "2026-11-25",
       "updated": "2026-11-25",
       "categories": [
         "cs.CR"
       ],
-      "summary": "Advances in quantum computing pose a long-term threat to blockchain systems that rely on classical digital signature schemes such as ECDSA. Migrating these systems to post-quantum cryptography introduces practical costs beyond cryptographic security, including larger transactions, higher computational costs and faster ledger growth. We present an empirica...",
-      "url": "http://arxiv.org/abs/2611.34229v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.34229v1.pdf"
+      "summary": "Lattice-based cryptography can be used to construct a variety of post-quantum cryptographic schemes, ranging from standard cryptographic primitives such as digital signatures and encryption, to fully homomorphic encryption (FHE). However, the verification of correct lattice computations remains relatively expensive, particularly for computationally intens...",
+      "url": "http://arxiv.org/abs/2611.34417v1",
+      "pdf_url": "http://arxiv.org/pdf/2611.34417v1.pdf"
     },
     {
       "arxiv_id": "2611.33299v1",
@@ -225,22 +241,6 @@
       "summary": "Quantum computing offers the prospect of surpassing classical computation on certain tasks by leveraging quantum coherence and entanglement. However, a significant gap remains between current quantum hardware and the requirements to transcend what classical computers can achieve, with decoherence limiting the capacity of storing quantum information and th...",
       "url": "http://arxiv.org/abs/2611.33299v1",
       "pdf_url": "http://arxiv.org/pdf/2611.33299v1.pdf"
-    },
-    {
-      "arxiv_id": "2611.32388v1",
-      "modality_id": "trapped-ion",
-      "topic_stream": "離子阱量子電腦 (Trapped-Ion)",
-      "domain_tag": "Quantum Hardware / QEC",
-      "title": "Thermal state preparation with shallow quantum circuits",
-      "authors": "Cenk Tüysüz, Simon Deconihout, Enrico Rinaldi, Michele Grossi",
-      "published": "2026-11-24",
-      "updated": "2026-11-24",
-      "categories": [
-        "quant-ph"
-      ],
-      "summary": "Preparing thermal states on noisy quantum hardware requires circuits that remain shallow at low temperatures. Even when accurate classical state representations are available, compiling them into suitable circuits can be costly. We introduce PP-VarQITE, combining Pauli propagation with variational quantum imaginary-time evolution to determine circuit para...",
-      "url": "http://arxiv.org/abs/2611.32388v1",
-      "pdf_url": "http://arxiv.org/pdf/2611.32388v1.pdf"
     },
     {
       "arxiv_id": "2611.33472v1",
